@@ -1,0 +1,5 @@
+ATG-Product-Full: ATG Siebel Integration Fulfillment
+ATG-Class-Path: lib/classes.jar
+ATG-Client-Class-Path: lib/classes.jar 
+ATG-Config-Path: config
+ATG-Required: Siebel

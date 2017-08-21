@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+ATG-Product-Full: ATG Siebel Web Service
+ATG-Required: Siebel
+ATG-EAR-Module: j2ee-apps/SiebelWS.ear

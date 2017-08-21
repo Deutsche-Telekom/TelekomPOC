@@ -1,0 +1,6 @@
+ATG-Product-Full: ATG Siebel Integration Versioned
+ATG-Class-Path: lib/classes.jar
+ATG-Client-Class-Path: lib/classes.jar 
+ATG-Config-Path: config
+ATG-Required: Publishing.base Siebel.SiebelWS
+

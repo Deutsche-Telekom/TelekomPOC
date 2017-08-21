@@ -1,0 +1,20 @@
+<!DOCTYPE item-descriptor
+        SYSTEM
+        "http://www.atg.com/dtds/databinding/itemDescriptorMapping_1.0.dtd">
+
+<item-descriptor repository-path="/atg/siebel/account/SiebelAccountRepository" name="contactInfo">
+  <!-- Mapping against BusinessAddressData and CutAddressData class -->
+  <property name="siebelId" targetName="id" include="true"/>
+  <property name="city" targetName="city" include="true"/>
+  <property name="county" targetName="county" include="true"/>
+  <property name="faxNumber" targetName="faxNumber" include="true"/>
+  <property name="phoneNumber" targetName="phoneNumber" include="true"/>
+  <property name="postalCode" targetName="postalCode" include="true"/>
+  <property name="state" targetName="state" include="true"/>
+  <property name="address1" targetName="streetAddress" include="true"/>
+  <property name="address2" targetName="streetAddress2" include="true"/>
+  <property name="address3" targetName="addressLine3" include="true"/>
+  <property name="addressName" targetName="addressName" include="true"/>
+  <property name="country" targetName="country" include="true"/>
+</item-descriptor>
+<!-- @version $Id: //product/Siebel/version/11.2/mappings/businessAddress.xml#1 $$Change: 1186180 $-->

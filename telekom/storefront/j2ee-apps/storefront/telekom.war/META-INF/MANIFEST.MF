@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+ATG-Module-Uri: telekom.war
+ATG-Context-Root: dt
+ATG-Module-Version: telekom.war
+

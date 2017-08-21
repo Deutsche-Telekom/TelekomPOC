@@ -1,0 +1,8759 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:xsdLocal1="http://siebel.com/OrderManagement/Order/Details/Data/Query"
+ targetNamespace="http://siebel.com/OrderManagement/Order/Details"
+ xmlns:xsdLocal3="http://siebel.com/OrderManagement/Order/Details/Data/Id"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsdLocal2="http://siebel.com/OrderManagement/Order/Details/Data/Data"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/OrderManagement/Order/Details"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Order/Details/Data/Data"
+ xmlns:xsdLocal2="http://siebel.com/OrderManagement/Order/Details/Data/Data"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfOrderDetail"
+ type="xsdLocal2:ListOfOrderDetailData"
+></xsd:element
+><xsd:complexType
+ name="ListOfOrderDetailTopElmtData"
+><xsd:sequence
+><xsd:element
+ name="ListOfOrderDetail"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal2:ListOfOrderDetailData"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderDetailData"
+><xsd:sequence
+><xsd:element
+ name="OrderDetail"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:OrderDetailData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderDetailData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Account"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountContractedProductsOnlyFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="AccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Active"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Approved"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="BillToAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillableFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="BillingAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CarrierPriority"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CarrierType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CompoundProductNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactEmailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Discount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="DiscountAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="Freight"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MRCTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="NRCTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="OptyId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="OrderNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderPriority"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="OrderType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderTypeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentTerm"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentTermId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryPositionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="QuoteId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="QuoteNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RequestedShipDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Revision"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="ScenarioTestFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="ServiceAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceContactEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceContactWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipInstructions"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TaxAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="TaxExempt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="TaxExemptNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TaxExemptReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TaxRate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="PersonalBillToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingProfileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Comments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingContactEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingContactWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfOrderApprovalHistory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfOrderApprovalHistoryData"
+></xsd:element
+><xsd:element
+ name="ListOfShipment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfShipmentData"
+></xsd:element
+><xsd:element
+ name="ListOfOrderItemDetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfOrderItemDetailData"
+></xsd:element
+><xsd:element
+ name="ListOfOrderPayment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfOrderPaymentData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderApprovalHistoryData"
+><xsd:sequence
+><xsd:element
+ name="OrderApprovalHistory"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:OrderApprovalHistoryData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderApprovalHistoryData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Action"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Comments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DueTime"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ItemObjectId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PastDue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Priority"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProtectOwnershipFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StartTime"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="TaskOwnerFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TaskOwnerFullName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TaskOwnerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TaskOwnerLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TaskOwnerLogin"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfShipmentData"
+><xsd:sequence
+><xsd:element
+ name="Shipment"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:ShipmentData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ShipmentData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssignedTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssignedToID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Carrier"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CarrierPriority"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Condition"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FreightCost"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="Incoterms"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Instructions"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InsuranceCost"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="InsuredValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="IntegrationId2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NoofContainers"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="OrderId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="POD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PrimaryOrderId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReceiveDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ReceiveInvLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReceiveLocationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReceiveUnknownFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="ReceivedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReceivedContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ScheduledDeliveryDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ScheduledPickUpDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ShipDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ShipDueDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ShipInvLocId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipInvLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipInvLocationIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToCityState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToCityStateZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToContactIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipVia"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipmentNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShippedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShippedContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StatusAsOfDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="TransitToAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransitToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransitToAccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransitToAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransitToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransitToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransitToAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransitToContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransitToContactIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransitToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransitToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UOMFreight"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UOMInsuranceCost"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UOMInsuranceValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UOMWeight"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnknownOrderMatch"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnknownOrderNum"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnknownOrdertype"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="WaybillNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Weight"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ListOfShipmentItem"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfShipmentItemData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderItemDetailData"
+><xsd:sequence
+><xsd:element
+ name="OrderItemDetail"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:OrderItemDetailData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderItemDetailData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActionCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AdjustedListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="AmountExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="AssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AutoExplodeFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="BasePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="BillingAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CalculatedAssetStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CalculatedDueDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CarrierCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CarrierPriority"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CfgActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="CfgEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CfgLatestReleasedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CfgObjectDefFirstVersion"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="CfgObjectDefLastVersion"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="CfgReleasedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="CfgStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CfgStateCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CfgType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CfgVersion"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ChangeCost"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ClassRegistrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CommitmentCoveredFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="CompoundProductFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="CompoundProductNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConvertToAgreementFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="ConvertToAssetFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Cost"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Discount2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="DiscountAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="DiscountPercent"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="DiscountSource"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DueDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="ExcludePricingFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="ExtendedQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ForcastableFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="HasGenericsFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="HeaderCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="HeaderDiscount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="HeaderExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IsComplexProduct"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="IsComplexProductComponent"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="IsComplexProductRoot"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="ItemPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ItemPriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="JointWorkspaceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LineNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="LineNumber2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="MRCCxTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="MRCCxTotalinHeaderCurrency"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="MaximumQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="MinimumQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="NRCCxTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="NRCCxTotalinHeaderCurrency"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="NeedRefreshBasePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="NetworkElementType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Node"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="OrderCPN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderHeaderId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OwnerAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentOrderItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PartNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PostPickCD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrePickCD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PreviousAssetStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PreviousBillingAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PreviousServiceAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PreviousServiceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PreviousUsageAssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PricingComments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProcessedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="ProdItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProdPromId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProdPromInstanceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProdPromName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProdPromRuleId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProdPromSourceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Product"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductEffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="ProductEffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductPortId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductPrimaryProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductXAClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PromotionItemFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="QuantityRequested"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="QuantityShipped"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="RevisedLineItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RollupAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="RollupItemPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="RootAssetIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootItemPriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootOrderItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RootProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SalesServiceFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="ServiceAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceAccountZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ServiceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipInstrustions"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToContact-Email"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToContact-FirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToContact-LastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToContact-WorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SmartPartNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TaxAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="TaxExemptFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="ToNode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ToServiceAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ToServiceAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VODRowId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VolumeDiscountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VolumeDiscountItem"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VolumeDiscountItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VolumeUpsellItem"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VolumeUpsellItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VolumeUpsellMessage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Write-InProduct"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipToAddressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingProfileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingAccountZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingContactEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingContactWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DonatingServiceProvider"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EndingPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LegacyAccountNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NumberPortabilityAgencyName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NumberToPort"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PIN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RequestedPortingDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ServicePostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StartingPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfOrderItemXADetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfOrderItemXADetailData"
+></xsd:element
+><xsd:element
+ name="ListOfOrderItemProductLine"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfOrderItemProductLineData"
+></xsd:element
+><xsd:element
+ name="OrderItemDetail"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:OrderItemDetailData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderPaymentData"
+><xsd:sequence
+><xsd:element
+ name="OrderPayment"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:OrderPaymentData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderPaymentData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ABACode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AVSCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountNumber-ReadOnly"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActualCharge"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="AuthorizationCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AuthorizationDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="BCReadOnlyFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BankAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BankAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CalculatedOrderType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CardHolder"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactFirstLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactLastFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CreatedByName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CreditCardNumber-Display"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CreditCardTransactionResponseCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CreditCardTransactionResponseMessage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CreditCheckMessage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CreditCheckStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CreditCheckStatusAsOfDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DateOfBirth"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DesiredPayDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="EncryptionKey"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="ExpirationDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="ExpirationMonth"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ExpirationYear"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InvoiceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InvoiceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IssuingBankCustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IssuingBankName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IssuingBankPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LineNumber3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ManualAuthorizationFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="MerchantId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderCustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderId2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Payment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentAccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentAccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentAccountSite"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentContactIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="PaymentImportFlg"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PaymentMethod"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentMethodLIC"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentProfileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentStatusAsOfDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="PaymentType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PaymentTypeReadOnlyFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PersonalBillToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalBillToStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="QuoteCustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="QuoteId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="QuoteNumber2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SSNEncryptionKey"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SaveCreditCard"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SocialSecurityNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransactionAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="TransactionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransactionMessage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TransactionTime"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="TransactionType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VendorId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VerificationNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ListOfOrderPaymentsBankAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfOrderPaymentsBankAddressData"
+></xsd:element
+><xsd:element
+ name="ListOfOrderPaymentsBillToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfOrderPaymentsBillToAddressData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfShipmentItemData"
+><xsd:sequence
+><xsd:element
+ name="ShipmentItem"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:ShipmentItemData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ShipmentItemData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssetNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillingDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="BillingQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="DeliveryDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="DeliveryQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="LineItemActionType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LineItemActionTypeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LineNumber4"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PickingDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="PickingQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="PlanDispatchDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="PlanDispatchQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="Product2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipmentDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ShipmentId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipmentQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StatusAsOfDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderItemXADetailData"
+><xsd:sequence
+><xsd:element
+ name="OrderItemXADetail"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:OrderItemXADetailData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderItemXADetailData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActionCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AttributeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BCReadOnlyFlag2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="CfgStateCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DataType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DateValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="Description2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Hidden"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LOVType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MLOV"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NumericValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="ObjectId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrderItemStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentComplexProductFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PreviousDateValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="PreviousNumericValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="PreviousTextValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PreviousValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ReadOnly"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Required"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Sequence"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="TextValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Validation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Value"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderItemProductLineData"
+><xsd:sequence
+><xsd:element
+ name="OrderItemProductLine"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:OrderItemProductLineData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderItemProductLineData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderPaymentsBankAddressData"
+><xsd:sequence
+><xsd:element
+ name="OrderPaymentsBankAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:OrderPaymentsBankAddressData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderPaymentsBankAddressData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BankAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BankAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BankCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BankCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BankState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BankZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderPaymentsBillToAddressData"
+><xsd:sequence
+><xsd:element
+ name="OrderPaymentsBillToAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:OrderPaymentsBillToAddressData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderPaymentsBillToAddressData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillToZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ xmlns:xsdLocal1="http://siebel.com/OrderManagement/Order/Details/Data/Query"
+ targetNamespace="http://siebel.com/OrderManagement/Order/Details/Data/Query"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfOrderDetail"
+ type="xsdLocal1:ListOfOrderDetailQuery"
+></xsd:element
+><xsd:complexType
+ name="ListOfOrderDetailTopElmtQuery"
+><xsd:sequence
+><xsd:element
+ name="ListOfOrderDetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfOrderDetailQuery"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderDetailQuery"
+><xsd:sequence
+><xsd:element
+ name="OrderDetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:OrderDetailQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderDetailQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Account"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountContractedProductsOnlyFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Active"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Approved"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillableFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CarrierPriority"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CarrierType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CompoundProductNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactEmailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Discount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DiscountAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Freight"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MRCTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NRCTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OptyId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderPriority"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderTypeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentTerm"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentTermId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryPositionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="QuoteId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="QuoteNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RequestedShipDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Revision"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ScenarioTestFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceContactEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceContactWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipInstructions"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaxAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaxExempt"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaxExemptNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaxExemptReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaxRate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingProfileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Comments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingContactEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingContactWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfOrderApprovalHistory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfOrderApprovalHistoryQuery"
+></xsd:element
+><xsd:element
+ name="ListOfShipment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfShipmentQuery"
+></xsd:element
+><xsd:element
+ name="ListOfOrderItemDetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfOrderItemDetailQuery"
+></xsd:element
+><xsd:element
+ name="ListOfOrderPayment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfOrderPaymentQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderApprovalHistoryQuery"
+><xsd:sequence
+><xsd:element
+ name="OrderApprovalHistory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:OrderApprovalHistoryQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderApprovalHistoryQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Action"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Comments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DueTime"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ItemObjectId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PastDue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Priority"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProtectOwnershipFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StartTime"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaskOwnerFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaskOwnerFullName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaskOwnerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaskOwnerLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaskOwnerLogin"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfShipmentQuery"
+><xsd:sequence
+><xsd:element
+ name="Shipment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ShipmentQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ShipmentQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AssignedTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AssignedToID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Carrier"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CarrierPriority"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Condition"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FreightCost"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Incoterms"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Instructions"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="InsuranceCost"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="InsuredValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NoofContainers"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="POD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryOrderId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ReceiveDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ReceiveInvLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ReceiveLocationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ReceiveUnknownFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ReceivedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ReceivedContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ScheduledDeliveryDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ScheduledPickUpDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipDueDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipInvLocId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipInvLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipInvLocationIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToCityState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToCityStateZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToContactIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToID"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipVia"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipmentNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShippedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShippedContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StatusAsOfDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToAccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToContactIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransitToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UOMFreight"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UOMInsuranceCost"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UOMInsuranceValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UOMWeight"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UnknownOrderMatch"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UnknownOrderNum"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UnknownOrdertype"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="WaybillNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Weight"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfShipmentItem"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfShipmentItemQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderItemDetailQuery"
+><xsd:sequence
+><xsd:element
+ name="OrderItemDetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:OrderItemDetailQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderItemDetailQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ActionCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AdjustedListPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AmountExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AssetIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AssetStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AutoExplodeFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BasePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CalculatedAssetStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CalculatedDueDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CarrierCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CarrierPriority"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgLatestReleasedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgObjectDefFirstVersion"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgObjectDefLastVersion"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgReleasedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgStateCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgVersion"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ChangeCost"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ClassRegistrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CommitmentCoveredFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CompoundProductFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CompoundProductNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConfigurationModelId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConvertToAgreementFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConvertToAssetFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Cost"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Discount2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DiscountAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DiscountPercent"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DiscountSource"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DueDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EligibilityReason"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EligibilityStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ExcludePricingFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ExtendedQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ForcastableFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="HasGenericsFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="HeaderCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="HeaderDiscount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="HeaderExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="InclusiveEligibilityFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IsComplexProduct"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IsComplexProductComponent"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IsComplexProductRoot"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ItemPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ItemPriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="JointWorkspaceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LineNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LineNumber2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MRCCxTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MRCCxTotalinHeaderCurrency"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MaximumQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MinimumQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NRCCxTotal"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NRCCxTotalinHeaderCurrency"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NeedRefreshBasePrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NetPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NetworkElementType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Node"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderCPN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderHeaderId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OwnerAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ParentOrderItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PartNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PostPickCD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrePickCD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreviousAssetStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreviousBillingAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreviousServiceAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreviousServiceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreviousUsageAssetId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PricingComments"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProcessedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProdItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProdPromId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProdPromInstanceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProdPromName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProdPromRuleId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProdPromSourceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Product"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProductDefTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProductEffectiveFrom"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProductEffectiveTo"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProductPortId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProductPrimaryProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProductTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProductXAClassId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PromotionItemFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Quantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="QuantityRequested"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="QuantityShipped"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RevisedLineItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RollupAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RollupItemPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RootAssetIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RootItemPriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RootOrderItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RootProductId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="SalesServiceFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceAccountZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServiceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipInstrustions"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToContact-Email"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToContact-FirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToContact-LastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToContact-WorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="SmartPartNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaxAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TaxExemptFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ToNode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ToServiceAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ToServiceAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UnitPrice"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="VODRowId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="VolumeDiscountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="VolumeDiscountItem"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="VolumeDiscountItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="VolumeUpsellItem"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="VolumeUpsellItemId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="VolumeUpsellMessage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Write-InProduct"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalShipToAddressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipToAddressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingProfileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingAccountZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingContactEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingContactWorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DonatingServiceProvider"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EndingPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LegacyAccountNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NumberPortabilityAgencyName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NumberToPort"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PIN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RequestedPortingDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ServicePostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StartingPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfOrderItemXADetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfOrderItemXADetailQuery"
+></xsd:element
+><xsd:element
+ name="ListOfOrderItemProductLine"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfOrderItemProductLineQuery"
+></xsd:element
+><xsd:element
+ name="OrderItemDetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:OrderItemDetailQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderPaymentQuery"
+><xsd:sequence
+><xsd:element
+ name="OrderPayment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:OrderPaymentQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderPaymentQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ABACode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AVSCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountNumber-ReadOnly"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ActualCharge"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AuthorizationCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AuthorizationDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BCReadOnlyFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BankAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BankAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CalculatedOrderType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CardHolder"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactEmail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactFirstLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactLastFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedByName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreditCardNumber-Display"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreditCardTransactionResponseCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreditCardTransactionResponseMessage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreditCheckMessage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreditCheckStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreditCheckStatusAsOfDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DateOfBirth"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DesiredPayDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EncryptionKey"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ExpirationDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ExpirationMonth"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ExpirationYear"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="InvoiceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="InvoiceNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IssuingBankCustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IssuingBankName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IssuingBankPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LineNumber3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ManualAuthorizationFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MerchantId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderCustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderId2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Payment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentAccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentAccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentAccountSite"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentContactIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentImportFlg"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentMethod"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentMethodLIC"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentProfileName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentStatusAsOfDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PaymentTypeReadOnlyFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalBillToStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="QuoteCustomerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="QuoteId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="QuoteNumber2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="SSNEncryptionKey"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="SaveCreditCard"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="SocialSecurityNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransactionAmount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransactionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransactionMessage"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransactionTime"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TransactionType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="VendorId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="VerificationNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfOrderPaymentsBankAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfOrderPaymentsBankAddressQuery"
+></xsd:element
+><xsd:element
+ name="ListOfOrderPaymentsBillToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfOrderPaymentsBillToAddressQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfShipmentItemQuery"
+><xsd:sequence
+><xsd:element
+ name="ShipmentItem"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ShipmentItemQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ShipmentItemQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AssetNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillingQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DeliveryDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DeliveryQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LineItemActionType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LineItemActionTypeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LineNumber4"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PickingDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PickingQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PlanDispatchDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PlanDispatchQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Product2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProductName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipmentDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipmentId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipmentQuantity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StatusAsOfDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderItemXADetailQuery"
+><xsd:sequence
+><xsd:element
+ name="OrderItemXADetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:OrderItemXADetailQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderItemXADetailQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ActionCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AttributeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BCReadOnlyFlag2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CfgStateCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DataType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DateValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Description2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DisplayName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Hidden"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LOVType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MLOV"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NumericValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ObjectId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrderItemStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ParentComplexProductFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreviousDateValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreviousNumericValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreviousTextValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreviousValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ReadOnly"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Required"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Sequence"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TextValue"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UnitofMeasure"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Validation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Value"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderItemProductLineQuery"
+><xsd:sequence
+><xsd:element
+ name="OrderItemProductLine"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:OrderItemProductLineQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderItemProductLineQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderPaymentsBankAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="OrderPaymentsBankAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:OrderPaymentsBankAddressQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderPaymentsBankAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BankAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BankAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BankCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BankCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BankState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BankZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderPaymentsBillToAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="OrderPaymentsBillToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:OrderPaymentsBillToAddressQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="OrderPaymentsBillToAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillToZip"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="queryType"
+><xsd:simpleContent
+><xsd:extension
+ base="xsd:string"
+><xsd:attribute
+ name="sortorder"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="sortsequence"
+ type="xsd:string"
+></xsd:attribute
+></xsd:extension
+></xsd:simpleContent
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Order/Details"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Order/Details/Data/Id"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Order/Details/Data/Data"
+></xsd:import
+><xsd:import
+ namespace="http://siebel.com/OrderManagement/Order/Details/Data/Query"
+></xsd:import
+><xsd:element
+ name="OrderDetailQueryPage_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="NamedSearchSpec"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal1:ListOfOrderDetail"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PickListName"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="OrderDetailQueryPage_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfOrderDetail"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="OrderDetailUpdate_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfOrderDetail"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="OrderDetailUpdate_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal3:ListOfOrderDetail"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/OrderManagement/Order/Details/Data/Id"
+ xmlns:xsdLocal3="http://siebel.com/OrderManagement/Order/Details/Data/Id"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfOrderDetail"
+ type="xsdLocal3:ListOfOrderDetailId"
+></xsd:element
+><xsd:complexType
+ name="ListOfOrderDetailTopElmtId"
+><xsd:sequence
+><xsd:element
+ name="ListOfOrderDetail"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal3:ListOfOrderDetailId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderDetailId"
+><xsd:sequence
+><xsd:element
+ name="OrderDetail"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:OrderDetailId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="OrderDetailId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfOrderApprovalHistory"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfOrderApprovalHistoryId"
+></xsd:element
+><xsd:element
+ name="ListOfShipment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfShipmentId"
+></xsd:element
+><xsd:element
+ name="ListOfOrderItemDetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfOrderItemDetailId"
+></xsd:element
+><xsd:element
+ name="ListOfOrderPayment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfOrderPaymentId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderApprovalHistoryId"
+><xsd:sequence
+><xsd:element
+ name="OrderApprovalHistory"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:OrderApprovalHistoryId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="OrderApprovalHistoryId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfShipmentId"
+><xsd:sequence
+><xsd:element
+ name="Shipment"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:ShipmentId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ShipmentId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfShipmentItem"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfShipmentItemId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderItemDetailId"
+><xsd:sequence
+><xsd:element
+ name="OrderItemDetail"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:OrderItemDetailId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="OrderItemDetailId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfOrderItemXADetail"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfOrderItemXADetailId"
+></xsd:element
+><xsd:element
+ name="ListOfOrderItemProductLine"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfOrderItemProductLineId"
+></xsd:element
+><xsd:element
+ name="OrderItemDetail"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:OrderItemDetailId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderPaymentId"
+><xsd:sequence
+><xsd:element
+ name="OrderPayment"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:OrderPaymentId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="OrderPaymentId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfOrderPaymentsBankAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfOrderPaymentsBankAddressId"
+></xsd:element
+><xsd:element
+ name="ListOfOrderPaymentsBillToAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfOrderPaymentsBillToAddressId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfShipmentItemId"
+><xsd:sequence
+><xsd:element
+ name="ShipmentItem"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:ShipmentItemId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ShipmentItemId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderItemXADetailId"
+><xsd:sequence
+><xsd:element
+ name="OrderItemXADetail"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:OrderItemXADetailId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="OrderItemXADetailId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderItemProductLineId"
+><xsd:sequence
+><xsd:element
+ name="OrderItemProductLine"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:OrderItemProductLineId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="OrderItemProductLineId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProductLineId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderPaymentsBankAddressId"
+><xsd:sequence
+><xsd:element
+ name="OrderPaymentsBankAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:OrderPaymentsBankAddressId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="OrderPaymentsBankAddressId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfOrderPaymentsBillToAddressId"
+><xsd:sequence
+><xsd:element
+ name="OrderPaymentsBillToAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:OrderPaymentsBillToAddressId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="OrderPaymentsBillToAddressId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+></types
+><message
+ name="OrderDetailQueryPage_Input"
+><part
+ name="OrderDetailQueryPage_Input"
+ element="tns:OrderDetailQueryPage_Input"
+></part
+></message
+><message
+ name="OrderDetailQueryPage_Output"
+><part
+ name="OrderDetailQueryPage_Output"
+ element="tns:OrderDetailQueryPage_Output"
+></part
+></message
+><message
+ name="OrderDetailUpdate_Input"
+><part
+ name="OrderDetailUpdate_Input"
+ element="tns:OrderDetailUpdate_Input"
+></part
+></message
+><message
+ name="OrderDetailUpdate_Output"
+><part
+ name="OrderDetailUpdate_Output"
+ element="tns:OrderDetailUpdate_Output"
+></part
+></message
+><portType
+ name="OrderDetailUDSPort"
+><operation
+ name="OrderDetailQueryPage"
+><input
+ message="tns:OrderDetailQueryPage_Input"
+></input
+><output
+ message="tns:OrderDetailQueryPage_Output"
+></output
+></operation
+><operation
+ name="OrderDetailUpdate"
+><input
+ message="tns:OrderDetailUpdate_Input"
+></input
+><output
+ message="tns:OrderDetailUpdate_Output"
+></output
+></operation
+></portType
+><binding
+ name="OrderDetailUDSPort"
+ type="tns:OrderDetailUDSPort"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="OrderDetailQueryPage"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Order/Details:OrderDetailQueryPage"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="OrderDetailUpdate"
+><soap:operation
+ soapAction="document/http://siebel.com/OrderManagement/Order/Details:OrderDetailUpdate"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="OrderDetailWebService"
+><port
+ binding="tns:OrderDetailUDSPort"
+ name="OrderDetailUDSPort"
+><soap:address
+ location="http://localhost/eai_enu/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute"
+></soap:address
+></port
+></service
+></definitions
+>

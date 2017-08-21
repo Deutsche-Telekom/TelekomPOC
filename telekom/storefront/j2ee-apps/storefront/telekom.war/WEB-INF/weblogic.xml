@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd">
+	<container-descriptor>
+	        <prefer-web-inf-classes>true</prefer-web-inf-classes>
+	</container-descriptor>
+	<context-root>/dt</context-root>	
+	<container-descriptor>
+        <index-directory-enabled>true</index-directory-enabled>
+    </container-descriptor>	
+	<session-descriptor> 
+	    <timeout-secs>900</timeout-secs> 
+	    <invalidation-interval-secs>900</invalidation-interval-secs> 
+	 </session-descriptor> 
+	
+<!-- Enable for Production env --> 
+
+	<!-- Can occur zero to one time.
+	  When set to true, compresses the HTML in the JSP template blocks to improve runtime performance.
+	  default: false --> 	  
+	<jsp-descriptor>
+	      	<compress-html-template>true</compress-html-template>
+	  </jsp-descriptor>
+	  
+	  <!-- Can occur zero to one time.
+	  When set to true, the JSP compiler optimizes Java expressions to improve runtime performance.
+	  default: false -->
+	 <jsp-descriptor>
+		    <optimize-java-expression>true</optimize-java-expression>
+	</jsp-descriptor>
+	
+	 <!-- Can occur zero to one time. Keep generated .java source files -->
+	 <jsp-descriptor>
+		    <keepgenerated>true</keepgenerated>
+	</jsp-descriptor>
+	
+	 <!-- Can occur zero to one time.
+	  This param indicates whether to continue precompilation even when some jsp pages have errors in them.
+	  default: false -->
+	<jsp-descriptor>
+		    <precompile-continue>true</precompile-continue>
+	</jsp-descriptor>
+	
+	 <!-- Can occur zero to one time.
+	  Compiles all modified jsps at webapp application deployment time or server startup time. default: false -->
+	<jsp-descriptor>
+		    <page-check-seconds>10</page-check-seconds>
+	</jsp-descriptor>
+	
+	<jsp-descriptor>
+		    <precompile>true</precompile>
+	</jsp-descriptor>
+
+  <container-descriptor>
+  	<!-- Can occur zero to one time.
+	  How often WebLogic checks whether a servlet has been modified, and if so reloads it. -1 is never reload, 0 is
+	  always reload. Default to 1 second. Value specified via console will be given precedence over this setting.-->
+    <servlet-reload-check-secs>10</servlet-reload-check-secs>
+    
+     <!-- Can occur zero to one time.
+	  This parameter is used to do metadata caching for resources cached found in the resource path in the webapp scope. This param is to
+	  tell how often WebLogic checks whether a resource has been modified, and if so reloads it. -1 is never reload, 0 is
+	  always reload. Default to 1 second. Value specified via console will be given precedence over this setting.-->
+    <resource-reload-check-secs>10</resource-reload-check-secs>
+  </container-descriptor>
+</weblogic-web-app>

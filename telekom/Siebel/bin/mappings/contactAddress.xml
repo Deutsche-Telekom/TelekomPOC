@@ -1,0 +1,30 @@
+<!DOCTYPE item-descriptor
+        SYSTEM
+        "http://www.atg.com/dtds/databinding/itemDescriptorMapping_1.0.dtd">
+
+<item-descriptor repository-path="/atg/siebel/account/SiebelAccountRepository" name="contactInfo">
+  <!-- Mapping against ContactData class -->
+  <property name="siebelId" targetName="primaryAddressId" include="true"/>
+  <property name="siebelAccountId" targetName="accountId" include="true"/>
+  <property name="firstName" targetName="firstName" include="true"/>
+  <property name="middleName" targetName="middleName" include="true"/>
+  <property name="lastName" targetName="lastName" include="true"/>
+  <property name="jobTitle" targetName="jobTitle" include="true"/>
+  <property name="companyName" targetName="primaryAccountName" include="true"/>
+  <property name="address1" targetName="primaryStreetAddress" include="true"/>
+  <property name="address2" targetName="primaryAddressStreetAddress2" include="true"/>
+  <property name="address3" targetName="primaryAddressStreetAddress3" include="true"/>
+  <property name="city" targetName="primaryCity" include="true"/>
+  <property name="state" targetName="primaryState" include="true"/>
+  <property name="postalCode" targetName="primaryPostalCode" include="true"/>
+  <property name="county" targetName="primaryAddressCounty" include="true"/>
+  <property name="country" targetName="primaryCountry" include="true"/>
+  <property name="phoneNumber" targetName="homePhone" include="true"/>
+  <property name="faxNumber" targetName="faxPhone" include="true"/>
+  <property name="cellPhone" targetName="cellularPhone" include="true"/>
+  <property name="assistantPhone" targetName="assistantPhone" include="true"/>
+  <property name="workPhone" targetName="workPhone" include="true"/>
+  <property name="addressName" targetName="addressName" include="true"/>
+
+</item-descriptor>
+<!-- @version $Id: //product/Siebel/version/11.2/mappings/contactAddress.xml#1 $$Change: 1186180 $-->

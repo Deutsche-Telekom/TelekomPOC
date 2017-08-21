@@ -1,0 +1,39 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+        <system systemId="http://localhost/wsdl/SelfServiceAccount.wsdl"
+                uri="wsdl/SelfServiceAccount.wsdl"/>
+        <system systemId="http://localhost/wsdl/SelfServiceAddress.wsdl"
+                uri="wsdl/SelfServiceAddress.wsdl"/>
+        <system systemId="http://localhost/wsdl/SelfServiceContact.wsdl"
+                uri="wsdl/SelfServiceContact.wsdl"/>
+        <system systemId="http://localhost/wsdl/SelfServiceUser.wsdl"
+                uri="wsdl/SelfServiceUser.wsdl"/>
+        <system systemId="http://localhost/wsdl/CatalogWebService.wsdl"
+                uri="wsdl/CatalogWebService.wsdl"/>
+        <system systemId="http://localhost/wsdl/ProductConfigurator.wsdl"
+                uri="wsdl/ProductConfigurator.wsdl"/>
+        <system systemId="http://localhost/wsdl/PromotionWebService.wsdl"
+                uri="wsdl/PromotionWebService.wsdl"/>
+        <system systemId="http://localhost/wsdl/CalculatePriceWS.wsdl"
+                uri="wsdl/CalculatePriceWS.wsdl"/>
+        <system systemId="http://localhost/wsdl/SelfServiceAccountBillingProfile.wsdl"
+                uri="wsdl/SelfServiceAccountBillingProfile.wsdl"/>   
+        <system systemId="http://localhost/wsdl/QuotingWebService.wsdl"
+                uri="wsdl/QuotingWebService.wsdl"/>   
+        <system systemId="http://localhost/wsdl/OrderDetailWebService.wsdl"
+	        uri="wsdl/OrderDetailWebService.wsdl"/>   
+	<system systemId="http://localhost/wsdl/OrderWebService.wsdl"
+                uri="wsdl/OrderWebService.wsdl"/>   
+        <system systemId="http://localhost/wsdl/AssetManagement.wsdl"
+                uri="wsdl/AssetManagement.wsdl"/>
+        <system systemId="http://localhost/wsdl/AssetManagementComplex.wsdl"
+                uri="wsdl/AssetManagementComplex.wsdl"/>
+        <system systemId="http://localhost/wsdl/QuoteEligibilityCompatibility.wsdl"
+                uri="wsdl/QuoteEligibilityCompatibility.wsdl"/>        
+		<system systemId="http://localhost/wsdl/ABOWebService.wsdl"
+                uri="wsdl/ABOWebService.wsdl"/>
+		<system systemId="http://localhost/wsdl/QuoteWebService.wsdl"
+                uri="wsdl/QuoteWebService.wsdl"/>
+        <system systemId="http://localhost/wsdl/SessionAccessWS.wsdl"
+                uri="wsdl/SessionAccessWS.wsdl"/>
+</catalog>
+<!-- @version $Id: //product/Siebel/version/11.2/src/META-INF/jax-ws-catalog.xml#2 $$Change: 1190593 $-->

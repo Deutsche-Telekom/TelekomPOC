@@ -1,0 +1,1938 @@
+<gsa-template xml-combine="append">
+
+  <header xml-combine="replace">
+    <name>ATG Siebel Catalog</name>
+    <author>Patrick Mc Erlean</author>
+    <version>$Revision: #2 $</version>
+  </header>
+
+  <!--///////////////////////////////-->
+  <!--          catalog              -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="catalog" xml-combine="append">
+
+    <table name="sbl_catalog" type="auxiliary" id-column-name="catalog_id">
+
+      <property name="active" data-type="boolean" column-name="active" category-resource="categoryInfo" display-name-resource="Active">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="0"/>
+      </property>
+
+      <property name="catalogType" data-type="string" column-name="catalog_type" category-resource="categoryInfo" display-name-resource="CatalogType">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+      <property name="description" data-type="string" column-name="description" category-resource="categoryInfo" display-name-resource="Description">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="2"/>
+      </property>
+
+      <property name="startDate" data-type="timestamp" column-name="start_date" category-resource="categoryInfo" display-name-resource="StartDate">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="3"/>
+      </property>
+
+      <property name="endDate" data-type="timestamp" column-name="end_date" category-resource="categoryInfo" display-name-resource="EndDate">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="4"/>
+      </property>
+
+      <property name="privateFlag" data-type="boolean" column-name="private_flag" category-resource="categoryInfo" display-name-resource="PrivateFlag">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="5"/>
+      </property>
+
+      <property name="sequenceNumber" data-type="int" column-name="sequence_number" category-resource="categoryInfo" display-name-resource="SequenceNumber">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="6"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_catalog_media" type="auxiliary" id-column-name="catalog_id">
+
+      <property name="thumbnailImage" item-type="media-external" column-name="thumbnail_image_id" cascade="delete" category-resource="categoryInfo" display-name-resource="ThumbnailImage">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="7"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_catalog_translation" type="multi" id-column-name="catalog_id">
+
+      <property name="translations" data-type="set" component-item-type="translation"
+                column-name="translation_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Translations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--          category              -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="category" xml-combine="append">
+
+    <table name="sbl_category" type="auxiliary" id-column-name="category_id">
+
+      <property name="activeFlag" data-type="boolean" column-name="active_flag" category-resource="categoryInfo" display-name-resource="ActiveFlag">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+      <property name="count" data-type="int" column-name="count" category-resource="categoryInfo" display-name-resource="Count">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="2"/>
+      </property>
+
+      <property name="privateFlag" data-type="boolean" column-name="private_flag" category-resource="categoryInfo" display-name-resource="PrivateFlag">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="3"/>
+      </property>
+
+      <property name="rootCategoryFlag" data-type="boolean" column-name="root_category_flag" category-resource="categoryInfo" display-name-resource="RootCategoryFlag">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="4"/>
+      </property>
+
+      <property name="sequenceNumber" data-type="int" column-name="sequence_number" category-resource="categoryInfo" display-name-resource="SequenceNumber">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="5"/>
+      </property>
+
+      <property name="usage" data-type="string" column-name="category_usage" category-resource="categoryInfo" display-name-resource="Usage">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="6"/>
+      </property>
+
+      <property name="parentCategoryId" data-type="string" column-name="parent_category_id" category-resource="categoryInfo" display-name-resource="ParentCategoryId">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="7"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_category_translation" type="multi" id-column-name="category_id">
+
+      <property name="translations" data-type="set" component-item-type="translation"
+                column-name="translation_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Translations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_category_products" type="multi" id-column-name="category_id">
+
+      <property name="categoryProducts" data-type="set" component-item-type="category-product"
+                column-name="category_product_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="CategoryProducts">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--       category-product        -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="category-product" display-name-resource="CategoryProduct"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-category-product">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_category_product" type="primary" id-column-name="category_product_id">
+
+      <property name="id" data-type="string" column-name="category_product_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="product" item-type="product" column-name="product" category-resource="categoryInfo" display-name-resource="Product">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="sequenceNumber" data-type="int" column-name="sequence_number" category-resource="categoryInfo" display-name-resource="SequenceNumber">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="activeFlag" data-type="boolean" column-name="active_flag" category-resource="categoryInfo" display-name-resource="ActiveFlag">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--          product              -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="product" xml-combine="append">
+
+    <table name="dcs_product" type="primary" id-column-name="product_id">
+      <property name="unitOfMeasure" xml-combine="remove" />
+    </table>
+	
+    <table name="sbl_product" type="auxiliary" id-column-name="product_id">
+
+      <property name="siebelType" data-type="enumerated" column-name="siebel_type" hidden="false">
+         <attribute name="propertySortPriority" value="20"/>
+         <attribute name="useCodeForValue" value="false"/>
+         <option value="Simple Product" code="1000"/>
+         <option value="Simple Product With Attributes" code="1001"/>
+         <option value="Simple Product Bundle" code="1002"/>
+         <option value="Configurable Product" code="1003"/>
+         <option value="Promotion" code="1004"/>
+      </property>
+	
+      <property name="quantity" data-type="int" column-name="quantity" category-resource="categoryInfo" display-name-resource="Quantity">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="productConfigurationModelId" data-type="string" column-name="product_cfg_model_id" category-resource="categoryInfo" display-name-resource="ProductConfigurationModelId">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="inclusiveEligibilityFlag" data-type="boolean" column-name="inclusive_eligibility_flag" category-resource="categoryInfo" display-name-resource="InclusiveEligibilityFlag">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="integrationId" data-type="string" column-name="integration_id" category-resource="categoryInfo" display-name-resource="IntegrationId">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="orderable" data-type="boolean" column-name="orderable" category-resource="categoryInfo" display-name-resource="Orderable">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="part" data-type="string" column-name="part" category-resource="categoryInfo" display-name-resource="Part">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="pricelistId" data-type="string" column-name="price_list_id" category-resource="categoryInfo" display-name-resource="PriceListId">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="productDefTypeCode" data-type="enumerated" column-name="product_def_type_code" category-resource="categoryInfo" display-name-resource="ProductDefTypeCode">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="useCodeForValue" value="false"/>
+        <option value="None" code="0"/>
+        <option value="Bundle" code="1"/>
+        <option value="Customizable" code="2"/>
+		<option value="Simple" code="3"/>
+      </property>
+
+      <property name="productTypeCode" data-type="enumerated" column-name="product_type_code" category-resource="categoryInfo" display-name-resource="ProductTypeCode">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="useCodeForValue" value="false"/>
+        <option value="Promotion" code="0"/>
+        <option value="Other" code="1"/>
+      </property>
+
+      <property name="unitOfMeasure" data-type="string" column-name="unit_of_measure" category-resource="categoryInfo" display-name-resource="UnitOfMeasure">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="vendorIntegrationId" data-type="string" column-name="vendor_integration_id" category-resource="categoryInfo" display-name-resource="VendorIntegrationId">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="class" item-type="product-class" column-name="class" category-resource="categoryInfo" display-name-resource="Class">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="priceType" data-type="enumerated" column-name="price_type" category-resource="categoryInfo" display-name-resource="PriceType">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="useCodeForValue" value="false"/>
+        <option value="One-Time" code="0"/>
+        <option value="Recurring" code="1"/>
+        <option value="Usage" code="2"/>
+      </property>
+
+      <property name="active" data-type="boolean" column-name="active" category-resource="categoryInfo" display-name-resource="Active">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-3"/>
+      </property>
+
+      <property name="simpleBundleStructure" item-type="simple-bundle-structure" cascade="delete" column-name="simple_bundle_struct_id"
+                category-resource="categoryInfo" display-name-resource="SimpleBundleStructure">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="false"/>
+      </property>
+
+      <property name="configurableProductStructure" item-type="configurable-product-structure" cascade="delete" column-name="config_prod_struct_id"
+                category-resource="categoryInfo" display-name-resource="ConfigurableProductStructure">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="false"/>
+      </property>
+
+      <property name="promotionStructure" item-type="promotion-structure" cascade="delete" column-name="promotion_struct_id"
+                category-resource="categoryInfo" display-name-resource="PromotionStructure">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_product_translation" type="multi" id-column-name="product_id">
+
+      <property name="translations" data-type="set" component-item-type="translation"
+                column-name="translation_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Translations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_prod_product_line" type="multi" id-column-name="product_id">
+
+      <property name="productLines" data-type="set" component-item-type="product-line"
+                column-name="product_line_id" queryable="true" cascade="update"
+                category-resource="categoryInfo" display-name-resource="ProductLines">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_product_feature" type="multi" id-column-name="product_id">
+
+      <property name="keyFeatures" data-type="set" component-item-type="key-feature"
+                column-name="key_feature_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="KeyFeatures">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_product_literature" type="multi" id-column-name="product_id">
+
+      <property name="literature" data-type="set" component-item-type="literature"
+                column-name="literature_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Literature">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_product_rec_prod" type="multi" id-column-name="product_id">
+
+      <property name="recommendedProducts" data-type="set" component-item-type="recommended-product"
+                column-name="recommended_product_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="RecommendedProducts">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_product_config_attr" type="multi" id-column-name="product_id">
+
+      <property name="configuredAttributes" data-type="set" component-item-type="configured-attribute"
+                column-name="configured_attribute_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="ConfiguredAttributes">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--          media-external       -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="media-external" xml-combine="append">
+
+    <table name="sbl_media_external" type="auxiliary" id-column-name="media_id">
+
+      <property name="mediaSize" data-type="int" column-name="media_size" category-resource="categoryInfo" display-name-resource="MediaSize">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-8"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--          translation          -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="translation" display-name-resource="Translation"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-translation">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_translation" type="primary" id-column-name="translation_id">
+
+      <property name="id" data-type="string" column-name="translation_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="displayName" data-type="string" column-name="display_name" category-resource="categoryInfo" display-name-resource="DisplayName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="languageCode" data-type="string" column-name="language_code" category-resource="categoryInfo" display-name-resource="LanguageCode">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="languageName" data-type="string" column-name="language_name" category-resource="categoryInfo" display-name-resource="LanguageName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--          product-line         -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="product-line" display-name-resource="ProductLine"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-product-line">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_product_line" type="primary" id-column-name="product_line_id">
+
+      <property name="id" data-type="string" column-name="product_line_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="name" data-type="string" column-name="name" category-resource="categoryInfo" display-name-resource="Name">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="description" data-type="string" column-name="description" category-resource="categoryInfo" display-name-resource="Description">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--          key-feature          -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="key-feature" display-name-resource="KeyFeature"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-key-feature">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_key_feature" type="primary" id-column-name="key_feature_id">
+
+      <property name="id" data-type="string" column-name="key_feature_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="feature" data-type="string" column-name="feature" category-resource="categoryInfo" display-name-resource="Feature">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="vendorId" data-type="string" column-name="vendor_id" category-resource="categoryInfo" display-name-resource="VendorId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="vendorLocation" data-type="string" column-name="vendor_location" category-resource="categoryInfo" display-name-resource="VendorLocation">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--          literature           -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="literature" display-name-resource="Literature"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-literature">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_literature" type="primary" id-column-name="literature_id">
+
+      <property name="id" data-type="string" column-name="literature_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="description" data-type="string" column-name="description" category-resource="categoryInfo" display-name-resource="Description">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="literatureFileDate" data-type="timestamp" column-name="literature_file_date" category-resource="categoryInfo" display-name-resource="LiteratureFileDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="literatureFileExt" data-type="string" column-name="literature_file_ext" category-resource="categoryInfo" display-name-resource="LiteratureFileExtension">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="literatureFileName" data-type="string" column-name="literature_file_name" category-resource="categoryInfo" display-name-resource="LiteratureFileName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="literatureFileSize" data-type="int" column-name="literature_file_size" category-resource="categoryInfo" display-name-resource="LiteratureFileSize">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="name" data-type="string" column-name="name" category-resource="categoryInfo" display-name-resource="Name">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="salesToolType" data-type="string" column-name="sales_tool_type" category-resource="categoryInfo" display-name-resource="SalesToolType">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="releaseDate" data-type="timestamp" column-name="release_date" category-resource="categoryInfo" display-name-resource="ReleaseDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="expirationDate" data-type="timestamp" column-name="expiration_date" category-resource="categoryInfo" display-name-resource="ExpirationDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="webDisplay" data-type="string" column-name="web_display" category-resource="categoryInfo" display-name-resource="WebDisplay">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="synopsis" data-type="string" column-name="synopsis" category-resource="categoryInfo" display-name-resource="Synopsis">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--      recommended-product      -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="recommended-product" display-name-resource="RecommendedProduct"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-recommended-product">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_recommended_product" type="primary" id-column-name="recommended_product_id">
+
+      <property name="id" data-type="string" column-name="recommended_product_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="product" item-type="product" column-name="product" category-resource="categoryInfo" display-name-resource="Product">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="type" data-type="string" column-name="type" category-resource="categoryInfo" display-name-resource="Type">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="effectiveFrom" data-type="timestamp" column-name="effective_from" category-resource="categoryInfo" display-name-resource="EffectiveFrom">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="effectiveTo" data-type="timestamp" column-name="effective_to" category-resource="categoryInfo" display-name-resource="EffectiveTo">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--   configured-attribute        -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="configured-attribute" display-name-resource="ConfiguredAttribute"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-configured-attribute">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_configured_attribute" type="primary" id-column-name="configured_attribute_id">
+
+      <property name="id" data-type="string" column-name="configured_attribute_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="attributeDefinition" item-type="attribute" column-name="attribute_definition" category-resource="categoryInfo" display-name-resource="AttributeDefinition">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="origId" data-type="string" column-name="original_id" category-resource="categoryInfo" display-name-resource="OriginalId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="attributeName" data-type="string" column-name="attribute_name" category-resource="categoryInfo" display-name-resource="AttributeName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="displayName" data-type="string" column-name="display_name" category-resource="categoryInfo" display-name-resource="DisplayName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="defaultValue" data-type="string" column-name="default_value" category-resource="categoryInfo" display-name-resource="DefaultValue">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="incrementValue" data-type="string" column-name="increment_value" category-resource="categoryInfo" display-name-resource="IncrementValue">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="maximumValue" data-type="string" column-name="maximum_value" category-resource="categoryInfo" display-name-resource="MaximumValue">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="minimumValue" data-type="string" column-name="minimum_value" category-resource="categoryInfo" display-name-resource="MinimumValue">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="noneValue" data-type="string" column-name="none_value" category-resource="categoryInfo" display-name-resource="NoneValue">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="unitOfMeasure" data-type="string" column-name="unit_of_measure" category-resource="categoryInfo" display-name-resource="UnitOfMeasure">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="hiddenFlag" data-type="boolean" column-name="hidden_flag" category-resource="categoryInfo" display-name-resource="HiddenFlag">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="readOnlyFlag" data-type="boolean" column-name="read_only_flag" category-resource="categoryInfo" display-name-resource="ReadOnlyFlag">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="requiredFlag" data-type="boolean" column-name="required_flag" category-resource="categoryInfo" display-name-resource="RequiredFlag">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="vectorFlag" data-type="boolean" column-name="vector_flag" category-resource="categoryInfo" display-name-resource="VectorFlag">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--           attribute           -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="attribute" display-name-resource="Attribute"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-attribute">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_attribute" type="primary" id-column-name="attribute_id">
+
+      <property name="id" data-type="string" column-name="attribute_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="originalId" data-type="string" column-name="original_id" category-resource="categoryInfo" display-name-resource="OriginalId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="name" data-type="string" column-name="name" category-resource="categoryInfo" display-name-resource="Name">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="description" data-type="string" column-name="description" category-resource="categoryInfo" display-name-resource="Description">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="domainType" data-type="string" column-name="domain_type" category-resource="categoryInfo" display-name-resource="DomainType">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="dataType" data-type="string" column-name="data_type" category-resource="categoryInfo" display-name-resource="DataType">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="maximumValue" data-type="string" column-name="maximum_value" category-resource="categoryInfo" display-name-resource="MaximumValue">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="minimumValue" data-type="string" column-name="minimum_value" category-resource="categoryInfo" display-name-resource="MinimumValue">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="unitOfMeasure" data-type="string" column-name="unit_of_measure" category-resource="categoryInfo" display-name-resource="UnitOfMeasure">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="attributeDefinitionId" data-type="string" column-name="attribute_definition_id" category-resource="categoryInfo" display-name-resource="AttributeDefinitionId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_attribute_translation" type="multi" id-column-name="attribute_id">
+
+      <property name="translations" data-type="set" component-item-type="translation"
+                column-name="translation_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Translations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_attr_attr_value" type="multi" id-column-name="attribute_id">
+
+      <property name="values" data-type="set" component-item-type="attribute-value"
+                column-name="attribute_value_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="AttributeValues">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--      attribute-value          -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="attribute-value" display-name-resource="AttributeValue"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-attribute-value">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_attribute_value" type="primary" id-column-name="attribute_value_id">
+
+      <property name="id" data-type="string" column-name="attribute_value_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="attributeValue" data-type="string" column-name="attribute_value" category-resource="categoryInfo" display-name-resource="AttributeValue">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="sequence" data-type="int" column-name="sequence" category-resource="categoryInfo" display-name-resource="Sequence">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_attr_val_translation" type="multi" id-column-name="attribute_value_id">
+
+      <property name="translations" data-type="set" component-item-type="translation"
+                column-name="translation_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Translations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--   simple-bundle-structure     -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="simple-bundle-structure" display-name-resource="SimpleBundleStructure"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-simple-bundle-structure">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_simple_bundle_structure" type="primary" id-column-name="simple_bundle_struct_id">
+
+      <property name="id" data-type="string" column-name="simple_bundle_struct_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_simple_bundle_struct_rel" type="multi" id-column-name="simple_bundle_struct_id">
+
+      <property name="relationships" data-type="set" component-item-type="relationship"
+                column-name="relationship_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Relationships">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="true"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--////////////////////////////////-->
+  <!-- configurable-product-structure -->
+  <!--////////////////////////////////-->
+
+  <item-descriptor name="configurable-product-structure" display-name-resource="ConfigurableProductStructure"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-configurable-product-structure">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_config_product_structure" type="primary" id-column-name="config_prod_struct_id">
+
+      <property name="id" data-type="string" column-name="config_prod_struct_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_config_prod_media" type="multi" id-column-name="config_prod_struct_id">
+
+      <property name="decorations" data-type="set" component-item-type="media-external"
+				column-name="decoration_id" queryable="true" cascade="delete"
+				category-resource="categoryInfo" display-name-resource="Decorations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_config_prod_struct_rel" type="multi" id-column-name="config_prod_struct_id">
+
+      <property name="relationships" data-type="set" component-item-type="relationship"
+                column-name="relationship_id" queryable="true" cascade="update"
+                category-resource="categoryInfo" display-name-resource="Relationships">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="true"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--////////////////////////////////-->
+  <!--       promotion-structure      -->
+  <!--////////////////////////////////-->
+
+  <item-descriptor name="promotion-structure" display-name-resource="PromotionStructure"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-promotion-structure">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_promotion_structure" type="primary" id-column-name="promotion_struct_id">
+
+      <property name="id" data-type="string" column-name="promotion_struct_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="adjustmentCharge" data-type="string" column-name="adjustment_charge" category-resource="categoryInfo" display-name-resource="AdjustmentCharge">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="adjustmentReason" data-type="string" column-name="adjustment_reason" category-resource="categoryInfo" display-name-resource="AdjustmentReason">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="chargeBasis" data-type="string" column-name="charge_basis" category-resource="categoryInfo" display-name-resource="ChargeBasis">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="commitFlag" data-type="boolean" column-name="commit_flag" category-resource="categoryInfo" display-name-resource="CommitFlag">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="endDate" data-type="timestamp" column-name="end_date" category-resource="categoryInfo" display-name-resource="EndDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="gracePeriod" data-type="int" column-name="grace_period" category-resource="categoryInfo" display-name-resource="GracePeriod">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="gracePeriodUnitOfMeasure" data-type="string" column-name="grace_period_uom" category-resource="categoryInfo" display-name-resource="GracePeriodUnitOfMeasure">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="instance" data-type="string" column-name="instance" category-resource="categoryInfo" display-name-resource="Instance">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="nonRecurringChargeAmount" data-type="double" column-name="nrc_amount" category-resource="categoryInfo" display-name-resource="NonRecurringChargeAmount">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="nonRecurringChargeAmountCurrencyCode" data-type="string" column-name="nrc_currency_code" category-resource="categoryInfo" display-name-resource="NonRecurringChargeAmountCurrencyCode">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="nonRecurringChargeAmountExchangeDate" data-type="timestamp" column-name="nrc_exchange_date" category-resource="categoryInfo" display-name-resource="NonRecurringChargeAmountExchangeDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="nonRecurringChargePlanId" data-type="string" column-name="nrc_plan_id" category-resource="categoryInfo" display-name-resource="NonRecurringChargePlanId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="nonRecurringChargePlanName" data-type="string" column-name="nrc_plan_name" category-resource="categoryInfo" display-name-resource="NonRecurringChargePlanName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="nonRecurringChargeQuantity" data-type="int" column-name="nrc_quantity" category-resource="categoryInfo" display-name-resource="NonRecurringChargeQuantity">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="nonRecurringChargeSchedule" data-type="string" column-name="nrc_schedule" category-resource="categoryInfo" display-name-resource="NonRecurringChargeSchedule">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="nonRecurringChargeScheduleId" data-type="string" column-name="nrc_schedule_id" category-resource="categoryInfo" display-name-resource="NonRecurringChargeScheduleId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="period" data-type="int" column-name="period" category-resource="categoryInfo" display-name-resource="Period">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="periodUnitOfMeasure" data-type="string" column-name="period_uom" category-resource="categoryInfo" display-name-resource="PeriodUnitOfMeasure">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="promotion" item-type="product" column-name="promotion" category-resource="categoryInfo" display-name-resource="Promotion">
+        <attribute name="propertySortPriority" value="-2"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="promotionType" data-type="string" column-name="promotion_type" category-resource="categoryInfo" display-name-resource="PromotionType">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="recurringChargeAdjustmentAmount" data-type="double" column-name="rc_adjustment_amount" category-resource="categoryInfo" display-name-resource="RecurringChargeAdjustmentAmount">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="recurringChargeAdjustmentUM" data-type="string" column-name="rc_adjustment_um" category-resource="categoryInfo" display-name-resource="RecurringChargeAdjustmentUM">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="recurringChargeAmount" data-type="double" column-name="rc_amount" category-resource="categoryInfo" display-name-resource="RecurringChargeAmount">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="recurringChargeAmountCurrencyCode" data-type="string" column-name="rc_amount_curr_code" category-resource="categoryInfo" display-name-resource="RecurringChargeAmountCurrencyCode">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="recurringChargeAmountExchangeDate" data-type="timestamp" column-name="rc_amount_exch_date" category-resource="categoryInfo" display-name-resource="RecurringChargeAmountExchangeDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="recurringChargeSchedule" data-type="string" column-name="rc_schedule" category-resource="categoryInfo" display-name-resource="RecurringChargeSchedule">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="recurringChargeScheduleId" data-type="string" column-name="rc_schedule_id" category-resource="categoryInfo" display-name-resource="RecurringChargeScheduleId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="reason" data-type="string" column-name="reason" category-resource="categoryInfo" display-name-resource="Reason">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="salesProductFlag" data-type="boolean" column-name="sales_product_flag" category-resource="categoryInfo" display-name-resource="SalesProductFlag">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="score" data-type="int" column-name="score" category-resource="categoryInfo" display-name-resource="Score">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="startDate" data-type="timestamp" column-name="start_date" category-resource="categoryInfo" display-name-resource="StartDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="usagePlanId" data-type="string" column-name="usage_plan_id" category-resource="categoryInfo" display-name-resource="UsagePlanId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="usagePlanName" data-type="string" column-name="usage_plan_name" category-resource="categoryInfo" display-name-resource="UsagePlanName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="usageSchedule" data-type="string" column-name="usage_schedule" category-resource="categoryInfo" display-name-resource="UsageSchedule">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="usageScheduleId" data-type="string" column-name="usage_schedule_id" category-resource="categoryInfo" display-name-resource="UsageScheduleId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_promotion_struct_media" type="auxiliary" id-column-name="promotion_struct_id">
+
+      <property name="largeImage" item-type="media-external" column-name="large_image_id" cascade="delete" category-resource="categoryInfo" display-name-resource="LargeImage">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-5"/>
+      </property>
+
+      <property name="thumbnailImage" item-type="media-external" column-name="thumbnail_image_id" cascade="delete" category-resource="categoryInfo" display-name-resource="ThumbnailImage">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-5"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_promotion_struct_rel" type="multi" id-column-name="promotion_struct_id">
+
+      <property name="relationships" data-type="set" component-item-type="promotion-relationship"
+                column-name="relationship_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Relationships">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="true"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_promo_struct_pricing_rule" type="multi" id-column-name="promotion_struct_id">
+
+      <property name="pricingRules" data-type="set" component-item-type="promotion-pricing-rule"
+                column-name="promotion_pricing_rule_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="PromotionPricingRules">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_promotion_struct_msg" type="multi" id-column-name="promotion_struct_id">
+
+      <property name="translations" data-type="set" component-item-type="translation"
+                column-name="translation_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Translations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+
+    <table name="sbl_promotion_struct_term" type="multi" id-column-name="promotion_struct_id">
+
+      <property name="terms" data-type="set" component-item-type="promotion-term"
+                column-name="term_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="PromotionTerms">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_promotion_struct_upgrade" type="multi" id-column-name="promotion_struct_id">
+
+      <property name="upgrades" data-type="set" component-item-type="promotion-upgrade"
+                column-name="upgrade_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="PromotionUpgrades">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+
+    <table name="sbl_promotion_struct_version" type="multi" id-column-name="promotion_struct_id">
+
+      <property name="versions" data-type="set" component-item-type="promotion-version"
+                column-name="version_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="PromotionVersions">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--////////////////////////////////-->
+  <!--       relationship             -->
+  <!--////////////////////////////////-->
+
+  <item-descriptor name="relationship" display-name-resource="Relationship"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-relationship">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_relationship" type="primary" id-column-name="relationship_id">
+
+      <property name="id" data-type="string" column-name="relationship_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="name" data-type="string" column-name="name" category-resource="categoryInfo" display-name-resource="Name">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="displayName" data-type="string" column-name="display_name" category-resource="categoryInfo" display-name-resource="DisplayName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="class" item-type="product-class" column-name="class" category-resource="categoryInfo" display-name-resource="Class">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="className" data-type="string" column-name="class_name" category-resource="categoryInfo" display-name-resource="ClassName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="defaultProduct" item-type="product" column-name="default_product" category-resource="categoryInfo" display-name-resource="DefaultProduct">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-5"/>
+      </property>
+
+      <property name="minimumCardinality" data-type="int" column-name="minimum_cardinality" category-resource="categoryInfo" display-name-resource="MinimumCardinality">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="maximumCardinality" data-type="int" column-name="maximum_cardinality" category-resource="categoryInfo" display-name-resource="MaximumCardinality">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="defaultCardinality" data-type="int" column-name="default_cardinality" category-resource="categoryInfo" display-name-resource="DefaultCardinality">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_relationship_translation" type="multi" id-column-name="relationship_id">
+
+      <property name="translations" data-type="set" component-item-type="translation"
+                column-name="translation_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Translations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_relationship_domains" type="multi" id-column-name="relationship_id">
+
+      <property name="relationshipDomains" data-type="set" component-item-type="relationship-domain"
+                column-name="relationship_domain_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="RelationshipDomains">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_relationship_media" type="multi" id-column-name="relationship_id">
+
+      <property name="relationshipDecorations" data-type="set" component-item-type="media-external"
+                column-name="relationship_decoration_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="RelationshipDecorations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--////////////////////////////////-->
+  <!--       relationship-domain      -->
+  <!--////////////////////////////////-->
+
+  <item-descriptor name="relationship-domain" display-name-resource="RelationshipDomain"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-relationship-domain">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_relationship_domain" type="primary" id-column-name="relationship_domain_id">
+
+      <property name="id" data-type="string" column-name="relationship_domain_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="product" item-type="product" column-name="product" category-resource="categoryInfo" display-name-resource="Product">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="name" data-type="string" column-name="name" category-resource="categoryInfo" display-name-resource="Name">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="displayName" data-type="string" column-name="display_name" category-resource="categoryInfo" display-name-resource="DisplayName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="description" data-type="string" column-name="description" category-resource="categoryInfo" display-name-resource="Description">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--////////////////////////////////////-->
+  <!--      promotion-relationship        -->
+  <!--////////////////////////////////////-->
+
+  <item-descriptor name="promotion-relationship" display-name-resource="PromotionRelationship"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-promotion-relationship">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_promotion_relationship" type="primary" id-column-name="relationship_id">
+
+      <property name="id" data-type="string" column-name="relationship_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="promotion" item-type="product" column-name="promotion" category-resource="categoryInfo" display-name-resource="Promotion">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="product" item-type="product" column-name="product" category-resource="categoryInfo" display-name-resource="Product">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="productLine" item-type="product-line" column-name="product_line" category-resource="categoryInfo" display-name-resource="ProductLine">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="className" data-type="string" column-name="class_name" category-resource="categoryInfo" display-name-resource="ClassName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="classVodNum" data-type="string" column-name="class_version" category-resource="categoryInfo" display-name-resource="ClassVersion">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="minimumQuantity" data-type="int" column-name="minimum_quantity" category-resource="categoryInfo" display-name-resource="MinimumQuantity">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="maximumQuantity" data-type="int" column-name="maximum_quantity" category-resource="categoryInfo" display-name-resource="MaximumQuantity">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="defaultQuantity" data-type="int" column-name="default_quantity" category-resource="categoryInfo" display-name-resource="DefaultQuantity">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="type" data-type="string" column-name="type" category-resource="categoryInfo" display-name-resource="Type">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="integrationId" data-type="string" column-name="integration_id" category-resource="categoryInfo" display-name-resource="IntegrationId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_promo_rel_attr_overrides" type="multi" id-column-name="relationship_id">
+
+      <property name="attributeOverrides" data-type="set" component-item-type="promotion-product-attribute-override"
+                column-name="promo_prod_attr_override_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="AttributeOverrides">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_promo_rel_prod_msg" type="multi" id-column-name="relationship_id">
+
+      <property name="translations" data-type="set" component-item-type="translation"
+                column-name="translation_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Translations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_promo_rel_agg_def_prod" type="multi" id-column-name="relationship_id">
+
+      <property name="aggregateDefaultProducts" data-type="set" component-item-type="promotion-product-aggregates-default"
+                column-name="promo_prod_agg_default_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="AgregateDefaultProducts">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--/////////////////////////////////////////-->
+  <!--  promotion-product-attribute-override   -->
+  <!--/////////////////////////////////////////-->
+
+  <item-descriptor name="promotion-product-attribute-override" display-name-resource="PromotionProductAttributeOverride"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-promotion-product-attribute-override">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_promo_prod_attr_override" type="primary" id-column-name="promo_prod_attr_override_id">
+
+      <property name="id" data-type="string" column-name="promo_prod_attr_override_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="attributeName" data-type="string" column-name="attribute_name" category-resource="categoryInfo" display-name-resource="AttributeName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="condition" data-type="string" column-name="condition_clause" category-resource="categoryInfo" display-name-resource="Condition">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="promotionItemId" data-type="string" column-name="promotion_item_id" category-resource="categoryInfo" display-name-resource="PromotionItemId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_prod_attr_override_values" type="multi" id-column-name="promo_prod_attr_override_id">
+
+      <property name="overrideValues" data-type="set" component-item-type="promotion-product-attribute-override-value"
+                column-name="promo_prod_attr_over_val_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="AttributeOverrideValues">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////////////////////-->
+  <!--  promotion-product-attribute-override-value   -->
+  <!--///////////////////////////////////////////////-->
+
+  <item-descriptor name="promotion-product-attribute-override-value" display-name-resource="PromotionProductAttributeOverrideValue"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-promotion-product-attribute-override-value">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_promo_prod_attr_over_val" type="primary" id-column-name="promo_prod_attr_over_val_id">
+
+      <property name="id" data-type="string" column-name="promo_prod_attr_over_val_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="promotionItemAttributeId" data-type="string" column-name="promo_item_attr_id" category-resource="categoryInfo" display-name-resource="PromotionItemAttributeId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="attributeValue" data-type="string" column-name="attribute_value" category-resource="categoryInfo" display-name-resource="AttributeValue">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--/////////////////////////////////////////-->
+  <!--  promotion-product-aggregates-default   -->
+  <!--/////////////////////////////////////////-->
+
+  <item-descriptor name="promotion-product-aggregates-default" display-name-resource="PromotionProductAggregatesDefault"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-promotion-product-aggregates-default">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_promo_prod_agg_defaults" type="primary" id-column-name="promo_prod_agg_default_id">
+
+      <property name="id" data-type="string" column-name="promo_prod_agg_default_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="defaultCardinality" data-type="int" column-name="default_cardinality" category-resource="categoryInfo" display-name-resource="DefaultCardinality">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="parentClassId" data-type="string" column-name="parent_class_id" category-resource="categoryInfo" display-name-resource="ParentClassId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="product" item-type="product" column-name="product" category-resource="categoryInfo" display-name-resource="Product">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="type" data-type="string" column-name="type" category-resource="categoryInfo" display-name-resource="Type">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////-->
+  <!--  promotion-pricing-rule   -->
+  <!--///////////////////////////-->
+
+  <item-descriptor name="promotion-pricing-rule" display-name-resource="PromotionPricingRule"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-promotion-pricing-rule">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_promo_pricing_rule" type="primary" id-column-name="pricing_rule_id">
+
+      <property name="id" data-type="string" column-name="pricing_rule_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="matrixRuleNumber" data-type="string" column-name="matrix_rule_number" category-resource="categoryInfo" display-name-resource="MatrixRuleNumber">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="adjustmentGroupId" data-type="string" column-name="adjustment_group_id" category-resource="categoryInfo" display-name-resource="AdjustmentGroupId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="adjustmentType" data-type="string" column-name="adjustment_type" category-resource="categoryInfo" display-name-resource="AdjustmentType">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="adjustmentValue" data-type="double" column-name="adjustment_value" category-resource="categoryInfo" display-name-resource="AdjustmentValue">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="className" data-type="string" column-name="class_name" category-resource="categoryInfo" display-name-resource="ClassName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="classVodNum" data-type="string" column-name="class_version" category-resource="categoryInfo" display-name-resource="ClassVersion">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="product" item-type="product" column-name="product" category-resource="categoryInfo" display-name-resource="Product">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="productLine" item-type="product-line" column-name="product_line" category-resource="categoryInfo" display-name-resource="ProductLine">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="promotion" item-type="product" column-name="promotion" category-resource="categoryInfo" display-name-resource="Promotion">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="type" data-type="string" column-name="type" category-resource="categoryInfo" display-name-resource="Type">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="currencyCode" data-type="string" column-name="currency_code" category-resource="categoryInfo" display-name-resource="CurrencyCode">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="exchangeDate" data-type="timestamp" column-name="exchange_date" category-resource="categoryInfo" display-name-resource="ExchangeDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////-->
+  <!--  promotion-term           -->
+  <!--///////////////////////////-->
+
+  <item-descriptor name="promotion-term" display-name-resource="PromotionTerm"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-promotion-term">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_promotion_term" type="primary" id-column-name="term_id">
+
+      <property name="id" data-type="string" column-name="term_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="description" data-type="string" column-name="description" category-resource="categoryInfo" display-name-resource="Description">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="name" data-type="string" column-name="name" category-resource="categoryInfo" display-name-resource="Name">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="section" data-type="string" column-name="section" category-resource="categoryInfo" display-name-resource="Section">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="sequenceNumber" data-type="int" column-name="sequence_number" category-resource="categoryInfo" display-name-resource="SequenceNumber">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="termTemplateId" data-type="string" column-name="term_template_id" category-resource="categoryInfo" display-name-resource="TermTemplateId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="type" data-type="string" column-name="type" category-resource="categoryInfo" display-name-resource="Type">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////-->
+  <!--  promotion-upgrade        -->
+  <!--///////////////////////////-->
+
+  <item-descriptor name="promotion-upgrade" display-name-resource="PromotionUpgrade"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-promotion-upgrade">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_promotion_upgrade" type="primary" id-column-name="upgrade_id">
+
+      <property name="id" data-type="string" column-name="upgrade_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="originalPromotion" item-type="product" column-name="original_promotion" category-resource="categoryInfo" display-name-resource="OriginalPromotion">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="targetPromotion" item-type="product" column-name="target_promotion" category-resource="categoryInfo" display-name-resource="TargetPromotion">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="commitmentStart" data-type="string" column-name="commitment_start" category-resource="categoryInfo" display-name-resource="CommitmentStart">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="duration" data-type="string" column-name="duration" category-resource="categoryInfo" display-name-resource="Duration">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="penaltyAmount" data-type="double" column-name="penalty_amount" category-resource="categoryInfo" display-name-resource="PenaltyAmount">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="penaltyAmountCurrencyCode" data-type="string" column-name="penalty_amount_curr_code" category-resource="categoryInfo" display-name-resource="PenaltyAmountCurrencyCode">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="penaltyAmountExchangeDate" data-type="timestamp" column-name="penalty_amount_exch_date" category-resource="categoryInfo" display-name-resource="PenaltyAmountExchangeDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="proratePlanId" data-type="string" column-name="prorate_plan_id" category-resource="categoryInfo" display-name-resource="ProratePlanId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="proratePlanName" data-type="string" column-name="prorate_plan_name" category-resource="categoryInfo" display-name-resource="ProratePlanName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="relationshipType" data-type="string" column-name="relationship_type" category-resource="categoryInfo" display-name-resource="RelationshipType">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////-->
+  <!--  promotion-version        -->
+  <!--///////////////////////////-->
+
+  <item-descriptor name="promotion-version" display-name-resource="PromotionVersion"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-promotion-version">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_promotion_version" type="primary" id-column-name="version_id">
+
+      <property name="id" data-type="string" column-name="version_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="created" data-type="timestamp" column-name="created" category-resource="categoryInfo" display-name-resource="Created">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="activeFlag" data-type="boolean" column-name="active_flag" category-resource="categoryInfo" display-name-resource="ActiveFlag">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="promotionEndDate" data-type="timestamp" column-name="promotion_end_date" category-resource="categoryInfo" display-name-resource="PromotionEndDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="promotion" item-type="product" column-name="promotion" category-resource="categoryInfo" display-name-resource="Promotion">
+        <attribute name="propertySortPriority" value="-1"/>
+        <attribute name="references" value="true"/>
+      </property>
+
+      <property name="promotionObjectId" data-type="string" column-name="promotion_object_id" category-resource="categoryInfo" display-name-resource="PromotionObjectId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="releasedFlag" data-type="boolean" column-name="released_flag" category-resource="categoryInfo" display-name-resource="ReleasedFlag">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="promotionStartDate" data-type="timestamp" column-name="promotion_start_date" category-resource="categoryInfo" display-name-resource="PromotionStartDate">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="version" data-type="string" column-name="version" category-resource="categoryInfo" display-name-resource="Version">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+
+  <!--///////////////////////////-->
+  <!--       product-class	     -->
+  <!--///////////////////////////-->
+
+  <item-descriptor name="product-class" display-name-resource="ProductClass"
+                   item-cache-size="1000" query-cache-size="1000" id-space-name="siebel-product-class">
+
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+    <attribute name="deployable" value="true"/>
+    <attribute name="categoryBasicsPriority" value="10"/>
+    <attribute name="categoryInfoPriority" value="20"/>
+
+    <table name="sbl_product_class" type="primary" id-column-name="class_id">
+
+      <property name="id" data-type="string" column-name="class_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="name" data-type="string" column-name="name" category-resource="categoryInfo" display-name-resource="Name">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="parentClassId" data-type="string" column-name="parent_class_id" category-resource="categoryInfo" display-name-resource="ParentClassId">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="parentClassName" data-type="string" column-name="parent_class_name" category-resource="categoryInfo" display-name-resource="ParentClassName">
+        <attribute name="uiwritable" value="true"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_prod_class_translation" type="multi" id-column-name="class_id">
+
+      <property name="translations" data-type="set" component-item-type="translation"
+                column-name="translation_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="Translations">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_prod_class_conf_attr" type="multi" id-column-name="class_id">
+
+      <property name="configuredAttributes" data-type="set" component-item-type="configured-attribute"
+                column-name="configured_attribute_id" queryable="true" cascade="update,delete"
+                category-resource="categoryInfo" display-name-resource="ConfiguredAttributes">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+  
+</gsa-template>
+<!-- @version $Id: //product/Siebel/version/11.2/config/atg/commerce/catalog/custom/customCatalog.xml#2 $$Change: 1205396 $-->

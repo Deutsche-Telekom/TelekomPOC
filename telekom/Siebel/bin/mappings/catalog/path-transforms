@@ -1,0 +1,22 @@
+# The Siebel Export Container passed to the ATG import web service may or may not be addressable.
+# For example the address could be UNC format which is not accessible on Linux (without mounting),
+# or the fileshare might need credentials. For our sample solution we are assuming that the fileshare
+# where the Export Files are hosted has been mounted or mapped to a local directory/drive prior.
+# This file then defines where the fileshare has been mapped/mounted to.
+#
+# example transforms
+#
+# \\SomeServer\TestShare=Z:\TestShare
+# \\SomeServer2\TestShare2=/local/test
+#
+# if the Mapper received a Siebel Import File Location of \\SomeServer\TestShare\Jobs\ABC the path
+# will be transformed to Z:\TestShare\Jobs\ABC
+#
+# if the Mapper received a Siebel Import File Location of \\SomeServer2\TestShare2/Jobs/XYZ the
+# path will be transformed to /local/test/Jobs/XYZ
+#
+#
+# This solution is certainly not the only way to get around the issue but was implemented like this
+# to keep it reasonably simple and configurable. You may need to change the way SiebelXmlTools reads
+# in export files depending on your own circumstances. 
+#

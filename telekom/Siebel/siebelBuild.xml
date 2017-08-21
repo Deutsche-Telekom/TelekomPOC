@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Siebel" default="all" basedir=".">
+
+  <!-- Import global defaults and settings and common tasks -->
+  <import file="${basedir}/buildtools/common.xml"/>
+    
+  <!-- To keep track of alters made to the schemas, place them in the sql.install.dir
+       and name them with alter_core_xxx.sql and alter_catalog_xxx.sql. The following
+       path declaration will pick them up, and they will be executed on the appropriate
+       schema. -->
+  <path id="alter.core.schema.files">
+    <fileset dir="${sql.alter.dir}">
+      <include name="alter_core*"/>
+    </fileset>
+  </path>
+
+  <path id="alter.catalog.schema.files">
+    <fileset dir="${sql.alter.dir}">
+      <include name="alter_catalog*"/>
+    </fileset>
+  </path>
+
+  <!-- ======================================= -->
+  <!-- Task Definitions                        -->
+  <!-- ======================================= -->
+	<!-- Web Serice import task - generates Java classes based on WSDL files.
+	     This is a JAX (Java API for XML) resource.
+	 -->
+  <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+    <classpath refid="classpath"/>
+  	<classpath path="${dyn.classpath}" />
+  </taskdef>
+	
+  <!-- ======================================= -->
+
+  <!-- Define the all task.  We do this here because we need to call tasks
+       imported in both the common.xml and deploy.xml files.  This may seem a
+       bit odd but it feels better to segregate common tasks from j2ee
+       deployment tasks and add this extra bit of layering than have one
+       massive common task file which has tons of targets, making it difficult
+       to read.  You get my point separating the tasks in multiple imports
+       makes this complex environment easier to get around.  -->
+  <target name="all"
+          depends="clean,build,install"
+          description="Cleans, builds, and installs the project.">
+  </target>
+
+  <!-- Does what 'all' does.
+       Also builds and install the web services for the "import from Siebel"
+       functionality.
+    -->
+  <target name="all-with-ws"
+          depends="clean,build,install,make-install-ws"
+          description="Cleans, builds, and installs the project.">
+  </target>
+
+  <!--
+    Compiles and jars the code.
+    Also copies the WSDL files into the classes dir to the JAR'd.
+  -->
+  <target name="build"
+          depends="set-dynamo-classpath,wsdl2java,compile,copy-wsdl,-jar,-copylibs,build-versioned,build-publishingagent,build-fulfillment"
+          description="Compiles and jars the code.">
+  </target>
+
+  <!-- Performs all requisite tasks for installing the module.
+   -->
+  <target name="install"
+          depends="-init, -createdirs, -installcore, -install-web-app,install-versioned,install-publishingagent,install-fulfillment"
+          description="Installs the codebase to the install directory.">
+  </target>
+
+  <!--
+    Creates and installs the Siebel web services.
+   -->
+  <target name="make-install-ws"
+    depends="create-ws,install-ws"
+    description="" >
+  </target>
+  
+  <!--
+    Creates the Siebel web service.
+  -->
+  <target name="create-ws">
+    <antcall target="copy-siebel-ws-script" />
+    <exec executable="/bin/sh" dir="${dynamo.home}" failonerror="yes"
+      os="Linux:SunOS:Mac OS X">
+      <arg line="bin/generateSiebelWebService" />
+    </exec>
+    <exec executable="cmd" dir="${dynamo.home}" failonerror="yes"
+      osfamily="windows">
+      <arg line="/c bin\generateSiebelWebService.bat" />
+    </exec>
+    
+    <move todir="${basedir}/SiebelWS/j2ee-apps" failonerror="yes">
+      <fileset dir="${dynamo.home}" includes="SiebelWS.ear" />
+    </move>
+  </target>
+
+  <!--
+    Copies the web service generation scripts to $DYNAMO_HOME/bin
+    so they have access to other ATG scripts.
+  -->
+  <target name="copy-siebel-ws-script">
+    <copy todir="${dynamo.home}/bin" failonerror="yes">
+      <fileset dir="${basedir}/wsGenScripts/" includes="generate*" />
+    </copy>
+  </target>
+
+  <!--
+    Installs the web services by copying them to the module directory.
+  -->
+  <target name="install-ws" >
+    <!-- Copy the web service directory -->
+    <copy todir="${install.dir}/SiebelWS">
+      <fileset dir="${basedir}/SiebelWS/"/>
+    </copy>
+  </target>
+  
+  <!--
+    Copy WSDL files into classes dir
+   -->
+  <target name="copy-wsdl">
+    <copy todir="${classes.dir}/META-INF/wsdl">
+      <fileset dir="${src.dir}/META-INF/wsdl"/>
+    </copy>
+  </target>
+
+  <!--
+    Creates Java source from the WSDL files provided.
+    Calls another task to pass in the right classpath.
+  -->
+  <target name="wsdl2java">
+    <antcall target="_wsdl2java" />
+  </target>
+  
+  <!--
+    Creates Java source from the WSDL files provided.
+    This must be called from an antcall in order to get the right classpath.
+  -->
+  <target name="_wsdl2java" depends="set-dynamo-classpath">
+    <mkdir dir="${gen-src.dir}" />
+    <mkdir dir="${classes.dir}" />
+  	<property name="quiet" value="true"/> 
+    <wsimport keep="true"   quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}" 
+      wsdl="${wsdl.dir}/ABOWebService.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/ABOWebService.wsdl"/>
+    <wsimport keep="true"   quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}" 
+      wsdl="${wsdl.dir}/SelfServiceAccount.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/SelfServiceAccount.wsdl"/>
+    <wsimport  keep="true"  quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/SelfServiceAddress.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/SelfServiceAddress.wsdl"/>
+    <wsimport  keep="true"  quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/SelfServiceContact.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/SelfServiceContact.wsdl"/>
+    <wsimport  keep="true"  quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/SelfServiceUser.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/SelfServiceUser.wsdl"/>
+    <wsimport  keep="true" quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/ProductConfigurator.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/ProductConfigurator.wsdl"/>
+    <wsimport  keep="true" quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/PromotionWebService.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/PromotionWebService.wsdl"/>
+    <wsimport  keep="true" quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/CalculatePriceWS.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/CalculatePriceWS.wsdl"/>
+	<wsimport  keep="true" quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/SelfServiceAccountBillingProfile.wsdl"
+	  binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/SelfServiceAccountBillingProfile.wsdl"/>
+    <wsimport  keep="true" quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/QuotingWebService.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/QuotingWebService.wsdl"/>
+    <wsimport  keep="true" quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/OrderDetailWebService.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/OrderDetailWebService.wsdl"/>		
+    <wsimport  keep="true" quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/OrderWebService.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/OrderWebService.wsdl"/>	
+    <wsimport  keep="true"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/AssetManagement.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/AssetManagement.wsdl"/>
+    <wsimport  keep="true"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/AssetManagementComplex.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/AssetManagementComplex.wsdl"/>
+	<wsimport keep="true" quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/QuoteEligibilityCompatibility.wsdl"
+	  binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/QuoteEligibilityCompatibility.wsdl"/>
+    <wsimport  keep="true"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/CatalogWebService.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/CatalogWebService.wsdl"/>	  
+	<wsimport keep="true" quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/QuoteWebService.wsdl"
+      binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/QuoteWebService.wsdl"/>
+	<wsimport keep="true" quiet="${quiet}"
+      sourcedestdir="${gen-src.dir}" destdir="${classes.dir}"
+      wsdl="${wsdl.dir}/SessionAccessWS.wsdl"
+	  binding="${wsdl.dir}/binding.xml"
+      wsdllocation="http://localhost/wsdl/SessionAccessWS.wsdl"/>
+  </target>
+
+	<!-- Installs the JSP files to the target WAR directory.
+   -->
+  <target name="install-jsps" description="Copy JSPs">
+    <filter token="*.js*" value="${install.dir}/j2ee-apps/Siebel/siebel.war" />
+    <copy todir="${install.dir}/j2ee-apps/Siebel/siebel.war" preservelastmodified="true" filtering="true" encoding="ISO-8859-1">
+     <fileset dir="${basedir}/j2ee/siebel.war" />
+    </copy>
+  </target>
+
+  <target name="-install-web-app" description="Installs all module's web applications into installation directory.">
+    <!-- Copy config files only and apply filtering to them. -->
+    <copy todir="${install.j2ee.dir}/${module.name}">
+      <fileset dir="${j2ee.dir}"/>
+    </copy>
+    <!-- Copy all necessary taglibs into each target WEB-INF directory. -->
+    <foreach param="target.webinf.dir" target="-copy-taglibs">
+      <path>
+        <dirset dir="${install.j2ee.dir}/${module.name}">
+          <include name="**/WEB-INF"/>
+        </dirset>
+      </path>
+    </foreach>
+  </target>
+  
+  <target name="build-versioned" 
+	      depends="set-dynamo-classpath"
+		  description="Builds the Java code in the Versioned sub-module">
+  
+    <mkdir dir="${classes.versioned.dir}" />
+	
+    <echo message="DYNAMO CLASSPATH = ${dyn.classpath}"/>
+    <property name="prop.classpath" refid="classpath" />
+    <echo message="CLASSPATH = ${prop.classpath}"/>
+    
+    <javac srcdir="${src.versioned.dir}"
+           destdir="${classes.versioned.dir}"
+           debug="true"
+           deprecation="false"
+           optimize="false"
+           source="1.5"
+           target="1.5"
+           includeantruntime="false"
+           verbose="${javac.verbose.bool}">
+
+      <classpath refid="classpath"/>
+      <classpath path="${dyn.classpath}"/>
+      <classpath path="${classes.dir}"/>
+
+      <include name="**/*.java" />
+	</javac>
+
+    <!-- create classes.jar -->
+    <mkdir dir="${build.versioned.dir}/lib" />
+    <jar jarfile="${build.versioned.dir}/lib/classes.jar"
+         basedir="${classes.versioned.dir}/"
+         includes="**"/>
+
+    <!-- copy config files -->
+    <mkdir dir="${build.tempconfig.versioned.dir}" />
+    <copy todir="${build.tempconfig.versioned.dir}" filtering="true">
+      <fileset dir="${config.versioned.dir}" />
+    </copy>
+	
+  </target>
+  
+  <target name="install-versioned" description="Installs the Versioned sub-module">
+    <!-- copy classes.jar -->
+    <mkdir dir="${build.versioned.dir}/lib"/>
+    <copy file="${build.versioned.dir}/lib/classes.jar" todir="${install.versioned.dir}/lib"/>
+    <!-- copy config files -->
+    <mkdir dir="${install.versioned.dir}/config" />
+    <copy todir="${install.versioned.dir}/config">
+      <fileset dir="${build.tempconfig.versioned.dir}" />
+    </copy>
+    <!-- Copy manifest file -->
+    <mkdir dir="${install.versioned.dir}/META-INF" />
+	<copy file="${versioned.dir}/META-INF/MANIFEST.MF" todir="${install.versioned.dir}/META-INF"/>
+  </target>
+  
+   <!-- fulfillment -->
+  
+  <target name="build-fulfillment" 
+	      depends="set-dynamo-classpath"
+		  description="Builds the Java code in the Fulfillment sub-module">
+  
+    <mkdir dir="${classes.fulfillment.dir}" />
+	
+    <echo message="DYNAMO CLASSPATH = ${dyn.classpath}"/>
+    <property name="prop.classpath" refid="classpath" />
+    <echo message="CLASSPATH = ${prop.classpath}"/>
+    
+    <javac srcdir="${src.fulfillment.dir}"
+           destdir="${classes.fulfillment.dir}"
+           debug="true"
+           deprecation="false"
+           optimize="false"
+           source="1.5"
+           target="1.5"
+           includeantruntime="false"
+           verbose="${javac.verbose.bool}">
+
+      <classpath refid="classpath"/>
+      <classpath path="${dyn.classpath}"/>
+      <classpath path="${classes.dir}"/>
+
+      <include name="**/*.java" />
+	</javac>
+
+    <!-- create classes.jar -->
+    <mkdir dir="${build.fulfillment.dir}/lib" />
+    <jar jarfile="${build.fulfillment.dir}/lib/classes.jar"
+         basedir="${classes.fulfillment.dir}/"
+         includes="**"/>
+
+    <!-- copy config files -->
+    <mkdir dir="${build.tempconfig.fulfillment.dir}" />
+    <copy todir="${build.tempconfig.fulfillment.dir}" filtering="true">
+      <fileset dir="${config.fulfillment.dir}" />
+    </copy>
+	
+  </target>
+  
+  <target name="install-fulfillment" description="Installs the Fulfillment sub-module">
+    <!-- copy classes.jar -->
+    <mkdir dir="${build.fulfillment.dir}/lib"/>
+    <copy file="${build.fulfillment.dir}/lib/classes.jar" todir="${install.fulfillment.dir}/lib"/>
+    <!-- copy config files -->
+    <mkdir dir="${install.fulfillment.dir}/config" />
+    <copy todir="${install.fulfillment.dir}/config">
+      <fileset dir="${build.tempconfig.fulfillment.dir}" />
+    </copy>
+    <!-- Copy manifest file -->
+    <mkdir dir="${install.fulfillment.dir}/META-INF" />
+	<copy file="${fulfillment.dir}/META-INF/MANIFEST.MF" todir="${install.fulfillment.dir}/META-INF"/>
+  </target> 
+  
+  <target name="build-publishingagent" 
+	      depends="set-dynamo-classpath"
+		  description="Builds the publishingagent sub-module">
+
+    <mkdir dir="${classes.publishingagent.dir}" />
+	
+    <echo message="DYNAMO CLASSPATH = ${dyn.classpath}"/>
+    <property name="prop.classpath" refid="classpath" />
+    <echo message="CLASSPATH = ${prop.classpath}"/>
+    
+    <javac srcdir="${src.publishingagent.dir}"
+           destdir="${classes.publishingagent.dir}"
+           debug="true"
+           deprecation="false"
+           optimize="false"
+           source="1.5"
+           target="1.5"
+           includeantruntime="false"
+           verbose="${javac.verbose.bool}">
+
+      <classpath refid="classpath"/>
+      <classpath path="${dyn.classpath}"/>
+      <classpath path="${classes.dir}"/>
+
+      <include name="**/*.java" />
+	</javac>
+
+    <!-- create classes.jar -->
+    <mkdir dir="${build.publishingagent.dir}/lib" />
+    <jar jarfile="${build.publishingagent.dir}/lib/classes.jar"
+         basedir="${classes.publishingagent.dir}/"
+         includes="**"/>
+		 
+    <!-- copy config files -->
+    <mkdir dir="${build.tempconfig.publishingagent.dir}" />
+    <copy todir="${build.tempconfig.publishingagent.dir}" filtering="true">
+      <fileset dir="${config.publishingagent.dir}" />
+    </copy>
+  </target>	
+  
+  <target name="install-publishingagent" description="Installs the PublishingAgent sub-module">
+    <!-- copy classes.jar -->
+    <mkdir dir="${build.publishingagent.dir}/lib"/>
+    <copy file="${build.publishingagent.dir}/lib/classes.jar" todir="${install.publishingagent.dir}/lib"/>
+	<!-- copy config files -->
+    <mkdir dir="${install.publishingagent.dir}/config" />
+    <copy todir="${install.publishingagent.dir}/config">
+      <fileset dir="${build.tempconfig.publishingagent.dir}" />
+    </copy>
+    <!-- Copy manifest file -->
+    <mkdir dir="${install.publishingagent.dir}/META-INF" />
+	<copy file="${publishingagent.dir}/META-INF/MANIFEST.MF" todir="${install.publishingagent.dir}/META-INF"/>
+  </target>
+	
+
+</project>
+<!-- @version $Id: //product/Siebel/version/11.2/siebelBuild.xml#3 $$Change: 1221406 $-->

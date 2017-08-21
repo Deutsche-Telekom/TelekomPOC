@@ -1,0 +1,45 @@
+#orderhistory {
+  width:90%;
+}
+
+#itemdetails {
+  width:75%
+}
+
+#itemdetails td {
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+td.vieworderbutton {
+  vertical-align:middle;
+}
+
+#orderpagination {
+  border:0;
+  width:90%;
+  padding: 0px;
+  background-color:#FFFFFF;
+}
+
+#spacercell {
+  width:98%
+}
+
+#orderdetails {
+  width:80%;
+}
+
+#orderdetails td {
+  padding-top:0px;
+  padding-bottom:0px;
+
+}
+
+th.spacerrow {
+  height:5px;
+  padding-top:0px;
+  padding-bottom:0px;
+  font: 1px arial,sans-serif;
+}
+

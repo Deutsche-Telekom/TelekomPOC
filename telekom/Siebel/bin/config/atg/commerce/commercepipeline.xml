@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE pipelinemanager PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Pipeline Manager//EN"
+        "http://www.atg.com/dtds/pipelinemanager/pipelinemanager_1.0.dtd">
+<pipelinemanager>
+  
+  <pipelinechain name="updateOrder" transaction="TX_REQUIRED" headlink="updateOrderObject" xml-combine="append">
+    <pipelinelink name="updateCommerceItemObjects" transaction="TX_MANDATORY" xml-combine="replace">
+      <processor jndi="/atg/commerce/order/processor/SaveCommerceItemObjects"/>
+      <transition returnvalue="1" link="updateAttributeObjects"/>
+    </pipelinelink>
+    <pipelinelink name="updateAttributeObjects" transaction="TX_MANDATORY">
+      <processor jndi="/atg/siebel/order/processor/SaveAttributeObjects"/>
+      <transition returnvalue="1" link="updateShippingGroupObjects"/>
+    </pipelinelink>
+  </pipelinechain>
+  
+  <pipelinechain name="refreshOrder" transaction="TX_REQUIRED" headlink="loadOrderObjectForRefresh" xml-combine="append">
+    <pipelinelink name="loadCommerceItemObjects" transaction="TX_MANDATORY" xml-combine="replace">
+      <processor jndi="/atg/commerce/order/processor/LoadCommerceItemObjects"/>
+      <transition returnvalue="1" link="loadAttributeObjects"/>
+    </pipelinelink>
+    <pipelinelink name="loadAttributeObjects" transaction="TX_MANDATORY">
+      <processor jndi="/atg/siebel/order/processor/LoadAttributeObjects"/>
+      <transition returnvalue="1" link="loadShippingGroupObjects"/>
+    </pipelinelink>
+  </pipelinechain>
+
+</pipelinemanager>
+<!-- @version $Id: //product/Siebel/version/11.2/config/atg/commerce/commercepipeline.xml#1 $$Change: 1186180 $-->

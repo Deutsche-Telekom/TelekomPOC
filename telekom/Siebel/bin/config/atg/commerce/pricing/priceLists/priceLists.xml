@@ -1,0 +1,166 @@
+<gsa-template xml-combine="append">
+
+  <header xml-combine="replace">
+    <name>ATG Price Lists</name>
+    <author>Patrick Mc Erlean</author>
+    <version>$Revision: #2 $</version>
+  </header>
+
+  <!--///////////////////////////////-->
+  <!--          price                -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="price" xml-combine="append">
+
+    <table name="dcs_price">
+	
+      <property name="id" data-type="string" column-name="price_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+	  
+    </table>
+	
+    <table name="sbl_price" type="auxiliary" id-column-name="price_id">
+
+      <property name="description" data-type="string" column-name="description" category-resource="categoryInfo" display-name-resource="Description">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+      <property name="priceListCurrencyCode" data-type="string" column-name="price_list_currency_code" category-resource="categoryInfo" display-name-resource="PriceListCurrencyCode">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+      <property name="referencePrice" data-type="double" column-name="reference_price" category-resource="categoryInfo" display-name-resource="ReferencePrice">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+      <property name="integrationId" data-type="string" column-name="integration_id" category-resource="categoryInfo" display-name-resource="IntegrationId">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+    </table>
+
+
+  </item-descriptor>
+  
+  <!--///////////////////////////////-->
+  <!--          complexPrice         -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="complexPrice" xml-combine="append">
+
+    <table name="dcs_complex_price">
+
+      <property name="id" data-type="string" column-name="complex_price_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>  
+  
+    <table name="sbl_complex_price" type="auxiliary" id-column-name="complex_price_id">
+
+      <property name="name" data-type="string" column-name="name" category-resource="categoryInfo" display-name-resource="Name">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+      <property name="description" data-type="string" column-name="description" category-resource="categoryInfo" display-name-resource="Description">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+      <property name="startDate" data-type="timestamp" column-name="start_date" category-resource="categoryInfo" display-name-resource="StartDate">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="2"/>
+      </property>
+
+      <property name="endDate" data-type="timestamp" column-name="end_date" category-resource="categoryInfo" display-name-resource="EndDate">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="2"/>
+      </property>
+
+      <property name="exchangeDate" data-type="timestamp" column-name="exchange_date" category-resource="categoryInfo" display-name-resource="ExchangeDate">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="2"/>
+      </property>
+
+      <property name="discountMethod" data-type="string" column-name="discount_method" category-resource="categoryInfo" display-name-resource="DiscountMethod">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="2"/>
+      </property>
+
+      <property name="currencyCode" data-type="string" column-name="currency_code" category-resource="categoryInfo" display-name-resource="CurrencyCode">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--          priceLevel         -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="priceLevel" xml-combine="append">
+
+    <table name="dcs_price_level">
+
+      <property name="id" data-type="string" column-name="price_level_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+  
+    <table name="sbl_price_level" type="auxiliary" id-column-name="price_level_id">
+
+      <property name="name" data-type="string" column-name="name" category-resource="categoryInfo" display-name-resource="Name">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+      <property name="description" data-type="string" column-name="description" category-resource="categoryInfo" display-name-resource="Description">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+      <property name="maximumQuantity" data-type="long" column-name="maximum_quantity" category-resource="categoryInfo" display-name-resource="MaximumQuantity">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="2"/>
+      </property>
+
+      <property name="adjustmentType" data-type="string" column-name="adjustment_type" category-resource="categoryInfo" display-name-resource="AdjustmentType">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="1"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+  
+  <!--///////////////////////////////-->
+  <!--       genericFolder         -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="genericFolder" xml-combine="append">
+
+    <table name="dcs_gen_fol_pl">
+
+      <property name="id" data-type="string" column-name="folder_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="resourceBundle" value="atg.siebel.resources.SiebelCatalogResources"/>
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+    </table>
+  
+  </item-descriptor>
+  
+</gsa-template>
+<!-- @version $Id: //product/Siebel/version/11.2/config/atg/commerce/pricing/priceLists/priceLists.xml#2 $$Change: 1201150 $-->

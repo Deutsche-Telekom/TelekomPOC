@@ -1,0 +1,2254 @@
+<siebel-atg-mappings>
+ 
+     <list-of-entity-mappings>
+	 
+	    <entity-mapping>
+            <siebel-entity>Catalog</siebel-entity>
+            <atg-entity>catalog</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/CatalogMapper</mapping-component>
+                </field-mapping>
+				
+				<field-mapping>
+                    <siebel-field>Active</siebel-field>
+                    <atg-property>active</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping> 
+				
+				<field-mapping>
+                    <siebel-field>CatalogType</siebel-field>
+                    <atg-property>catalogType</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping> 
+
+				<field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping> 
+
+				<field-mapping>
+                    <siebel-field>EffectiveEndDate</siebel-field>
+                    <atg-property>endDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>EffectiveStartDate</siebel-field>
+                    <atg-property>startDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>displayName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>PrivateFlag</siebel-field>
+                    <atg-property>privateFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>SequenceNumber</siebel-field>
+                    <atg-property>sequenceNumber</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+				
+				<field-mapping>
+                    <siebel-field>ListOfCategory</siebel-field>
+                    <atg-property>rootCategories</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/CategoryListMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ListOfMessage</siebel-field>
+                    <atg-property>translations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MessagesMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ThumbnImageFileExt,ThumbnImageFileName</siebel-field>
+                    <atg-property>thumbnailImage</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MediaMapper</mapping-component>
+                </field-mapping>
+				
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+        <entity-mapping>
+            <siebel-entity>Message</siebel-entity>
+            <atg-entity>translation</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+				<!-- Unfortunately we cannot use the Id for all messages because there are
+				DB errors encountered when the parent entity does not have a Siebel Id
+				(eg AttributeLOVValue) when trying to update entities. This means we need to
+				check whether there is a generated id and if so use that otherwise just use
+				the Id. 'GeneratedId' does not come from the Siebel export but is generated
+				by code and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>GeneratedId,Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/TranslationIdMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>displayName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>LanguageCode</siebel-field>
+                    <atg-property>languageCode</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>LanguageName</siebel-field>
+                    <atg-property>languageName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+	
+        <entity-mapping>
+            <siebel-entity>Category</siebel-entity>
+            <atg-entity>category</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+				
+				<field-mapping>
+                    <siebel-field>ActiveFlag</siebel-field>
+                    <atg-property>activeflag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>CatalogId</siebel-field>
+                    <atg-property>computedCatalogs</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>Count</siebel-field>
+                    <atg-property>count</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>DisplayName,Description</siebel-field>
+                    <atg-property>longDescription</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/LongDescriptionMapper</mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>DisplayName,Name</siebel-field>
+                    <atg-property>displayName</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/CategoryDisplayNameMapper</mapping-component>
+                </field-mapping>
+				
+				<field-mapping>
+                    <siebel-field>EffectiveEndDate</siebel-field>
+                    <atg-property>endDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>EffectiveStartDate</siebel-field>
+                    <atg-property>startDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>				
+
+				<field-mapping>
+                    <siebel-field>ParentCategoryId</siebel-field>
+                    <atg-property>parentCategoryId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>PrivateFlag</siebel-field>
+                    <atg-property>privateflag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping> 
+
+				<field-mapping>
+                    <siebel-field>RootCategoryFlag</siebel-field>
+                    <atg-property>rootcategoryflag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping> 
+
+				<field-mapping>
+                    <siebel-field>SequenceNumber</siebel-field>
+                    <atg-property>sequencenumber</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>Usage</siebel-field>
+                    <atg-property>usage</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+				
+				<field-mapping>
+                    <siebel-field>ListOfCategoryProduct</siebel-field>
+                    <atg-property>fixedChildProducts</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ProductListMapper</mapping-component>
+                </field-mapping>
+ 
+				<!-- Description is dummy field since cant have two identical siebel fields
+				in the same entity mapping and ListOfCategoryProduct needs to be mapped to both
+				fixedChildProducts and categoryProducts (and cant have 2 atg properties in the
+				<atg-property> tag). -->
+				<field-mapping>
+                    <siebel-field>ListOfCategoryProduct,Description</siebel-field>
+                    <atg-property>categoryProducts</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/CategoryProductMapper</mapping-component>
+                </field-mapping>
+ 
+                <field-mapping>
+                    <siebel-field>ThumbnImageFileExt,ThumbnImageFileName</siebel-field>
+                    <atg-property>thumbnailImage</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MediaMapper</mapping-component>
+                </field-mapping>
+												
+				<field-mapping>
+                    <siebel-field>Category</siebel-field>
+                    <atg-property>fixedChildCategories</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ChildItemMapper</mapping-component>
+                </field-mapping>
+ 
+                <field-mapping>
+                    <siebel-field>ListOfMessage</siebel-field>
+                    <atg-property>translations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MessagesMapper</mapping-component>
+                </field-mapping>
+				
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+				
+        <entity-mapping>
+            <siebel-entity>CategoryProduct</siebel-entity>
+            <atg-entity>category-product</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+				<!-- 'GeneratedId' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>GeneratedId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>product</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>SequenceNumber</siebel-field>
+                    <atg-property>sequenceNumber</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ActiveFlag</siebel-field>
+                    <atg-property>activeFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+		<entity-mapping>
+            <siebel-entity>Product</siebel-entity>
+            <atg-entity>product</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProductConfigurationModelId</siebel-field>
+                    <atg-property>productConfigurationModelId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>InclusiveEligibilityFlag</siebel-field>
+                    <atg-property>inclusiveEligibilityFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>EffectiveFrom</siebel-field>
+                    <atg-property>startDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>EffectiveTo</siebel-field>
+                    <atg-property>endDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ImageFileExt,ImageFileName</siebel-field>
+                    <atg-property>largeImage</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MediaMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>IntegrationId</siebel-field>
+                    <atg-property>integrationId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+								
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>displayName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Orderable</siebel-field>
+                    <atg-property>orderable</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Part</siebel-field>
+                    <atg-property>part</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PriceListId</siebel-field>
+                    <atg-property>priceListId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>ProductDefTypeCode</siebel-field>
+                    <atg-property>productDefTypeCode</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>ProductTypeCode</siebel-field>
+                    <atg-property>productTypeCode</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ProductTypeCodeMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ThumbnImageFileExt,ThumbnImageFileName</siebel-field>
+                    <atg-property>thumbnailImage</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MediaMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>UnitofMeasure</siebel-field>
+                    <atg-property>unitOfMeasure</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>VendorIntegrationId</siebel-field>
+                    <atg-property>vendorIntegrationId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ClassId</siebel-field>
+                    <atg-property>class</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PriceType</siebel-field>
+                    <atg-property>priceType</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+				
+				<field-mapping>
+                    <siebel-field>ListOfKeyFeature</siebel-field>
+                    <atg-property>keyFeatures</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/KeyFeatureListMapper</mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>ListOfLiterature</siebel-field>
+                    <atg-property>literature</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/LiteratureListMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProductTypeCode,ProductDefTypeCode,ListOfConfiguredAttribute</siebel-field>
+                    <atg-property>siebelType</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ProductTypeMapper</mapping-component>
+                </field-mapping>				
+				
+                <field-mapping>
+                    <siebel-field>ObjectSimpleBundle</siebel-field>
+                    <atg-property>simpleBundleStructure</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ObjectSimpleBundleMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ObjectConfigurableProduct</siebel-field>
+                    <atg-property>configurableProductStructure</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ObjectConfigurableProductMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ObjectPromotion</siebel-field>
+                    <atg-property>promotionStructure</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ObjectPromotionMapper</mapping-component>
+                </field-mapping>
+				
+				<!-- Need to generate/update a SKU  -->
+                <field-mapping>
+                    <siebel-field>Id,Name</siebel-field>
+                    <atg-property>childSKUs</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ProductToSKUMapper</mapping-component>
+                </field-mapping>				
+
+				<field-mapping>
+                    <siebel-field>Active</siebel-field>
+                    <atg-property>active</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfMessage</siebel-field>
+                    <atg-property>translations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MessagesMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ListOfProductLine</siebel-field>
+                    <atg-property>productLines</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ProductLineMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfRecommendedProduct</siebel-field>
+                    <atg-property>recommendedProducts</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/RecommendedProductListMapper</mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>ListOfConfiguredAttribute</siebel-field>
+                    <atg-property>configuredAttributes</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ProductConfAttributeListMapper</mapping-component>
+                </field-mapping>
+ 				
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+ 
+  	    <entity-mapping>
+            <siebel-entity>ProductLine</siebel-entity>
+            <atg-entity>product-line</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+  	    <entity-mapping>
+            <siebel-entity>KeyFeature</siebel-entity>
+            <atg-entity>key-feature</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Feature</siebel-field>
+                    <atg-property>feature</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Vendor</siebel-field>
+                    <atg-property>vendorId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>VendorLocation</siebel-field>
+                    <atg-property>vendorLocation</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+  	    <entity-mapping>
+            <siebel-entity>Literature</siebel-entity>
+            <atg-entity>literature</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>LitFileDate</siebel-field>
+                    <atg-property>literatureFileDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>LitFileExt</siebel-field>
+                    <atg-property>literatureFileExt</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>LitFileName</siebel-field>
+                    <atg-property>literatureFileName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>LitFileSize</siebel-field>
+                    <atg-property>literatureFileSize</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>SalesToolType</siebel-field>
+                    <atg-property>salesToolType</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ReleaseDate</siebel-field>
+                    <atg-property>releaseDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ExpirationDate</siebel-field>
+                    <atg-property>expirationDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>WebDisplay</siebel-field>
+                    <atg-property>webDisplay</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Synopsis</siebel-field>
+                    <atg-property>synopsis</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+		
+ 	    <entity-mapping>
+            <siebel-entity>RecommendedProduct</siebel-entity>
+            <atg-entity>recommended-product</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProductId</siebel-field>
+                    <atg-property>product</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>EffectiveTo</siebel-field>
+                    <atg-property>effectiveTo</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>EffectiveFrom</siebel-field>
+                    <atg-property>effectiveFrom</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Type</siebel-field>
+                    <atg-property>type</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+		
+  	    <entity-mapping>
+            <siebel-entity>ConfiguredAttribute</siebel-entity>
+            <atg-entity>configured-attribute</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+
+				<!-- 'GeneratedId' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+               <field-mapping>
+                    <siebel-field>GeneratedId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+               </field-mapping>
+			
+               <field-mapping>
+                    <siebel-field>OrigId</siebel-field>
+                    <atg-property>origId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AttributeDefinitionId</siebel-field>
+                    <atg-property>attributeDefinition</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AttributeName</siebel-field>
+                    <atg-property>attributeName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>DisplayName</siebel-field>
+                    <atg-property>displayName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>DefaultValue</siebel-field>
+                    <atg-property>defaultValue</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>IncrementValue</siebel-field>
+                    <atg-property>incrementValue</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MaximumValue</siebel-field>
+                    <atg-property>maximumValue</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MinimumValue</siebel-field>
+                    <atg-property>minimumValue</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>NoneValue</siebel-field>
+                    <atg-property>noneValue</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>UnitOfMeasure</siebel-field>
+                    <atg-property>unitOfMeasure</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>HiddenFlag</siebel-field>
+                    <atg-property>hiddenFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ReadOnlyFlag</siebel-field>
+                    <atg-property>readOnlyFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>RequiredFlag</siebel-field>
+                    <atg-property>requiredFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>VectorFlag</siebel-field>
+                    <atg-property>vectorFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+		
+  	    <entity-mapping>
+            <siebel-entity>Attribute</siebel-entity>
+            <atg-entity>attribute</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>AttributeDefinitionId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>OrigId</siebel-field>
+                    <atg-property>originalId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AttributeName</siebel-field>
+                    <atg-property>Name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>DomainType</siebel-field>
+                    <atg-property>domainType</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>DataType</siebel-field>
+                    <atg-property>dataType</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MaximumValue</siebel-field>
+                    <atg-property>maximumValue</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MinimumValue</siebel-field>
+                    <atg-property>minimumValue</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>UnitOfMeasure</siebel-field>
+                    <atg-property>unitOfMeasure</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<!-- We dont really need id here for this mapping but we cant have 2 AttributeDefinitionId
+				siebel-field in the same entity-mapping. We also cant map to 2 atg properties with one field
+				mapping, so this is	a workaround to ensure the id and attributeDefinitionId get populated -->
+                <field-mapping>
+                    <siebel-field>AttributeDefinitionId,Id</siebel-field>
+                    <atg-property>attributeDefinitionId</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/AttributeDefinitionIdMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfAttributeLOVValue</siebel-field>
+                    <atg-property>values</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/AttributeValueListMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfMessage</siebel-field>
+                    <atg-property>translations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MessagesMapper</mapping-component>
+                </field-mapping>
+								
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+ 	    <entity-mapping>
+            <siebel-entity>AttributeLOVValue</siebel-entity>
+            <atg-entity>attribute-value</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+				<!-- 'GeneratedId' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                 <field-mapping>
+                    <siebel-field>GeneratedId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Value</siebel-field>
+                    <atg-property>attributeValue</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Sequence</siebel-field>
+                    <atg-property>sequence</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfMessage</siebel-field>
+                    <atg-property>translations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/AttributeValueMessagesMapper</mapping-component>
+                </field-mapping>
+								
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+		
+  	    <entity-mapping>
+            <siebel-entity>ObjectSimpleBundle</siebel-entity>
+            <atg-entity>simple-bundle-structure</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+				<!-- 'GeneratedId' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>GeneratedId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfRelationship</siebel-field>
+                    <atg-property>relationships</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/RelationshipListMapper</mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+   	    <entity-mapping>
+            <siebel-entity>Relationship</siebel-entity>
+            <atg-entity>relationship</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ClassId</siebel-field>
+                    <atg-property>class</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ClassName</siebel-field>
+                    <atg-property>className</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>DefaultCardinality</siebel-field>
+                    <atg-property>defaultCardinality</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>DefaultProductId</siebel-field>
+                    <atg-property>defaultProduct</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>DisplayName</siebel-field>
+                    <atg-property>displayName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MaximumCardinality</siebel-field>
+                    <atg-property>maximumCardinality</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MinimumCardinality</siebel-field>
+                    <atg-property>minimumCardinality</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfRelationshipDomain</siebel-field>
+                    <atg-property>relationshipDomains</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/RelationshipDomainListMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfRelationshipDecoration</siebel-field>
+                    <atg-property>relationshipDecorations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/RelationshipDecorationListMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfMessage</siebel-field>
+                    <atg-property>translations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MessagesMapper</mapping-component>
+                </field-mapping>
+				
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+  	    <entity-mapping>
+            <siebel-entity>RelationshipDomain</siebel-entity>
+            <atg-entity>relationship-domain</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>OrigId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>product</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>DisplayName</siebel-field>
+                    <atg-property>displayName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+  	    <entity-mapping>
+            <siebel-entity>RelationshipDecoration</siebel-entity>
+            <atg-entity>media-external</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+				<!-- 'GeneratedId' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>GeneratedId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Value</siebel-field>
+                    <atg-property>url</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<!-- 'parentFolder' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>parentFolder</siebel-field>
+                    <atg-property>parentFolder</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<!-- 'path' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>path</siebel-field>
+                    <atg-property>path</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+			
+        </entity-mapping>
+
+  	    <entity-mapping>
+            <siebel-entity>ObjectConfigurableProduct</siebel-entity>
+            <atg-entity>configurable-product-structure</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+			
+				<!-- 'GeneratedId' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>GeneratedId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfObjectDecoration</siebel-field>
+                    <atg-property>decorations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ObjectDecorationListMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfRelationship</siebel-field>
+                    <atg-property>relationships</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/RelationshipListMapper</mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+		<entity-mapping>
+            <siebel-entity>ObjectDecoration</siebel-entity>
+            <atg-entity>media-external</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+				<!-- 'GeneratedId' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>GeneratedId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Value</siebel-field>
+                    <atg-property>url</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<!-- 'parentFolder' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>parentFolder</siebel-field>
+                    <atg-property>parentFolder</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<!-- 'path' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>path</siebel-field>
+                    <atg-property>path</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+				
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+		
+		
+ 	    <entity-mapping>
+            <siebel-entity>ObjectPromotion</siebel-entity>
+            <atg-entity>promotion-structure</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+				<!-- 'GeneratedId' does not come from the Siebel export but is generated by code
+				and requires a field mapping to ensure it gets added to startSQL -->
+                <field-mapping>
+                    <siebel-field>GeneratedId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AdjustCharge</siebel-field>
+                    <atg-property>adjustmentCharge</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AdjustReason</siebel-field>
+                    <atg-property>adjustmentReason</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ChargeBasis</siebel-field>
+                    <atg-property>chargeBasis</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>CommitFlag</siebel-field>
+                    <atg-property>commitFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>EndDate</siebel-field>
+                    <atg-property>endDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>GracePeriod</siebel-field>
+                    <atg-property>gracePeriod</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>GracePeriodUOM</siebel-field>
+                    <atg-property>gracePeriodUnitOfMeasure</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ImageName,ImageFileExt,ImageFileName,ImageFileSize</siebel-field>
+                    <atg-property>largeImage</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MediaMapperWithSizeAndName</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Instance</siebel-field>
+                    <atg-property>instance</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>NRCAmount</siebel-field>
+                    <atg-property>nonRecurringChargeAmount</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>NRCAmountCurrencyCode</siebel-field>
+                    <atg-property>nonRecurringChargeAmountCurrencyCode</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>NRCAmountExchangeDate</siebel-field>
+                    <atg-property>nonRecurringChargeAmountExchangeDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>NRCPlanId</siebel-field>
+                    <atg-property>nonRecurringChargePlanId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>NRCPlanName</siebel-field>
+                    <atg-property>nonRecurringChargePlanName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>NRCQty</siebel-field>
+                    <atg-property>nonRecurringChargeQuantity</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>NRCSchedule</siebel-field>
+                    <atg-property>nonRecurringChargeSchedule</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>NRCScheduleId</siebel-field>
+                    <atg-property>nonRecurringChargeScheduleId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Period</siebel-field>
+                    <atg-property>period</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PeriodUOM</siebel-field>
+                    <atg-property>PeriodUnitOfMeasure</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<field-mapping>
+                    <siebel-field>PromotionId</siebel-field>
+                    <atg-property>promotion</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PromotionType</siebel-field>
+                    <atg-property>promotionType</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>RCAdjustmentAmount</siebel-field>
+                    <atg-property>recurringChargeAdjustmentAmount</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>RCAdjustmentUM</siebel-field>
+                    <atg-property>recurringChargeAdjustmentUM</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>RCAmount</siebel-field>
+                    <atg-property>recurringChargeAmount</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>RCAmountCurrencyCode</siebel-field>
+                    <atg-property>recurringChargeAmountCurrencyCode</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>RCAmountExchangeDate</siebel-field>
+                    <atg-property>recurringChargeAmountExchangeDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>RCSchedule</siebel-field>
+                    <atg-property>recurringChargeSchedule</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>RCScheduleId</siebel-field>
+                    <atg-property>recurringChargeScheduleId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Reason</siebel-field>
+                    <atg-property>reason</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>SalesProductFlag</siebel-field>
+                    <atg-property>salesProductFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Score</siebel-field>
+                    <atg-property>score</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>StartDate</siebel-field>
+                    <atg-property>startDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>UsagePlanId</siebel-field>
+                    <atg-property>usagePlanId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>UsagePlanName</siebel-field>
+                    <atg-property>usagePlanName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>UsageSchedule</siebel-field>
+                    <atg-property>usageSchedule</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>UsageScheduleId</siebel-field>
+                    <atg-property>usageScheduleId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ThumbnImageFileExt,ThumbnImageFileName,ThumbnImageFileSize</siebel-field>
+                    <atg-property>thumbnailimage</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MediaMapperWithSize</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ListOfPromotionComponentsRulesSummary</siebel-field>
+                    <atg-property>relationships</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PromotionComponentsRulesListMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ListOfPromotionPricingRulesSummary</siebel-field>
+                    <atg-property>pricingRules</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PromotionPricingRulesListMapper</mapping-component>
+                </field-mapping>				
+				
+                <field-mapping>
+                    <siebel-field>ListOfMessage</siebel-field>
+                    <atg-property>translations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PromotionMessagesListMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ListOfPromotionTerms</siebel-field>
+                    <atg-property>terms</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PromotionTermsListMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ListOfPromotionUpgrade</siebel-field>
+                    <atg-property>upgrades</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PromotionUpgradeListMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ListOfPromotionVersions</siebel-field>
+                    <atg-property>versions</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PromotionVersionsListMapper</mapping-component>
+                </field-mapping>
+                
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+		
+ 	    <entity-mapping>
+            <siebel-entity>PromotionComponentsRulesSummary</siebel-entity>
+            <atg-entity>promotion-relationship</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+			
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ClassName</siebel-field>
+                    <atg-property>className</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ClassVodNum</siebel-field>
+                    <atg-property>classVodNum</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>DefaultQuantity</siebel-field>
+                    <atg-property>defaultQuantity</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>IntegrationId</siebel-field>
+                    <atg-property>integrationId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MaximumQuantity</siebel-field>
+                    <atg-property>maximumQuantity</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MinimumQuantity</siebel-field>
+                    <atg-property>minimumQuantity</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProdId</siebel-field>
+                    <atg-property>product</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProductLineId</siebel-field>
+                    <atg-property>productLine</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>PromotionId</siebel-field>
+                    <atg-property>promotion</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>Type</siebel-field>
+                    <atg-property>type</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfPromotionItemAttributeforImport</siebel-field>
+                    <atg-property>attributeOverrides</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PromotionEntityListMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ListOfMessage</siebel-field>
+                    <atg-property>translations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/MessagesMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ListOfPromotionProductAggregate-DefaultProducts</siebel-field>
+                    <atg-property>aggregateDefaultProducts</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PromotionEntityListMapper</mapping-component>
+                </field-mapping>
+							
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+   	    <entity-mapping>
+            <siebel-entity>PromotionPricingRulesSummary</siebel-entity>
+            <atg-entity>promotion-pricing-rule</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MatrixRuleNum</siebel-field>
+                    <atg-property>matrixRuleNumber</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AdjustmentGroupId</siebel-field>
+                    <atg-property>adjustmentGroupId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AdjustmentType</siebel-field>
+                    <atg-property>adjustmentType</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AdjustmentValue</siebel-field>
+                    <atg-property>adjustmentValue</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ClassName</siebel-field>
+                    <atg-property>className</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ClassVodNum</siebel-field>
+                    <atg-property>classVodNum</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProductId</siebel-field>
+                    <atg-property>product</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProductLineId</siebel-field>
+                    <atg-property>productLine</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PromotionId</siebel-field>
+                    <atg-property>promotion</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Type</siebel-field>
+                    <atg-property>type</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>CurrencyCode</siebel-field>
+                    <atg-property>currencyCode</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ExchangeDate</siebel-field>
+                    <atg-property>exchangeDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+		
+  	    <entity-mapping>
+            <siebel-entity>PromotionItemAttributeforImport</siebel-entity>
+            <atg-entity>promotion-product-attribute-override</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AttributeName</siebel-field>
+                    <atg-property>attributeName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Condition</siebel-field>
+                    <atg-property>condition</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PromotionItemId</siebel-field>
+                    <atg-property>promotionItemId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfPromotionItemAttributeValueforImport</siebel-field>
+                    <atg-property>overrideValues</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PromotionEntityListMapper</mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+   	    <entity-mapping>
+            <siebel-entity>PromotionItemAttributeValueforImport</siebel-entity>
+            <atg-entity>promotion-product-attribute-override-value</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PromotionItemAttributeId</siebel-field>
+                    <atg-property>promotionItemAttributeId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AttributeValue</siebel-field>
+                    <atg-property>attributeValue</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+ 	    <entity-mapping>
+            <siebel-entity>PromotionProductAggregate-DefaultProducts</siebel-entity>
+            <atg-entity>promotion-product-aggregates-default</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>DefaultCardinality</siebel-field>
+                    <atg-property>defaultCardinality</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ParentClassId</siebel-field>
+                    <atg-property>parentClassId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProductId</siebel-field>
+                    <atg-property>product</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Type</siebel-field>
+                    <atg-property>type</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+  	    <entity-mapping>
+            <siebel-entity>PromotionTerms</siebel-entity>
+            <atg-entity>promotion-term</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>SectionNumber</siebel-field>
+                    <atg-property>section</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>SequenceNumber</siebel-field>
+                    <atg-property>sequenceNumber</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>TermTemplateId</siebel-field>
+                    <atg-property>termTemplateId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Type</siebel-field>
+                    <atg-property>type</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+  	    <entity-mapping>
+            <siebel-entity>PromotionUpgrade</siebel-entity>
+            <atg-entity>promotion-upgrade</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>OriginalPromotionId</siebel-field>
+                    <atg-property>originalPromotion</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>TargetPromotionId</siebel-field>
+                    <atg-property>targetPromotion</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>CommitmentStart</siebel-field>
+                    <atg-property>commitmentStart</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Duration</siebel-field>
+                    <atg-property>duration</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PenaltyAmount</siebel-field>
+                    <atg-property>penaltyAmount</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PenaltyAmountCurrencyCode</siebel-field>
+                    <atg-property>penaltyAmountCurrencyCode</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PenaltyAmountExchangeDate</siebel-field>
+                    <atg-property>penaltyAmountExchangeDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProratePlanId</siebel-field>
+                    <atg-property>proratePlanId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProratePlanName</siebel-field>
+                    <atg-property>proratePlanName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>RelationshipType</siebel-field>
+                    <atg-property>relationshipType</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+				
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+  	    <entity-mapping>
+            <siebel-entity>PromotionVersions</siebel-entity>
+            <atg-entity>promotion-version</atg-entity>
+			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Created</siebel-field>
+                    <atg-property>created</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ActiveFlag</siebel-field>
+                    <atg-property>activeFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PromotionEndDate</siebel-field>
+                    <atg-property>promotionEndDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PromotionId</siebel-field>
+                    <atg-property>promotion</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PromotionObjectId</siebel-field>
+                    <atg-property>promotionObjectId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ReleasedFlag</siebel-field>
+                    <atg-property>releasedFlag</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/YesNoBooleanMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PromotionStartDate</siebel-field>
+                    <atg-property>promotionStartDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Version</siebel-field>
+                    <atg-property>version</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+   	    <entity-mapping>
+            <siebel-entity>ProductClass</siebel-entity>
+            <atg-entity>product-class</atg-entity>
+ 			<atg-repository>/atg/commerce/catalog/ProductCatalog</atg-repository>
+
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>ClassId</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ClassName</siebel-field>
+                    <atg-property>name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ParentClassId</siebel-field>
+                    <atg-property>parentClassId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ParentClassName</siebel-field>
+                    <atg-property>parentClassName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ListOfMessage</siebel-field>
+                    <atg-property>translations</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ProductClassMessagesMapper</mapping-component>
+                </field-mapping>
+				
+                <field-mapping>
+                    <siebel-field>ListOfConfiguredAttribute</siebel-field>
+                    <atg-property>configuredAttributes</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/ProductClassConfAttributeListMapper</mapping-component>
+                </field-mapping>
+				
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+ 	    <entity-mapping>
+            <siebel-entity>PriceList</siebel-entity>
+            <atg-entity>priceList</atg-entity>
+			<atg-repository>/atg/commerce/pricing/priceLists/PriceLists</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PriceListFolderMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>displayName</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>StartDate</siebel-field>
+                    <atg-property>startDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>EndDate</siebel-field>
+                    <atg-property>endDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+				<!-- ListOfPriceListItem in no way maps or relates to description, this is a workaround
+				to make sure the PriceListItem entities are put back onto the stack to be processed -->
+                <field-mapping>
+                    <siebel-field>Description,ListOfPriceListItem</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PriceListDescriptionMapper</mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>CurrencyCode</siebel-field>
+                    <atg-property>locale</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/CurrencyCodeLocaleMapper</mapping-component>
+                </field-mapping>
+								
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+		
+ 	    <entity-mapping>
+            <siebel-entity>PriceListItem</siebel-entity>
+            <atg-entity>price</atg-entity>
+			<atg-repository>/atg/commerce/pricing/priceLists/PriceLists</atg-repository>
+ 
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PriceListId</siebel-field>
+                    <atg-property>priceList</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>StartDate</siebel-field>
+                    <atg-property>startDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>EndDate</siebel-field>
+                    <atg-property>endDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ProductId</siebel-field>
+                    <atg-property>productId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>PriceListCurrencyCode</siebel-field>
+                    <atg-property>priceListCurrencyCode</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+								
+                <field-mapping>
+                    <siebel-field>OriginalListPrice</siebel-field>
+                    <atg-property>listPrice</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+								
+                <field-mapping>
+                    <siebel-field>ReferencePrice</siebel-field>
+                    <atg-property>referencePrice</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+								
+                <field-mapping>
+                    <siebel-field>VolumeDiscountId</siebel-field>
+                    <atg-property>complexPrice</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+								
+                <field-mapping>
+                    <siebel-field>IntegrationId</siebel-field>
+                    <atg-property>integrationId</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+								
+				<!-- We dont really need VolumeDiscount (potentially it wont even be in the PriceListItem)
+				here for this mapping but we cant have 2 VolumeDiscountId siebel-field in the same 
+				entity-mapping. We also cant map to 2 atg properties with one field mapping, so this is
+				a workaround to ensure the pricingScheme gets populated -->
+                <field-mapping>
+                    <siebel-field>VolumeDiscountId,VolumeDiscount</siebel-field>
+                    <atg-property>pricingScheme</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/PricingSchemeMapper</mapping-component>
+                </field-mapping>
+								
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+		
+ 	    <entity-mapping>
+            <siebel-entity>VolumeDiscount</siebel-entity>
+            <atg-entity>complexPrice</atg-entity>
+ 			<atg-repository>/atg/commerce/pricing/priceLists/PriceLists</atg-repository>
+
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>EffectiveStartDate</siebel-field>
+                    <atg-property>startDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>EffectiveEndDate</siebel-field>
+                    <atg-property>endDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>ExchangeDate</siebel-field>
+                    <atg-property>exchangeDate</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+								
+                <field-mapping>
+                    <siebel-field>DiscountMethod</siebel-field>
+                    <atg-property>discountMethod</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+								
+                <field-mapping>
+                    <siebel-field>CurrencyCode</siebel-field>
+                    <atg-property>currencyCode</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+								
+                <field-mapping>
+                    <siebel-field>ListOfVolumeDiscountItem</siebel-field>
+                    <atg-property>levels</atg-property>
+                    <mapping-component>/atg/siebel/catalog/mappingcomponents/VolumeDiscountItemListMapper</mapping-component>
+                </field-mapping>
+								
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+
+ 	    <entity-mapping>
+            <siebel-entity>VolumeDiscountItem</siebel-entity>
+            <atg-entity>priceLevel</atg-entity>
+ 			<atg-repository>/atg/commerce/pricing/priceLists/PriceLists</atg-repository>
+
+            <list-of-field-mappings>
+ 
+                <field-mapping>
+                    <siebel-field>Id</siebel-field>
+                    <atg-property>id</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Name</siebel-field>
+                    <atg-property>name</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>Description</siebel-field>
+                    <atg-property>description</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MaximumQuantity</siebel-field>
+                    <atg-property>maximumQuantity</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>MinimumQuantity</siebel-field>
+                    <atg-property>quantity</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AdjustmentType</siebel-field>
+                    <atg-property>adjustmentType</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+
+                <field-mapping>
+                    <siebel-field>AdjustmentAmount</siebel-field>
+                    <atg-property>price</atg-property>
+                    <mapping-component></mapping-component>
+                </field-mapping>
+								
+            </list-of-field-mappings>
+ 
+        </entity-mapping>
+				
+    </list-of-entity-mappings>
+ 
+</siebel-atg-mappings>
+<!-- @version $Id: //product/Siebel/version/11.2/mappings/catalog/mappings-file.xml#1 $$Change: 1186180 $-->

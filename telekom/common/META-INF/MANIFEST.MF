@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+ATG-Config-Path: config/
+ATG-Required: Store.Endeca.Assembler Siebel
+ATG-Class-Path: lib/classes.jar
+ATG-Client-Class-Path: lib/classes.jar mappings
+ATG-Client-Update-File: true
+ATG-Client-Update-Version: 4.0
+Name: mappings
+ATG-Assembler-Import-File: True

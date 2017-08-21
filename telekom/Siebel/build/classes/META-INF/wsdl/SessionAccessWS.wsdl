@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://www.siebel.com/xml/SessionAccess" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.siebel.com/xml/SessionAccess">
+  <types>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/SessionAccess" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="SessionAccessGetProfileAttr_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Name" type="xsd:string"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SessionAccessGetProfileAttr_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Value" minOccurs="0" type="xsd:string"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SessionAccessEcho_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="MsgIn" type="xsd:string"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SessionAccessEcho_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="MsgOut" minOccurs="0" type="xsd:string"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SessionAccessSetProfileAttr_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Value" type="xsd:string"></xsd:element>
+            <xsd:element name="Name" type="xsd:string"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SessionAccessPing_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="MsgIn" minOccurs="0" type="xsd:string"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SessionAccessPing_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="MsgOut" minOccurs="0" type="xsd:string"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="SessionAccessGetProfileAttr_Input">
+    <part name="SessionAccessGetProfileAttr_Input" element="tns:SessionAccessGetProfileAttr_Input"></part>
+  </message>
+  <message name="SessionAccessGetProfileAttr_Output">
+    <part name="SessionAccessGetProfileAttr_Output" element="tns:SessionAccessGetProfileAttr_Output"></part>
+  </message>
+  <message name="SessionAccessEcho_Input">
+    <part name="SessionAccessEcho_Input" element="tns:SessionAccessEcho_Input"></part>
+  </message>
+  <message name="SessionAccessEcho_Output">
+    <part name="SessionAccessEcho_Output" element="tns:SessionAccessEcho_Output"></part>
+  </message>
+  <message name="SessionAccessSetProfileAttr_Input">
+    <part name="SessionAccessSetProfileAttr_Input" element="tns:SessionAccessSetProfileAttr_Input"></part>
+  </message>
+  <message name="SessionAccessPing_Input">
+    <part name="SessionAccessPing_Input" element="tns:SessionAccessPing_Input"></part>
+  </message>
+  <message name="SessionAccessPing_Output">
+    <part name="SessionAccessPing_Output" element="tns:SessionAccessPing_Output"></part>
+  </message>
+  <portType name="port">
+    <operation name="SessionAccessGetProfileAttr">
+      <input message="tns:SessionAccessGetProfileAttr_Input"></input>
+      <output message="tns:SessionAccessGetProfileAttr_Output"></output>
+    </operation>
+    <operation name="SessionAccessEcho">
+      <input message="tns:SessionAccessEcho_Input"></input>
+      <output message="tns:SessionAccessEcho_Output"></output>
+    </operation>
+    <operation name="SessionAccessSetProfileAttr">
+      <input message="tns:SessionAccessSetProfileAttr_Input"></input>
+    </operation>
+    <operation name="SessionAccessPing">
+      <input message="tns:SessionAccessPing_Input"></input>
+      <output message="tns:SessionAccessPing_Output"></output>
+    </operation>
+  </portType>
+  <binding name="port" type="tns:port">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+    <operation name="SessionAccessGetProfileAttr">
+      <soap:operation soapAction="document/http://www.siebel.com/xml/SessionAccess:SessionAccessGetProfileAttr"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="SessionAccessEcho">
+      <soap:operation soapAction="document/http://www.siebel.com/xml/SessionAccess:SessionAccessEcho"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="SessionAccessSetProfileAttr">
+      <soap:operation soapAction="document/http://www.siebel.com/xml/SessionAccess:SessionAccessSetProfileAttr"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+    </operation>
+    <operation name="SessionAccessPing">
+      <soap:operation soapAction="document/http://www.siebel.com/xml/SessionAccess:SessionAccessPing"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+  </binding>
+  <service name="SessionAccessWS">
+    <port binding="tns:port" name="port">
+      <soap:address location="http://webserver/CustAppSvcs_enu/start.swe?SWEExtSource=CustomUI&amp;SWEExtCmd=Execute&amp;WSSOAP=1"></soap:address>
+    </port>
+  </service>
+</definitions>

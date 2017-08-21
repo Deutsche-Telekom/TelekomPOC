@@ -1,0 +1,5971 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions
+ xmlns="http://schemas.xmlsoap.org/wsdl/"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:xsdLocal1="http://www.siebel.com/SelfService/Common/Contact/Query"
+ targetNamespace="http://siebel.com/SelfService/Common/Contact"
+ xmlns:xsdLocal3="http://www.siebel.com/SelfService/Common/Contact/Id"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsdLocal2="http://www.siebel.com/SelfService/Common/Contact/Data"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:tns="http://siebel.com/SelfService/Common/Contact"
+><types
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://www.siebel.com/SelfService/Common/Contact/Data"
+ xmlns:xsdLocal2="http://www.siebel.com/SelfService/Common/Contact/Data"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfSSContact"
+ type="xsdLocal2:ListOfSSContactData"
+></xsd:element
+><xsd:complexType
+ name="ListOfSSContactTopElmtData"
+><xsd:sequence
+><xsd:element
+ name="ListOfSSContact"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal2:ListOfSSContactData"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfSSContactData"
+><xsd:sequence
+><xsd:element
+ name="Contact"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:ContactData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="AccountPriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountPrimaryBillToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountPrimaryBillToPersonId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountPrimaryShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountPrimaryShipToPersonId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountSurveyType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Alias"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ApprovalStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AssistantPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CalculatedAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Call"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="CellularPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ChallengeAnswer"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ChallengeQuestion"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Comment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ContactOrganizationIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CreatedByName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DUNSNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DeduplicationMatchScore"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="DisableDataCleansing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="EmailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EmailSRUpdatesFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="EmployeeFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="EndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="FaxAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FaxPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FullName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FullNameForOutlookENU"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FullNameForOutlookJPN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FullNameNoSpace"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="HomePhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IncomeCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IncomeExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="JobTitle"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Keylastupdated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="LastClnseDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="LastKeyGenDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="LastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LastNameFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LastNameFirstNameENU"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LastNameFirstNameJPN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LastUpdate-SDQ"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="LoginName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MiddleName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Mode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrgStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OwnedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OwnedById"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PartnershipContactFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PartyName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PartyTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PartyUId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Password"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonUId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PreferredCommunications"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PreferredLanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceList"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressCounty"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressStreetAddress3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAlternateEmailId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAlternatePhoneId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAssignmentDenormFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PrimaryAssignmentManualFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PrimaryAssignmentSystemFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PrimaryCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryGroupHouseholdId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryOpportunityId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryPersonalAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryPersonalPaymentProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryPositionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryResponsibilityId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProjectAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProjectRole"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProspectFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="RegistrationSourceAppName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RowId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="S-SInstance"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="S-SInstanceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="S-SKeyId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="SRReadFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="SendPromotions"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="SessionPassword"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TimeZone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TimeZoneId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TimeZoneName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TimeZoneNameTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UserBuyer"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="UserStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="UserType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="VerifyPassword"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="WorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="WorkPhoneExtension"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="XModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:int"
+></xsd:element
+><xsd:element
+ name="ListOfContactAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfContactAccountData"
+></xsd:element
+><xsd:element
+ name="ListOfContactCommunicationAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfContactCommunicationAddressData"
+></xsd:element
+><xsd:element
+ name="ListOfAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfAccountData"
+></xsd:element
+><xsd:element
+ name="ListOfPersonalAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfPersonalAddressData"
+></xsd:element
+><xsd:element
+ name="ListOfContactAlternatePhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfContactAlternatePhoneData"
+></xsd:element
+><xsd:element
+ name="ListOfContactBusinessAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfContactBusinessAddressData"
+></xsd:element
+><xsd:element
+ name="ListOfContactOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfContactOrganizationData"
+></xsd:element
+><xsd:element
+ name="ListOfContactPersonalAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfContactPersonalAddressData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactAccountData"
+><xsd:sequence
+><xsd:element
+ name="ContactAccount"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:ContactAccountData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactAccountData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Account"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountRowId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactCommunicationAddressData"
+><xsd:sequence
+><xsd:element
+ name="ContactCommunicationAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:ContactCommunicationAddressData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactCommunicationAddressData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AlternateEmailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CommunicationAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CommunicationAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CommunicationAddressMediumType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CommunicationAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAccountData"
+><xsd:sequence
+><xsd:element
+ name="Account"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:AccountData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AccountData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountOrganizationIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Alias"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ApprovalStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CityState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DUNSNumber2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="DisableDataCleansing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="EAISyncDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="EAISyncErrorText"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EAISyncStatusCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FullAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FullAddress-ENU"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FullAddress-JPN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="InternalOrgFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="LanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LastClnseDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="LastKeyGenDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="LastManagerReviewDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="LastReviewManagerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LastUpdate-SDQ"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="Location"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LocationType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MainFaxNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MainPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Marketing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="NameAndLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentAccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ParentAccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PartnerFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="PartyName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PartyTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PartyUId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PreferredShippingMethod"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceList2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PriceListStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountAddressCounty"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountAddressStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountAddressStreetAddress3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddressCounty"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddressStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddressStreetAddress3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToJobTitle"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToPersonId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryEmployeeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryEmployeeLogin"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryPaymentProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryPositionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressCounty"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressStreetAddress3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToJobTitle"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToPersonId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PrimaryTypeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ProspectFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="RelationshipType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="RowId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="S-SInstance"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="S-SInstanceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="S-SKeyId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="Type"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="TypeLIC"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MasterAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfAccountBusinessAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfAccountBusinessAddressData"
+></xsd:element
+><xsd:element
+ name="ListOfAccountOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal2:ListOfAccountOrganizationData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfPersonalAddressData"
+><xsd:sequence
+><xsd:element
+ name="PersonalAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:PersonalAddressData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="PersonalAddressData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="AddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressLine3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressNameLockedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="Addressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CalculatedAddressComma1"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CalculatedAddressComma2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CalculatedAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="City"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CityLen"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="Country"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="County"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Province"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="State"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StateLen"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+><xsd:element
+ name="StreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StreetAddressLen"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:decimal"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactAlternatePhoneData"
+><xsd:sequence
+><xsd:element
+ name="ContactAlternatePhone"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:ContactAlternatePhoneData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactAlternatePhoneData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AlternatePhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AlternatePhoneId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AlternatePhoneIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AlternatePhoneMediumType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AlternatePhoneName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactBusinessAddressData"
+><xsd:sequence
+><xsd:element
+ name="ContactBusinessAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:ContactBusinessAddressData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactBusinessAddressData"
+><xsd:sequence
+><xsd:element
+ name="AddressDisableDataCleansing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="AddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressNameLockedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="AddressS-SInstance"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Addressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BusinessCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BusinessCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BusinessPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BusinessState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BusinessStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BusinessStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MailTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactOrganizationData"
+><xsd:sequence
+><xsd:element
+ name="ContactOrganization"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:ContactOrganizationData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactOrganizationData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Organization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrganizationIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactPersonalAddressData"
+><xsd:sequence
+><xsd:element
+ name="ContactPersonalAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:ContactPersonalAddressData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactPersonalAddressData"
+><xsd:sequence
+><xsd:element
+ name="AddressType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalAddressStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:date"
+></xsd:element
+><xsd:element
+ name="PersonalCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalProvince"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PersonalStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAccountBusinessAddressData"
+><xsd:sequence
+><xsd:element
+ name="AccountBusinessAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:AccountBusinessAddressData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AccountBusinessAddressData"
+><xsd:sequence
+><xsd:element
+ name="AddressActiveStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="AddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ApartmentNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BillAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="BrickId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="BrickName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="City"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Country"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="County"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Descriptor"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="EmailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="FaxNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LandlordName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LandlordPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MailCodeORG"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="MainAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="OccupancyCD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Province"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ShipAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:boolean"
+></xsd:element
+><xsd:element
+ name="State"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="StreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AddressLine3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAccountOrganizationData"
+><xsd:sequence
+><xsd:element
+ name="AccountOrganization"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal2:AccountOrganizationData"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="lastpage"
+ type="xsd:boolean"
+></xsd:attribute
+><xsd:attribute
+ name="recordcount"
+ type="xsd:integer"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AccountOrganizationData"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:dateTime"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="Organization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrganizationIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="operation"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ xmlns:xsdLocal1="http://www.siebel.com/SelfService/Common/Contact/Query"
+ targetNamespace="http://www.siebel.com/SelfService/Common/Contact/Query"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfSSContact"
+ type="xsdLocal1:ListOfSSContactQuery"
+></xsd:element
+><xsd:complexType
+ name="ListOfSSContactTopElmtQuery"
+><xsd:sequence
+><xsd:element
+ name="ListOfSSContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfSSContactQuery"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfSSContactQuery"
+><xsd:sequence
+><xsd:element
+ name="Contact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ContactQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountPriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountPrimaryBillToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountPrimaryBillToPersonId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountPrimaryShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountPrimaryShipToPersonId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountSurveyType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ActiveStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Alias"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ApprovalStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AssistantPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CalculatedAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Call"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CellularPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ChallengeAnswer"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ChallengeQuestion"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Comment"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ContactOrganizationIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedByName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DUNSNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DeduplicationMatchScore"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DisableDataCleansing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EmailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EmailSRUpdatesFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EmployeeFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FaxAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FaxPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FullName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FullNameForOutlookENU"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FullNameForOutlookJPN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FullNameNoSpace"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="HomePhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IncomeCurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IncomeExchangeDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="JobTitle"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Keylastupdated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastClnseDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastKeyGenDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastNameFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastNameFirstNameENU"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastNameFirstNameJPN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastUpdate-SDQ"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LoginName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MiddleName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Mode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrgStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OwnedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OwnedById"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PartnershipContactFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PartyName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PartyTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PartyUId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Password"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonUId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalContact"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreferredCommunications"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreferredLanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceList"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceListIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressCounty"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressStreetAddress3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAlternateEmailId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAlternatePhoneId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAssignmentDenormFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAssignmentManualFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAssignmentSystemFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryCategoryId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryGroupHouseholdId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryOpportunityId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryPersonalAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryPersonalPaymentProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryPositionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryResponsibilityId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProjectAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProjectRole"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProspectFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RegistrationSourceAppName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RowId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="S-SInstance"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="S-SInstanceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="S-SKeyId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="SRReadFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="SendPromotions"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="SessionPassword"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Status"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TimeZone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TimeZoneId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TimeZoneName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TimeZoneNameTranslation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UserBuyer"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UserStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UserType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="VerifyPassword"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="WorkPhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="WorkPhoneExtension"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="XModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfContactAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfContactAccountQuery"
+></xsd:element
+><xsd:element
+ name="ListOfContactCommunicationAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfContactCommunicationAddressQuery"
+></xsd:element
+><xsd:element
+ name="ListOfAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfAccountQuery"
+></xsd:element
+><xsd:element
+ name="ListOfPersonalAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfPersonalAddressQuery"
+></xsd:element
+><xsd:element
+ name="ListOfContactAlternatePhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfContactAlternatePhoneQuery"
+></xsd:element
+><xsd:element
+ name="ListOfContactBusinessAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfContactBusinessAddressQuery"
+></xsd:element
+><xsd:element
+ name="ListOfContactOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfContactOrganizationQuery"
+></xsd:element
+><xsd:element
+ name="ListOfContactPersonalAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfContactPersonalAddressQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactAccountQuery"
+><xsd:sequence
+><xsd:element
+ name="ContactAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ContactAccountQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactAccountQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Account"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountRowId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactCommunicationAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="ContactCommunicationAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ContactCommunicationAddressQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactCommunicationAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AlternateEmailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CommunicationAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CommunicationAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CommunicationAddressMediumType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CommunicationAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAccountQuery"
+><xsd:sequence
+><xsd:element
+ name="Account"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:AccountQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AccountQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountOrganizationIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AccountStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Alias"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ApprovalStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CityState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CurrencyCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DUNSNumber2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Description"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="DisableDataCleansing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EAISyncDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EAISyncErrorText"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EAISyncStatusCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FullAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FullAddress-ENU"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FullAddress-JPN"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="InternalOrgFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LanguageCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastClnseDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastKeyGenDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastManagerReviewDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastReviewManagerId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LastUpdate-SDQ"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Location"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LocationType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MainFaxNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MainPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Marketing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Name"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="NameAndLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ParentAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ParentAccountIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ParentAccountLocation"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ParentAccountName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PartnerFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PartyName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PartyTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PartyUId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PreferredShippingMethod"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceList2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceListEndDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceListId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceListIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PriceListStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountAddressCounty"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountAddressStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountAddressStreetAddress3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAccountStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddressCounty"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddressStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToAddressStreetAddress3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToJobTitle"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToPersonId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryBillToStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryContactId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryEmployeeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryEmployeeLogin"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryOrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryPaymentProfileId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryPositionId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressCounty"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToAddressStreetAddress3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToFirstName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToJobTitle"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToLastName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToPersonId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryShipToStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PrimaryTypeId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ProspectFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RelationshipType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="RowId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="S-SInstance"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="S-SInstanceId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="S-SKeyId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Type"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="TypeLIC"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MasterAccountId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ListOfAccountBusinessAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfAccountBusinessAddressQuery"
+></xsd:element
+><xsd:element
+ name="ListOfAccountOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ListOfAccountOrganizationQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfPersonalAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="PersonalAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:PersonalAddressQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="PersonalAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ActiveFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressLine3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressNameLockedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Addressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CalculatedAddressComma1"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CalculatedAddressComma2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CalculatedAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="City"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CityLen"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Country"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="County"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="IntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Province"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="State"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StateLen"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StreetAddressLen"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactAlternatePhoneQuery"
+><xsd:sequence
+><xsd:element
+ name="ContactAlternatePhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ContactAlternatePhoneQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactAlternatePhoneQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AlternatePhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AlternatePhoneId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AlternatePhoneIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AlternatePhoneMediumType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AlternatePhoneName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactBusinessAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="ContactBusinessAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ContactBusinessAddressQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactBusinessAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="AddressDisableDataCleansing"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressNameLockedFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressS-SInstance"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Addressee"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BusinessCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BusinessCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BusinessPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BusinessState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BusinessStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BusinessStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MailTypeCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactOrganizationQuery"
+><xsd:sequence
+><xsd:element
+ name="ContactOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ContactOrganizationQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactOrganizationQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Organization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrganizationIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactPersonalAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="ContactPersonalAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:ContactPersonalAddressQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ContactPersonalAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="AddressType"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalAddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalAddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalAddressStartDate"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalCity"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalCountry"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalPostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalProvince"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalState"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalStreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PersonalStreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAccountBusinessAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="AccountBusinessAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:AccountBusinessAddressQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AccountBusinessAddressQuery"
+><xsd:sequence
+><xsd:element
+ name="AddressActiveStatus"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ApartmentNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BillAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BrickId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="BrickName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="City"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Country"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="County"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Descriptor"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="EmailAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="FaxNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LandlordName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="LandlordPhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MailCodeORG"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="MainAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OccupancyCD"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PhoneNumber"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="PostalCode"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Province"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ShipAddressFlag"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="State"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StreetAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="StreetAddress2"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressName"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="AddressLine3"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Operation"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="Searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAccountOrganizationQuery"
+><xsd:sequence
+><xsd:element
+ name="AccountOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:AccountOrganizationQuery"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="pagesize"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="startrownum"
+ type="xsd:integer"
+></xsd:attribute
+><xsd:attribute
+ name="recordcountneeded"
+ type="xsd:boolean"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="AccountOrganizationQuery"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Created"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="CreatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Updated"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="UpdatedBy"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ConflictId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="Organization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+><xsd:element
+ name="OrganizationIntegrationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal1:queryType"
+></xsd:element
+></xsd:sequence
+><xsd:attribute
+ name="IsPrimaryMVG"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="searchspec"
+ type="xsd:string"
+></xsd:attribute
+></xsd:complexType
+><xsd:complexType
+ name="queryType"
+><xsd:simpleContent
+><xsd:extension
+ base="xsd:string"
+><xsd:attribute
+ name="sortorder"
+ type="xsd:string"
+></xsd:attribute
+><xsd:attribute
+ name="sortsequence"
+ type="xsd:string"
+></xsd:attribute
+></xsd:extension
+></xsd:simpleContent
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://www.siebel.com/SelfService/Common/Contact/Id"
+ xmlns:xsdLocal3="http://www.siebel.com/SelfService/Common/Contact/Id"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:annotation
+><xsd:documentation
+>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation
+></xsd:annotation
+><xsd:element
+ name="ListOfSSContact"
+ type="xsdLocal3:ListOfSSContactId"
+></xsd:element
+><xsd:complexType
+ name="ListOfSSContactTopElmtId"
+><xsd:sequence
+><xsd:element
+ name="ListOfSSContact"
+ maxOccurs="1"
+ minOccurs="1"
+ type="xsdLocal3:ListOfSSContactId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfSSContactId"
+><xsd:sequence
+><xsd:element
+ name="Contact"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:ContactId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ContactId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfContactAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfContactAccountId"
+></xsd:element
+><xsd:element
+ name="ListOfContactCommunicationAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfContactCommunicationAddressId"
+></xsd:element
+><xsd:element
+ name="ListOfAccount"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfAccountId"
+></xsd:element
+><xsd:element
+ name="ListOfPersonalAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfPersonalAddressId"
+></xsd:element
+><xsd:element
+ name="ListOfContactAlternatePhone"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfContactAlternatePhoneId"
+></xsd:element
+><xsd:element
+ name="ListOfContactBusinessAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfContactBusinessAddressId"
+></xsd:element
+><xsd:element
+ name="ListOfContactOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfContactOrganizationId"
+></xsd:element
+><xsd:element
+ name="ListOfContactPersonalAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfContactPersonalAddressId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactAccountId"
+><xsd:sequence
+><xsd:element
+ name="ContactAccount"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:ContactAccountId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ContactAccountId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AccountRowId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactCommunicationAddressId"
+><xsd:sequence
+><xsd:element
+ name="ContactCommunicationAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:ContactCommunicationAddressId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ContactCommunicationAddressId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="CommunicationAddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAccountId"
+><xsd:sequence
+><xsd:element
+ name="Account"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:AccountId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="AccountId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ListOfAccountBusinessAddress"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfAccountBusinessAddressId"
+></xsd:element
+><xsd:element
+ name="ListOfAccountOrganization"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsdLocal3:ListOfAccountOrganizationId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfPersonalAddressId"
+><xsd:sequence
+><xsd:element
+ name="PersonalAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:PersonalAddressId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="PersonalAddressId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactAlternatePhoneId"
+><xsd:sequence
+><xsd:element
+ name="ContactAlternatePhone"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:ContactAlternatePhoneId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ContactAlternatePhoneId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="AlternatePhoneId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactBusinessAddressId"
+><xsd:sequence
+><xsd:element
+ name="ContactBusinessAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:ContactBusinessAddressId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ContactBusinessAddressId"
+><xsd:sequence
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactOrganizationId"
+><xsd:sequence
+><xsd:element
+ name="ContactOrganization"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:ContactOrganizationId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ContactOrganizationId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="OrganizationId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfContactPersonalAddressId"
+><xsd:sequence
+><xsd:element
+ name="ContactPersonalAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:ContactPersonalAddressId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ContactPersonalAddressId"
+><xsd:sequence
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAccountBusinessAddressId"
+><xsd:sequence
+><xsd:element
+ name="AccountBusinessAddress"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:AccountBusinessAddressId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="AccountBusinessAddressId"
+><xsd:sequence
+><xsd:element
+ name="AddressId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="ListOfAccountOrganizationId"
+><xsd:sequence
+><xsd:element
+ name="AccountOrganization"
+ maxOccurs="unbounded"
+ minOccurs="0"
+ type="xsdLocal3:AccountOrganizationId"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+><xsd:complexType
+ name="AccountOrganizationId"
+><xsd:sequence
+><xsd:element
+ name="Id"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ModId"
+ maxOccurs="1"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:schema
+><xsd:schema
+ elementFormDefault="qualified"
+ attributeFormDefault="unqualified"
+ targetNamespace="http://siebel.com/SelfService/Common/Contact"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+><xsd:import
+ namespace="http://www.siebel.com/SelfService/Common/Contact/Id"
+></xsd:import
+><xsd:import
+ namespace="http://www.siebel.com/SelfService/Common/Contact/Data"
+></xsd:import
+><xsd:import
+ namespace="http://www.siebel.com/SelfService/Common/Contact/Query"
+></xsd:import
+><xsd:element
+ name="SelfServiceContactQueryPage_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ name="NamedSearchSpec"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ ref="xsdLocal1:ListOfSSContact"
+ minOccurs="0"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="PickListName"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceContactQueryPage_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfSSContact"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceContactExecute_Input"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal2:ListOfSSContact"
+></xsd:element
+><xsd:element
+ name="ExecutionMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="LOVLanguageMode"
+ type="xsd:string"
+></xsd:element
+><xsd:element
+ name="ViewMode"
+ minOccurs="0"
+ type="xsd:string"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+><xsd:element
+ name="SelfServiceContactExecute_Output"
+><xsd:complexType
+><xsd:sequence
+><xsd:element
+ ref="xsdLocal3:ListOfSSContact"
+></xsd:element
+></xsd:sequence
+></xsd:complexType
+></xsd:element
+></xsd:schema
+></types
+><message
+ name="SelfServiceContactQueryPage_Input"
+><part
+ name="SelfServiceContactQueryPage_Input"
+ element="tns:SelfServiceContactQueryPage_Input"
+></part
+></message
+><message
+ name="SelfServiceContactQueryPage_Output"
+><part
+ name="SelfServiceContactQueryPage_Output"
+ element="tns:SelfServiceContactQueryPage_Output"
+></part
+></message
+><message
+ name="SelfServiceContactExecute_Input"
+><part
+ name="SelfServiceContactExecute_Input"
+ element="tns:SelfServiceContactExecute_Input"
+></part
+></message
+><message
+ name="SelfServiceContactExecute_Output"
+><part
+ name="SelfServiceContactExecute_Output"
+ element="tns:SelfServiceContactExecute_Output"
+></part
+></message
+><portType
+ name="SelfServiceContact"
+><operation
+ name="SelfServiceContactQueryPage"
+><input
+ message="tns:SelfServiceContactQueryPage_Input"
+></input
+><output
+ message="tns:SelfServiceContactQueryPage_Output"
+></output
+></operation
+><operation
+ name="SelfServiceContactExecute"
+><input
+ message="tns:SelfServiceContactExecute_Input"
+></input
+><output
+ message="tns:SelfServiceContactExecute_Output"
+></output
+></operation
+></portType
+><binding
+ name="SelfServiceContact"
+ type="tns:SelfServiceContact"
+><soap:binding
+ transport="http://schemas.xmlsoap.org/soap/http"
+ style="document"
+></soap:binding
+><operation
+ name="SelfServiceContactQueryPage"
+><soap:operation
+ soapAction="document/http://siebel.com/SelfService/Common/Contact:SelfServiceContactQueryPage"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+><operation
+ name="SelfServiceContactExecute"
+><soap:operation
+ soapAction="document/http://siebel.com/SelfService/Common/Contact:SelfServiceContactExecute"
+></soap:operation
+><input
+><soap:body
+ use="literal"
+></soap:body
+></input
+><output
+><soap:body
+ use="literal"
+></soap:body
+></output
+></operation
+></binding
+><service
+ name="SelfServiceContact"
+><port
+ binding="tns:SelfServiceContact"
+ name="SelfServiceContactPort"
+><soap:address
+ location="http://localhost/CustAppSvcs_enu/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;WSSOAP=1"
+></soap:address
+></port
+></service
+></definitions
+>

@@ -1,0 +1,43 @@
+#addresses {
+  width:1000px;
+  
+}
+
+#nicknamecol {
+  width:340px;
+  
+}
+
+#addresscol {
+  width: 290px;
+}
+
+th.defaultcol {
+  width:80px;
+}
+
+
+#managebillingprofile {
+	width:900px;
+}
+
+#mbp_default {
+  width: 75px;
+}
+
+#mbp_cardnumber {
+  width: 200px;
+}
+
+#mbp_cardtype {
+  width: 110px
+}
+
+#mbp_expiry {
+  width: 110px
+}
+
+#mbp_address {
+  width: 285px
+}
+

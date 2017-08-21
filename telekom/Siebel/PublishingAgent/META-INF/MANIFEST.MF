@@ -1,0 +1,6 @@
+ATG-Product-Full: ATG Siebel Integration PublishingAgent
+ATG-Class-Path: lib/classes.jar
+ATG-Client-Class-Path: lib/classes.jar 
+ATG-Config-Path: config
+ATG-Required: DCS.PublishingAgent Siebel.SiebelWS
+

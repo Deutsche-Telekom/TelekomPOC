@@ -1,0 +1,17 @@
+<!DOCTYPE item-descriptor
+        SYSTEM
+        "http://www.atg.com/dtds/databinding/itemDescriptorMapping_1.0.dtd">
+
+<item-descriptor repository-path="/atg/siebel/account/SiebelAccountRepository" name="organization">
+  <property name="siebelId" targetName="id" include="true"/>
+  <property name="name" targetName="name" include="true"/>
+  <property name="location" targetName="location" include="true"/>
+<!--
+  <property name="myCustomerType" targetName="accountTypeCode" include="true"/>
+-->
+  <property name="customerType" targetName="accountTypeCode" include="true"/>
+  <property name="mainPhoneNumber" targetName="mainPhoneNumber" include="true"/>
+  <property name="dunsNumber" targetName="dunsNumber" include="true"/>
+  <property name="defaultCarrier" targetName="preferredShippingMethod" include="true"/>
+</item-descriptor>
+<!-- @version $Id: //product/Siebel/version/11.2/mappings/account.xml#1 $$Change: 1186180 $-->

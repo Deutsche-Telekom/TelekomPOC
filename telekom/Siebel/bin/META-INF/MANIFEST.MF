@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.0
+Created-By: 16.0-b13 (Sun Microsystems Inc.)
+ATG-Product-Full: ATG Siebel Integration
+ATG-Class-Path: lib/classes.jar lib/jaxws-rt.jar lib/jaxws-tools.jar lib/jaxb-impl.jar lib/jaxb-xjc.jar lib/stax-ex.jar lib/streambuffer.jar
+ATG-Client-Class-Path: lib/classes.jar 
+ATG-Config-Path: config/config.jar
+ATG-Required: DCS
+ATG-Web-Module: j2ee-apps/Siebel/siebel.war
+
+Name: lib/classes.jar
+SHA-Digest: Mi5gkFjRh33yiLaOiMCJoaNCJvk=
+MD5-Digest: y9SH1e4AP8isuIq6YWF4sw==
+ATG-Client-Update-File: true
+
+Name: mappings
+ATG-Assembler-Import-File: True

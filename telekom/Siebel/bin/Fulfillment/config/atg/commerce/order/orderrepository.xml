@@ -1,0 +1,28 @@
+<gsa-template xml-combine="append">
+
+    <header xml-combine="replace">
+        <name>ATG Siebel Order</name>
+        <author>Gary McDowell</author>
+        <version>$Revision: #1 $</version>
+    </header>
+
+    <!--///////////////////////////////-->
+    <!--          order                -->
+    <!--///////////////////////////////-->
+
+    <item-descriptor name="order" xml-combine="append">
+
+        <table name="dcspp_order" type="primary" id-column-name="order_id">
+
+            <property name="state" column-name="state" data-type="string" default="INCOMPLETE" category-resource="categoryBasics" display-name-resource="state" cache-mode="disabled">
+                <attribute name="resourceBundle" value="atg.commerce.OrderRepositoryTemplateResources"/>
+                <attribute name="propertySortPriority" value="20"/>
+            </property>
+        </table>
+
+    </item-descriptor>
+
+
+
+</gsa-template>
+<!-- @version $Id: //product/Siebel/version/11.2/Fulfillment/config/atg/commerce/order/orderrepository.xml#1 $$Change: 1186180 $-->

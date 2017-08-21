@@ -1,0 +1,20 @@
+<!DOCTYPE item-descriptor
+        SYSTEM
+        "http://www.atg.com/dtds/databinding/itemDescriptorMapping_1.0.dtd">
+
+<item-descriptor repository-path="/atg/siebel/account/BillingProfileRepository"
+	name="credit-card">
+	<!-- Mapping against Billingprofile class -->
+	<property name="siebelId" targetName="id" include="true" />
+	<property name="siebelAccountPrimaryBillingProfileId" targetName="accountPrimaryBillingProfileId" include="true" />
+	<property name="siebelAddressId" targetName="addressId" include="true" />
+		<property name="creditCardNumber" targetName="creditCardNumber"
+		include="true" />
+	<property name="creditCardType" targetName="creditCardType"
+		include="true" />
+	<property name="expirationMonth" targetName="creditCardExpirationMonth"
+		include="true" />
+	<property name="expirationYear" targetName="creditCardExpirationYear"
+		include="true" /> 
+</item-descriptor>
+<!-- @version $Id: //product/Siebel/version/11.2/mappings/billingProfile.xml#1 $$Change: 1186180 $-->

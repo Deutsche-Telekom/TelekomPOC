@@ -1,0 +1,322 @@
+<gsa-template xml-combine="append">
+
+  <header xml-combine="replace">
+    <name>ATG Siebel Order</name>
+    <author>Patrick Mc Erlean</author>
+    <version>$Revision: #1 $</version>
+  </header>
+
+  <!--///////////////////////////////-->
+  <!--          order                -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="order" xml-combine="append">
+
+    <table name="dcspp_order" type="primary" id-column-name="order_id">
+
+      <property name="type">
+        <option value="siebelOrder" code="1000"/>
+      </property>
+
+      <property name="priceInfo" xml-combine="remove"/>
+
+      <property name="priceInfo" column-name="price_info" item-type="siebelOrderPriceInfo" cascade="delete" category-resource="categoryBasics" display-name-resource="priceInfo">
+        <attribute name="resourceBundle" value="atg.commerce.OrderRepositoryTemplateResources"/>
+        <attribute name="propertySortPriority" value="50"/>
+      </property>
+		</table>
+		<table name="sbl_order" id-column-name="order_id">
+			<property name="quoteNumber" data-type="string" column-name="quote_number"
+				display-name-resource="QuoteNumber">
+				<attribute name="propertySortPriority" value="10" />
+			</property>
+			<property name="activeDocumentId" data-type="string" column-name="active_document_id"
+				display-name-resource="ActiveDocumentId">
+				<attribute name="propertySortPriority" value="10" />
+			</property>
+    </table>
+
+  </item-descriptor>
+
+
+	<!--/////////////////////////////// -->
+  <!--        commerceItem           -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="commerceItem" xml-combine="append">
+
+    <table name="dcspp_item" type="primary" id-column-name="commerce_item_id">
+
+      <property name="type">
+        <option value="siebelCommerceItem" code="10000"/>
+      </property>
+
+      <property name="priceInfo" xml-combine="remove"/>
+
+      <property name="priceInfo" column-name="price_info" item-type="siebelItemPriceInfo" cascade="delete" category-resource="categoryBasics" display-name-resource="priceInfo">
+        <attribute name="resourceBundle" value="atg.commerce.OrderRepositoryTemplateResources"/>
+        <attribute name="propertySortPriority" value="50"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--      siebelCommerceItem       -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="siebelCommerceItem"  super-type="commerceItem" sub-type-value="siebelCommerceItem"
+                   display-name-resource="SiebelCommerceItem"  item-cache-size="1000" query-cache-size="1000">
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelOrderResources"/>
+    <attribute name="categoryInfoPriority" value="10"/>
+
+    <table name="sbl_ord_comm_item" id-column-name="commerce_item_id">
+
+      <property name="actionCode" data-type="enumerated" column-name="action_code" category-resource="categoryInfo" display-name-resource="ActionCode">
+        <attribute name="useCodeForValue" value="false"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <option value="NoAction" code="0"/>
+        <option value="Add" code="1"/>
+        <option value="Update" code="2"/>
+        <option value="Delete" code="3"/>
+      </property>
+	  
+	  <property name="parentRelationshipId" data-type="string" column-name="parent_relationship_id" category-resource="categoryInfo" display-name-resource="ParentRelationshipId">
+		<attribute name="propertySortPriority" value="10"/>
+	  </property>
+	  
+	  <property name="prodPromoRuleId" data-type="string" column-name="prod_promorule_id" category-resource="categoryInfo" display-name-resource="ProdPromoRuleId">
+		<attribute name="propertySortPriority" value="10"/>
+	  </property>
+	  
+	  <property name="prodPromoInstanceId" data-type="string" column-name="prod_promoinstance_id" category-resource="categoryInfo" display-name-resource="ProdPromoInstanceId">
+		<attribute name="propertySortPriority" value="10"/>
+	  </property>
+	  
+	  <property name="domainItemId" data-type="string" column-name="domain_item_id" category-resource="categoryInfo" display-name-resource="DomainItemId">
+		<attribute name="propertySortPriority" value="10"/>
+	  </property>
+	  
+	  <property name="cfgStateCode" data-type="string" column-name="cfg_state_code" category-resource="categoryInfo" display-name-resource="CfgStateCode">
+		<attribute name="propertySortPriority" value="10"/>
+	  </property>
+	  
+	  <property name="configured" data-type="boolean" column-name="configured" default="false" category-resource="categoryInfo" display-name-resource="Configured">
+		<attribute name="propertySortPriority" value="10"/>
+	  </property>
+
+	  <property name="assetNumber" data-type="string"
+		column-name="asset_Number" category-resource="categoryInfo"
+		display-name-resource="AssetNumber">
+		<attribute name="propertySortPriority" value="10" />
+	  </property>
+			
+	  <property name="assetIntegrationId" data-type="string"
+		column-name="asset_integration_id" category-resource="categoryInfo"
+		display-name-resource="AssetIntegrationId">
+		<attribute name="propertySortPriority" value="10" />
+	  </property>
+			
+	  <property name="quoteItemId" data-type="string"
+		column-name="quote_item_id" category-resource="categoryInfo"
+		display-name-resource="QuoteItemId">
+		<attribute name="propertySortPriority" value="10" />
+	  </property>
+
+      <property name="commerceItemType" data-type="enumerated" default = "DEFAULT"
+		column-name="commerce_item_type" category-resource="categoryInfo"
+		display-name-resource="CommerceItemType">
+		<attribute name="propertySortPriority" value="10" />
+		<attribute name="useCodeForValue" value="false"/>
+		<option value="DEFAULT" code="0"/>
+        <option value="MODIFYASSET" code="1"/>
+        <option value="UPGRADEPROMOTION" code="2"/>
+	  </property>
+    
+    </table>
+
+    <table name="sbl_ord_comm_item_attr" type="multi" id-column-name="commerce_item_id" multi-column-name="sequence_num">
+
+      <property name="attributes" data-type="list" component-item-type="siebelAttribute" column-name="attribute_id" 
+                           cascade="update,delete" category-resource="categoryInfo" display-name-resource="Attributes">
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+    <table name="sbl_ord_comm_item_child" type="multi" id-column-name="commerce_item_id" multi-column-name="sequence_num">
+
+      <property name="commerceItems" data-type="list" component-item-type="siebelCommerceItem" column-name="commerce_item_child_id"
+                           category-resource="categoryInfo" display-name-resource="CommerceItems">
+        <attribute name="propertySortPriority" value="-10"/>
+        <attribute name="references" data-type="boolean" value="false"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--        amountInfo             -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="amountInfo" xml-combine="append">
+
+    <table name="dcspp_amount_info" type="primary" id-column-name="amount_info_id">
+
+      <property name="type">
+        <option value="siebelItemPriceInfo" code="1000"/>
+        <option value="siebelOrderPriceInfo" code="1001"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--      siebelItemPriceInfo      -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="siebelItemPriceInfo" super-type="itemPriceInfo" sub-type-value="siebelItemPriceInfo"
+              cache-mode="simple" display-name-resource="SiebelItemPriceInfo" >    
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelOrderResources"/>
+    <attribute name="categoryInfoPriority" value="90"/>
+
+    <table name="sbl_item_price_info" id-column-name="amount_info_id">
+
+      <property name="nonRecurringPrice" column-name="non_recurring_price" data-type="double" category-resource="categoryItem" display-name-resource="NonRecurringPrice">
+        <attribute name="propertySortPriority" value="10"/>
+      </property>
+
+      <property name="monthlyRecurringPrice" column-name="monthly_recurring_price" data-type="double" category-resource="categoryItem" display-name-resource="MonthlyRecurringPrice">
+        <attribute name="propertySortPriority" value="10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--      siebelOrderPriceInfo      -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="siebelOrderPriceInfo" super-type="orderPriceInfo" sub-type-value="siebelOrderPriceInfo"
+              cache-mode="simple" display-name-resource="SiebelOrderPriceInfo" >    
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelOrderResources"/>
+    <attribute name="categoryInfoPriority" value="90"/>
+
+    <table name="sbl_order_price_info" id-column-name="amount_info_id">
+
+      <property name="nonRecurringPrice" column-name="non_recurring_price" data-type="double" category-resource="categoryItem" display-name-resource="NonRecurringPrice">
+        <attribute name="propertySortPriority" value="10"/>
+      </property>
+
+      <property name="monthlyRecurringPrice" column-name="monthly_recurring_price" data-type="double" category-resource="categoryItem" display-name-resource="MonthlyRecurringPrice">
+        <attribute name="propertySortPriority" value="10"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+
+  <!--///////////////////////////////-->
+  <!--      siebelAttribute          -->
+  <!--///////////////////////////////-->
+
+  <item-descriptor name="siebelAttribute" display-name-resource="SiebelAttribute" item-cache-timeout="180000" id-space-name="siebel-order-commerce-item-attribute">
+    <attribute name="resourceBundle" value="atg.siebel.resources.SiebelOrderResources"/>
+    <attribute name="categoryInfoPriority" value="10"/>
+
+    <table name="sbl_ord_attr" type="primary" id-column-name="attribute_id">
+
+      <property name="id" data-type="string" column-name="attribute_id" category-resource="categoryInfo" display-name-resource="Id">
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="attributeDefinitionId" data-type="string" column-name="attribute_def_id" category-resource="categoryInfo" display-name-resource="AttributeDefinitionId">
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="attributeName" data-type="string" column-name="attribute_name" category-resource="categoryInfo" display-name-resource="AttributeName">
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+
+      <property name="actionCode" data-type="enumerated" column-name="action_code" category-resource="categoryInfo" display-name-resource="ActionCode">
+        <attribute name="useCodeForValue" value="false"/>
+        <attribute name="propertySortPriority" value="-10"/>
+        <option value="NoAction" code="0"/>
+        <option value="Add" code="1"/>
+        <option value="Update" code="2"/>
+        <option value="Delete" code="3"/>
+      </property>
+	  
+	  <property name="cfgStateCode" data-type="string" column-name="cfg_state_code" category-resource="categoryInfo" display-name-resource="CfgStateCode">
+		<attribute name="propertySortPriority" value="10"/>
+	  </property>
+
+      <property name="value" data-type="string" column-name="value" category-resource="categoryInfo" display-name-resource="Value">
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+	
+	  <property name="propTypeCD" data-type="string" column-name="propTypeCD" category-resource="categoryInfo" display-name-resource="PropTypeCD">
+        <attribute name="propertySortPriority" value="-10"/>
+      </property>
+    </table>
+
+  </item-descriptor>
+  
+  
+  <!--///////////////////////////////-->
+  <!--      paymentGroup             -->
+  <!--///////////////////////////////-->
+  <item-descriptor name="paymentGroup" xml-combine="append">
+
+   <table name="dcspp_pay_group" type="primary" id-column-name="payment_group_id">
+
+      <property name="type">
+        <option value="siebelCreditCard" code="1000"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+  
+  <item-descriptor name="siebelCreditCard" super-type="creditCard" sub-type-value="siebelCreditCard" cache-mode="simple" display-name-resource="itemDescriptorCreditCard" item-cache-timeout="180000">
+
+    <table name="sbl_credit_card" id-column-name="payment_group_id">
+      <property name="siebelAccountPrimaryBillingProfileId" column-name="credit_card_billing_profile_id" data-type="string" category-resource="categoryCreditCard" display-name-resource="siebelAccountPrimaryBillingProfileId">
+        <attribute name="propertySortPriority" value="10"/>
+      </property>
+    </table>
+	
+  </item-descriptor>
+  
+  
+  <!--///////////////////////////////-->
+  <!--      shippingGroup            -->
+  <!--///////////////////////////////-->
+  <item-descriptor name="shippingGroup" xml-combine="append">
+
+   <table name="dcspp_ship_group" type="primary" id-column-name="shipping_group_id">
+
+      <property name="type">
+        <option value="siebelHardgoodShippingGroup" code="1000"/>
+      </property>
+
+    </table>
+
+  </item-descriptor>
+  
+  <item-descriptor name="siebelHardgoodShippingGroup" super-type="hardgoodShippingGroup" sub-type-value="siebelHardgoodShippingGroup" cache-mode="simple" display-name-resource="itemDescriptorHardgoodShippingGroup" item-cache-timeout="180000">
+
+    <table name="sbl_hrd_ship_grp" id-column-name="shipping_group_id">
+      <property name="siebelId" column-name="siebel_id" data-type="string" category-resource="categoryShippingGroup" display-name-resource="siebelId">
+        <attribute name="propertySortPriority" value="10"/>
+      </property>
+    </table>
+  </item-descriptor>
+  
+</gsa-template>
+<!-- @version $Id: //product/Siebel/version/11.2/config/atg/commerce/order/orderrepository.xml#1 $$Change: 1186180 $-->

@@ -1,0 +1,35 @@
+#cart {
+  width:1000px;
+  
+}
+
+#cart td {
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+#itemcol {
+  width:560px;
+  
+}
+
+th.costcol {
+  width:120px;
+}
+
+#promotionedit {
+  width:75%
+}
+
+#promotionedit td {
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+#rootproduct {
+  width:47%
+}
+
+#domainproduct {
+  width:37%
+}

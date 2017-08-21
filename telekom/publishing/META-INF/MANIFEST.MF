@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+ATG-Config-Path: config/
+ATG-Required: DAS DAF.Deployment RL DAS-UI DPS DSS DCS Publishing.base Store.EStore.Versioned DAS Siebel telekom.common
+ATG-J2EE: j2ee-apps/manage
+ATG-EAR-Module: j2ee-apps/manage
+ATG-Class-Path: lib/classes.jar lib/javacsv-2.0.jar 
+
+Name: lib/classes.jar
+ATG-Client-Update-File: true
+ATG-Client-Update-Version: 4.0

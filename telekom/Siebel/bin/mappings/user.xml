@@ -1,0 +1,17 @@
+<!DOCTYPE item-descriptor
+        SYSTEM
+        "http://www.atg.com/dtds/databinding/itemDescriptorMapping_1.0.dtd">
+
+<item-descriptor repository-path="/atg/siebel/account/SiebelAccountRepository" name="user">
+  <property name="siebelId" targetName="id" include="true"/>
+  <property name="siebelAccountId" targetName="accountId" include="true"/>
+  <!-- <property name="password" targetName="password" include="true"/> -->
+  <property name="firstName" targetName="firstName" include="true"/>
+  <property name="middleName" targetName="middleName" include="true"/>
+  <property name="lastName" targetName="lastName" include="true"/>
+  <!-- <property name="userType" targetName="userType" include="true"/> -->
+  <!-- <property name="locale" targetName="preferredLanguageCode" include="true"/> -->
+  <property name="registrationDate" targetName="startDate" include="true"/>
+  <property name="email" targetName="emailAddress" include="true"/>
+</item-descriptor>
+<!-- @version $Id: //product/Siebel/version/11.2/mappings/user.xml#1 $$Change: 1186180 $-->

@@ -1,0 +1,18 @@
+<!DOCTYPE item-descriptor
+        SYSTEM
+        "http://www.atg.com/dtds/databinding/itemDescriptorMapping_1.0.dtd">
+
+<item-descriptor repository-path="/atg/siebel/account/PrimaryBillToRepository" name="contactInfo">
+  <!-- Mapping against AccountData class -->
+  <property name="siebelId" targetName="primaryBillToAddressId" include="true"/>
+  <property name="city" targetName="primaryBillToCity" include="true"/>
+  <property name="county" targetName="primaryBillToAddressCounty" include="true"/>
+  <property name="postalCode" targetName="primaryBillToPostalCode" include="true"/>
+  <property name="state" targetName="primaryBillToState" include="true"/>
+  <property name="address1" targetName="primaryBillToStreetAddress" include="true"/>
+  <property name="address2" targetName="primaryBillToAddressStreetAddress2" include="true"/>
+  <property name="address3" targetName="primaryBillToAddressStreetAddress3" include="true"/>
+  <property name="addressName" targetName="addressName" include="true"/>
+  <property name="country" targetName="primaryBillToCountry" include="true"/>
+</item-descriptor>
+<!-- @version $Id: //product/Siebel/version/11.2/mappings/primaryBillTo.xml#1 $$Change: 1186180 $-->

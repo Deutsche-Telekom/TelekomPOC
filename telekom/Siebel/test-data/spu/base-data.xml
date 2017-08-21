@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+
+<import-items>
+
+<add-item item-descriptor="block" id="product-content-connection-charge-simple-product-block">
+  <set-property name="renderer"><![CDATA[product-content-simple-product]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[product-content-connection-charge-simple-product-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[style="padding:10px;font:17px arial,sans-serif;color:#335C64;width:100%;border:1px solid #DAA520;border-left-style:solid;border-left-width:15px;border-left-color:#DAA520;background-color:#FFFFFF"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="product-content-second-level-simple-product-block">
+  <set-property name="renderer"><![CDATA[product-content-simple-product]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[product-content-second-level-simple-product-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[style="padding:10px;font:17px arial,sans-serif;color:#335C64;width:100%;border:1px solid #507282;border-left-style:solid;border-left-width:15px;border-left-color:#592B1E;background-color:#FFFFFF"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="second-level-product-markup-div-start-block">
+  <set-property name="renderer"><![CDATA[markup-div-start]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[second-level-product-markup-div-start-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[style="padding:10px;font:17px arial,sans-serif;color:#335C64;width:100%;border:1px solid #507282;border-left-style:solid;border-left-width:15px;border-left-color:#592B1E;background-color:#FFFFFF"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="product-content-first-level-simple-product-block">
+  <set-property name="renderer"><![CDATA[product-content-simple-product]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[product-content-first-level-simple-product-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[style="padding:10px;font:17px arial,sans-serif;color:#335C64;width:100%;border:1px solid #B25538;border-left-style:solid;border-left-width:15px;border-left-color:#B25538;background-color:#FFFFFF"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="first-level-product-markup-div-start-block">
+  <set-property name="renderer"><![CDATA[markup-div-start]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[first-level-product-markup-div-start-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[style="padding:10px;font:17px arial,sans-serif;color:#335C64;width:100%;border:1px solid #B25538;border-left-style:solid;border-left-width:15px;border-left-color:#B25538;background-color:#FFFFFF"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="product-content-root-simple-product-block">
+  <set-property name="renderer"><![CDATA[product-content-simple-product]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[product-content-root-simple-product-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[style="padding:10px;font:17px arial,sans-serif;color:#335C64;width:75%;border:1px;border-color:#5C4A56;border-top-style:solid;border-left-style:solid;border-right-style:solid;border-bottom-style:solid;background-color:#F9F9F4"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="root-product-markup-div-start-block">
+  <set-property name="renderer"><![CDATA[markup-div-start]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[root-product-markup-div-start-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[style="padding:10px;font:17px arial,sans-serif;color:#335C64;width:75%;border:1px;border-color:#5C4A56;border-top-style:solid;border-left-style:solid;border-right-style:solid;border-bottom-style:solid;background-color:#F9F9F4"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="promo-rel-delete-button-block">
+  <set-property name="renderer"><![CDATA[rel-delete-button]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[promo-rel-delete-button-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[class="deletebut"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="rel-delete-button-block">
+  <set-property name="renderer"><![CDATA[rel-delete-button]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[rel-delete-button-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[class="deletebut"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="markup-div-end-block">
+  <set-property name="renderer"><![CDATA[markup-div-end]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[markup-div-end-block]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="markup-div-start-block">
+  <set-property name="renderer"><![CDATA[markup-div-start]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[markup-div-start-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[style="padding:10px;font:17px arial,sans-serif;color:#335C64;width:75%;border:1px;border-color:#5C4A56;border-top-style:solid;border-left-style:solid;border-right-style:solid;border-bottom-style:solid;background-color:#F9F9F4"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="product-content-description-block">
+  <set-property name="displayName"><![CDATA[]]></set-property>
+  <set-property name="renderer"><![CDATA[product-content-description]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[product-content-description-block]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="product-content-heading-block">
+  <set-property name="renderer"><![CDATA[product-content-heading]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[product-content-heading-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="product-content-simple-product-block">
+  <set-property name="renderer"><![CDATA[product-content-simple-product]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[product-content-simple-product-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[style="padding:10px;font:17px arial,sans-serif;color:#335C64;width:75%;border:1px;border-color:#5C4A56;border-top-style:solid;border-left-style:solid;border-right-style:solid;border-bottom-style:solid;background-color:#F9F9F4"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="markup-table-end-block">
+  <set-property name="renderer"><![CDATA[markup-table-end]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[markup-table-end-block]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="markup-table-start-block">
+  <set-property name="renderer"><![CDATA[markup-table-start]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[Configuration Options]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="product-quantity-block">
+  <set-property name="displayName"><![CDATA[]]></set-property>
+  <set-property name="renderer"><![CDATA[product-quantity-renderer-1]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[product-quantity-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="markup-tr-start-block">
+  <set-property name="renderer"><![CDATA[markup-tr-start]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[markup-tr-start-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="markup-tr-end-block">
+  <set-property name="renderer"><![CDATA[markup-tr-end]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[markup-tr-end-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="markup-td-start-block">
+  <set-property name="renderer"><![CDATA[markup-td-start]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[markup-td-start-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="markup-td-end-block">
+  <set-property name="renderer"><![CDATA[markup-td-end]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[markup-td-end-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="block" id="markup-nbsp-block">
+  <set-property name="renderer"><![CDATA[markup-nbsp]]></set-property>
+  <set-property name="activeFlag"><![CDATA[true]]></set-property>
+  <set-property name="name"><![CDATA[markup-nbsp-block]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="rel-opt-single-select-single-choice-check">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/rel-opt-single-select-single-choice-check.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="markup-table-end">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/markup-table-end.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="rel-man-single-select-single-choice-text">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/rel-man-single-select-single-choice-text.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="markup-table-start">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/markup-table-start.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="rel-delete-button">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/rel-delete-button.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="single-page-renderer">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/single-page-renderer.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="product-attribute-select">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/product-attribute-select.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="product-content-description">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/product-content-description.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="rel-opt-multi-select-multi-choice-list">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/rel-opt-multi-select-multi-choice-list.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[class="addvtn"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="markup-div-end">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/markup-div-end.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="rel-man-single-select-multi-choice-radio">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/rel-man-single-select-multi-choice-radio.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="multi-page-renderer">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/multi-page-renderer.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="product-attribute-text">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/product-attribute-text.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[class="updatebut"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="rel-opt-multi-select-single-choice-button">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/rel-opt-multi-select-single-choice-button.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+  <set-property name="htmlAttributes"><![CDATA[class="addvtn"]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="markup-div-start">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/markup-div-start.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="product-content-heading">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/product-content-heading.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="product-content-simple-product">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/product-content-simple-product.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="rel-opt-multi-select-multi-choice-select">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/rel-opt-multi-select-multi-choice-select.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="product-quantity-renderer-1">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/product-quantity-renderer.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="markup-tr-start">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/markup-tr-start.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="markup-tr-end">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/markup-tr-end.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="markup-td-start">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/markup-td-start.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="markup-td-end">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/markup-td-end.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="markup-br-start">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/markup-br-start.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+<add-item item-descriptor="renderer" id="markup-nbsp">
+  <set-property name="jspPath"><![CDATA[/configurator/renderer/markup-nbsp.jsp]]></set-property>
+  <set-property name="applicationContext"><![CDATA[/siebel]]></set-property>
+</add-item>
+
+</import-items>
+
+</gsa-template>
+<!-- @version $Id: //product/Siebel/version/11.2/test-data/spu/base-data.xml#1 $$Change: 1186180 $-->

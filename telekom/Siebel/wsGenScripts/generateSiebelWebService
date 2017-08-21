@@ -1,0 +1,48 @@
+#!/bin/sh
+
+#
+# Check that DYNAMO_HOME and DAS_ROOT are set
+#
+PROGRAM_DIR=`dirname $0`
+. $PROGRAM_DIR/checkDynamoHome.sh
+
+DYNAMO_MODULES="Siebel"
+SERVERNAME="."
+TPARGS=""
+SERVERCONFIGPATH=""
+J2EEAPI=${DYNAMO_HOME}/../../J2EEAPI/src/lib/libs.jar
+JAVA_ARGS="-server -Xms512m -Xmx512m -Djava.naming.factory.initial=atg.j2ee.jndi.SerialInitContextFactory $JAVA_ARGS"
+
+#
+# Add appropriate dir or jar to config path for TransactionManager
+#
+
+SERVERCONFIGPATH="${SERVERCONFIGPATH}:localconfig"
+
+if [ "x${ADDITIONAL_MODULES}" != "x" ] ; then
+    DYNAMO_MODULES=${DYNAMO_MODULES}:${ADDITIONAL_MODULES}
+fi
+
+#
+# Load in default environment values
+#
+. bin/dynamoEnv.sh
+
+CONFIGPATH=${CONFIGPATH}$SERVERCONFIGPATH
+
+CLASSPATH=${CLASSPATH}":${J2EEAPI}:${JAVA_HOME}/lib/tools.jar"
+
+echo -------------------
+echo JAVA_ARGS:  ${JAVA_ARGS}
+echo -------------------
+${JAVA_VM} ${JAVA_ARGS} atg.applauncher.dynamo.DynamoServerLauncher -expand DYNAMO_MODULES: ${DYNAMO_MODULES}
+echo -------------------
+${JAVA_VM} ${JAVA_ARGS} atg.applauncher.dynamo.DynamoServerLauncher -expand CONFIGPATH: ${CONFIGPATH}
+echo -------------------
+echo CLASSPATH:  ${CLASSPATH}
+echo -------------------
+echo PATH:       ${PATH}
+
+${JAVA_VM} ${JAVA_ARGS} atg.siebel.catalog.SiebelWebServiceGen -configPath ${CONFIGPATH} ${TPARGS}
+
+

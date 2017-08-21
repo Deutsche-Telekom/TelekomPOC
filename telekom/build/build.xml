@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<project name="TwoDegree Replatform App" default="atg-store-standalone-exploded" basedir="." xmlns:ac="antlib:net.sf.antcontrib">
+
+    <property environment="env"/>
+    <property file="build.properties"/>
+    <property name="full.build" value="false"/>
+    <property name="server.name" value=""></property>
+
+    <filelist id="module.files" files="${modules.build.order}"/>
+    <taskdef uri="antlib:net.sf.antcontrib" resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="${Ant.home}/lib/antcontrib.jar"/>
+        </classpath>
+    </taskdef>
+
+    <!--  - -
+    startBuild
+	- -  -->
+
+    <target name="-init">
+        <echo>Start Build....</echo>
+        <echo>$${ant.project.name} = ${ant.project.name}</echo>
+        <echo>$${Ant.home} = ${Ant.home}</echo>
+        <echo>$${basedir} = ${basedir}</echo>
+        <echo>$${ant.file} = ${ant.file}</echo>
+        <echo>$${ant.version} = ${ant.version}</echo>
+        <echo>$${env.DYNAMO_HOME} = ${env.DYNAMO_HOME}</echo>
+        <echo>telekom = ${env.DYNAMO_HOME}/../${telekom.name}</echo>
+        <echo>$${copy.exclude.dirs} = ${copy.exclude.dirs}</echo>
+        <echo>$${dynamo.home} = ${dynamo.home}</echo>
+        <echo>$${dynamo.root.dir} = ${dynamo.root.dir}</echo>
+        <echo>$${modules.build.order} = ${modules.build.order}</echo>
+        <echo>${telekom.location}/${telekom.name}</echo>
+    </target>
+
+    <!--
+    Including the Siebel Build script
+    -->
+    <target name="build.siebel">
+        <ant antfile="../Siebel/siebelBuild.xml" dir="../Siebel"/>
+    </target>
+
+    <!--  - -
+        clean task
+		- -  -->
+
+    <target name="clean" depends="-init">
+        <echo>******** Deleting TwoDegreeReplatformApp from ATG_ROOT AND EAR from weblogic Server...******</echo>
+        <delete dir="${env.DYNAMO_HOME}/../${telekom.name}" failonerror="false"/>
+    </target>
+
+    <!--  - -    copy-atg-server - -  -->
+    <target name="copy-atg-server" >
+        <echo>******* Copying Server configuration to ATG_ROOT...******</echo>
+        <mkdir dir="${dynamo.home}/servers/${server.name}"/>
+        <copy failonerror="false" includeemptydirs="true" todir="${dynamo.home}/servers/${server.name}">
+            <fileset dir="${dynamo.home}/../${telekom.name}/servers/homeServers/${server.name}">
+                <exclude name="**/.svn/*"/>
+            </fileset>
+        </copy>
+    </target>
+
+
+    <!--  - -    copy-app-to-atg -
+            First it will call siebel build script and then create wsdl jar
+     -  -->
+
+    <target name="copy-app-to-atg">
+        <!-- checking for full deployment or standard deployemnt -->
+        <echo>****** Copying TwoDegreeReplatformApp to ATG_ROOT...*******</echo>
+        <mkdir dir="${dynamo.home}/../${telekom.name}"/>
+        <copy todir="${dynamo.home}/../${telekom.name}" includeEmptyDirs="yes">
+            <fileset dir="${telekom.location}/${telekom.name}">
+                <exclude name="**/env/*"/>
+                <exclude name="**/build/*"/>
+                <exclude name="**/Siebel/**"/>
+                <exclude name="**/.svn/*"/>
+            </fileset>
+        </copy>
+    </target>
+
+ 
+    <!--  - -
+            macro def for call-subant
+    - -  -->
+
+    <macrodef name="call-subant">
+        <attribute name="target"/>
+        <sequential>
+            <subant target="@{target}">
+                <filelist refid="module.files"/>
+            </subant>
+        </sequential>
+    </macrodef>
+
+ 
+	<target name="store-build" depends="clean,copy-app-to-atg" description="store-build" >
+		
+		<ac:var name="server.name" unset="true"/>
+		<property name="server.name" value="${store.server.name}"/>
+		<antcall target="copy-atg-server"></antcall>		
+
+		<!-- Delete existing EAR -->
+		<echo>****** Deleting the Old EAR..*******</echo>
+		<delete dir="${store.standalone.ear.location}" failonerror="false"/>	
+		
+		<echo>****** Creating Standalone EAR..*******</echo>
+		<call-subant target="jar" />
+		
+		
+		<ant antfile="assembler.xml" inheritAll="true" target="exploded-store-ear-standalone">
+				<property name="modules.to.assemble" value="${dev.store.modules.to.assemble}"/>
+				<property name="ear.file.name" value="${store.ear.name}.ear"/>
+			    <property name="atgserver.name" value="${store.server.name}"/>
+				<property name="ear.location" value="${store.standalone.ear.location}"/>
+		</ant>
+	</target>
+	
+	<!-- Target To Create Stand alone EAR for Publishing Instance on UAT env-->
+	
+	<target name="bcc-build" depends="clean,copy-app-to-atg" description="bcc-build" >
+		
+		<ac:var name="server.name" unset="true"/>
+		<property name="server.name" value="${bcc.server.name}"/>
+		<antcall target="copy-atg-server"></antcall>
+
+		<!-- Delete existing EAR -->
+		<echo>****** Deleting the Old EAR..*******</echo>
+		<delete dir="${bcc.standalone.ear.location}" failonerror="false"/>	
+
+		<echo>****** Creating Standalone EAR..*******</echo>
+		<call-subant target="jar" />
+		
+			
+		<ant antfile="assembler.xml" inheritAll="true" target="exploded-pub-ear-standalone">
+			<property name="modules.to.assemble" value="${dev.pub.modules.to.assemble}"/>
+			<property name="ear.file.name" value="${bcc.ear.name}.ear"/>
+			<property name="atgserver.name" value="${bcc.server.name}"/>
+			<property name="ear.location" value="${bcc.standalone.ear.location}"/>
+		</ant>
+	</target>
+
+</project>
