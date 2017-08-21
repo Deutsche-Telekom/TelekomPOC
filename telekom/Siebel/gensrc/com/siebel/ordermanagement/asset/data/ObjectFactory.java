@@ -34,6 +34,38 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListOfAssetMgmtAssetXa }
+     * 
+     */
+    public ListOfAssetMgmtAssetXa createListOfAssetMgmtAssetXa() {
+        return new ListOfAssetMgmtAssetXa();
+    }
+
+    /**
+     * Create an instance of {@link ListOfAssetTopElmt }
+     * 
+     */
+    public ListOfAssetTopElmt createListOfAssetTopElmt() {
+        return new ListOfAssetTopElmt();
+    }
+
+    /**
+     * Create an instance of {@link ListOfAssetMgmtAsset }
+     * 
+     */
+    public ListOfAssetMgmtAsset createListOfAssetMgmtAsset() {
+        return new ListOfAssetMgmtAsset();
+    }
+
+    /**
+     * Create an instance of {@link AssetMgmtAssetHeader }
+     * 
+     */
+    public AssetMgmtAssetHeader createAssetMgmtAssetHeader() {
+        return new AssetMgmtAssetHeader();
+    }
+
+    /**
      * Create an instance of {@link AssetMgmtAsset }
      * 
      */
@@ -50,43 +82,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAssetMgmtAsset }
-     * 
-     */
-    public ListOfAssetMgmtAsset createListOfAssetMgmtAsset() {
-        return new ListOfAssetMgmtAsset();
-    }
-
-    /**
      * Create an instance of {@link AssetMgmtAssetXa }
      * 
      */
     public AssetMgmtAssetXa createAssetMgmtAssetXa() {
         return new AssetMgmtAssetXa();
-    }
-
-    /**
-     * Create an instance of {@link ListOfAssetTopElmt }
-     * 
-     */
-    public ListOfAssetTopElmt createListOfAssetTopElmt() {
-        return new ListOfAssetTopElmt();
-    }
-
-    /**
-     * Create an instance of {@link ListOfAssetMgmtAssetXa }
-     * 
-     */
-    public ListOfAssetMgmtAssetXa createListOfAssetMgmtAssetXa() {
-        return new ListOfAssetMgmtAssetXa();
-    }
-
-    /**
-     * Create an instance of {@link AssetMgmtAssetHeader }
-     * 
-     */
-    public AssetMgmtAssetHeader createAssetMgmtAssetHeader() {
-        return new AssetMgmtAssetHeader();
     }
 
     /**

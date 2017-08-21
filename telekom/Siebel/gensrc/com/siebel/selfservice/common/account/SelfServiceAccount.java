@@ -18,10 +18,10 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @WebService(name = "SelfServiceAccount", targetNamespace = "http://siebel.com/SelfService/Common/Account")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
-    com.siebel.selfservice.common.account.id.ObjectFactory.class,
+    com.siebel.selfservice.common.account.ObjectFactory.class,
     com.siebel.selfservice.common.account.data.ObjectFactory.class,
     com.siebel.selfservice.common.account.query.ObjectFactory.class,
-    com.siebel.selfservice.common.account.ObjectFactory.class
+    com.siebel.selfservice.common.account.id.ObjectFactory.class
 })
 public interface SelfServiceAccount {
 

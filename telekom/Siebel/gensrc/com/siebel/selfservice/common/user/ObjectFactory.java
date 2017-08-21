@@ -30,19 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SelfServiceUserExecuteOutput }
+     * Create an instance of {@link SelfServiceUserExecuteInput }
      * 
      */
-    public SelfServiceUserExecuteOutput createSelfServiceUserExecuteOutput() {
-        return new SelfServiceUserExecuteOutput();
-    }
-
-    /**
-     * Create an instance of {@link SelfServiceUserQueryPageInput }
-     * 
-     */
-    public SelfServiceUserQueryPageInput createSelfServiceUserQueryPageInput() {
-        return new SelfServiceUserQueryPageInput();
+    public SelfServiceUserExecuteInput createSelfServiceUserExecuteInput() {
+        return new SelfServiceUserExecuteInput();
     }
 
     /**
@@ -54,11 +46,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SelfServiceUserExecuteInput }
+     * Create an instance of {@link SelfServiceUserQueryPageInput }
      * 
      */
-    public SelfServiceUserExecuteInput createSelfServiceUserExecuteInput() {
-        return new SelfServiceUserExecuteInput();
+    public SelfServiceUserQueryPageInput createSelfServiceUserQueryPageInput() {
+        return new SelfServiceUserQueryPageInput();
+    }
+
+    /**
+     * Create an instance of {@link SelfServiceUserExecuteOutput }
+     * 
+     */
+    public SelfServiceUserExecuteOutput createSelfServiceUserExecuteOutput() {
+        return new SelfServiceUserExecuteOutput();
     }
 
 }

@@ -34,38 +34,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link QueryType }
-     * 
-     */
-    public QueryType createQueryType() {
-        return new QueryType();
-    }
-
-    /**
-     * Create an instance of {@link ContactAlternatePhoneQuery }
-     * 
-     */
-    public ContactAlternatePhoneQuery createContactAlternatePhoneQuery() {
-        return new ContactAlternatePhoneQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfSSAccountQuery }
-     * 
-     */
-    public ListOfSSAccountQuery createListOfSSAccountQuery() {
-        return new ListOfSSAccountQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfContactAlternatePhoneQuery }
-     * 
-     */
-    public ListOfContactAlternatePhoneQuery createListOfContactAlternatePhoneQuery() {
-        return new ListOfContactAlternatePhoneQuery();
-    }
-
-    /**
      * Create an instance of {@link ListOfAccountBusinessAddressQuery }
      * 
      */
@@ -79,6 +47,38 @@ public class ObjectFactory {
      */
     public ListOfContactQuery createListOfContactQuery() {
         return new ListOfContactQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfSSAccountQuery }
+     * 
+     */
+    public ListOfSSAccountQuery createListOfSSAccountQuery() {
+        return new ListOfSSAccountQuery();
+    }
+
+    /**
+     * Create an instance of {@link QueryType }
+     * 
+     */
+    public QueryType createQueryType() {
+        return new QueryType();
+    }
+
+    /**
+     * Create an instance of {@link AccountQuery }
+     * 
+     */
+    public AccountQuery createAccountQuery() {
+        return new AccountQuery();
+    }
+
+    /**
+     * Create an instance of {@link ContactCommunicationAddressQuery }
+     * 
+     */
+    public ContactCommunicationAddressQuery createContactCommunicationAddressQuery() {
+        return new ContactCommunicationAddressQuery();
     }
 
     /**
@@ -98,35 +98,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link BusinessAddressQuery }
+     * Create an instance of {@link ListOfContactAlternatePhoneQuery }
      * 
      */
-    public BusinessAddressQuery createBusinessAddressQuery() {
-        return new BusinessAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfSSAccountTopElmtQuery }
-     * 
-     */
-    public ListOfSSAccountTopElmtQuery createListOfSSAccountTopElmtQuery() {
-        return new ListOfSSAccountTopElmtQuery();
-    }
-
-    /**
-     * Create an instance of {@link AccountQuery }
-     * 
-     */
-    public AccountQuery createAccountQuery() {
-        return new AccountQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfBusinessAddressQuery }
-     * 
-     */
-    public ListOfBusinessAddressQuery createListOfBusinessAddressQuery() {
-        return new ListOfBusinessAddressQuery();
+    public ListOfContactAlternatePhoneQuery createListOfContactAlternatePhoneQuery() {
+        return new ListOfContactAlternatePhoneQuery();
     }
 
     /**
@@ -138,11 +114,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ContactCommunicationAddressQuery }
+     * Create an instance of {@link ContactAlternatePhoneQuery }
      * 
      */
-    public ContactCommunicationAddressQuery createContactCommunicationAddressQuery() {
-        return new ContactCommunicationAddressQuery();
+    public ContactAlternatePhoneQuery createContactAlternatePhoneQuery() {
+        return new ContactAlternatePhoneQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfSSAccountTopElmtQuery }
+     * 
+     */
+    public ListOfSSAccountTopElmtQuery createListOfSSAccountTopElmtQuery() {
+        return new ListOfSSAccountTopElmtQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfBusinessAddressQuery }
+     * 
+     */
+    public ListOfBusinessAddressQuery createListOfBusinessAddressQuery() {
+        return new ListOfBusinessAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link BusinessAddressQuery }
+     * 
+     */
+    public BusinessAddressQuery createBusinessAddressQuery() {
+        return new BusinessAddressQuery();
     }
 
     /**

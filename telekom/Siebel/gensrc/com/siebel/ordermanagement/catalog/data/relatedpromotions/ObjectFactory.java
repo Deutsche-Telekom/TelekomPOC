@@ -34,6 +34,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListOfPromotionMessages }
+     * 
+     */
+    public ListOfPromotionMessages createListOfPromotionMessages() {
+        return new ListOfPromotionMessages();
+    }
+
+    /**
      * Create an instance of {@link ListOfProduct }
      * 
      */
@@ -50,30 +58,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Product }
-     * 
-     */
-    public Product createProduct() {
-        return new Product();
-    }
-
-    /**
-     * Create an instance of {@link ListOfPromotionMessages }
-     * 
-     */
-    public ListOfPromotionMessages createListOfPromotionMessages() {
-        return new ListOfPromotionMessages();
-    }
-
-    /**
-     * Create an instance of {@link ListOfRelatedPromotion }
-     * 
-     */
-    public ListOfRelatedPromotion createListOfRelatedPromotion() {
-        return new ListOfRelatedPromotion();
-    }
-
-    /**
      * Create an instance of {@link ListOfProductTopElmt }
      * 
      */
@@ -82,11 +66,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Product }
+     * 
+     */
+    public Product createProduct() {
+        return new Product();
+    }
+
+    /**
      * Create an instance of {@link RelatedPromotion }
      * 
      */
     public RelatedPromotion createRelatedPromotion() {
         return new RelatedPromotion();
+    }
+
+    /**
+     * Create an instance of {@link ListOfRelatedPromotion }
+     * 
+     */
+    public ListOfRelatedPromotion createListOfRelatedPromotion() {
+        return new ListOfRelatedPromotion();
     }
 
     /**

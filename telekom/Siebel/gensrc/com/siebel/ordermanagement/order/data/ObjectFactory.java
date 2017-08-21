@@ -34,11 +34,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfOrderHeader }
+     * Create an instance of {@link Order }
      * 
      */
-    public ListOfOrderHeader createListOfOrderHeader() {
-        return new ListOfOrderHeader();
+    public Order createOrder() {
+        return new Order();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderItemXA }
+     * 
+     */
+    public ListOfOrderItemXA createListOfOrderItemXA() {
+        return new ListOfOrderItemXA();
     }
 
     /**
@@ -50,27 +58,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link OrderItemXA }
+     * 
+     */
+    public OrderItemXA createOrderItemXA() {
+        return new OrderItemXA();
+    }
+
+    /**
      * Create an instance of {@link ListOfOrderTopElmt }
      * 
      */
     public ListOfOrderTopElmt createListOfOrderTopElmt() {
         return new ListOfOrderTopElmt();
-    }
-
-    /**
-     * Create an instance of {@link OrderItem }
-     * 
-     */
-    public OrderItem createOrderItem() {
-        return new OrderItem();
-    }
-
-    /**
-     * Create an instance of {@link Order }
-     * 
-     */
-    public Order createOrder() {
-        return new Order();
     }
 
     /**
@@ -82,19 +82,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OrderItemXA }
+     * Create an instance of {@link OrderItem }
      * 
      */
-    public OrderItemXA createOrderItemXA() {
-        return new OrderItemXA();
+    public OrderItem createOrderItem() {
+        return new OrderItem();
     }
 
     /**
-     * Create an instance of {@link ListOfOrderItemXA }
+     * Create an instance of {@link ListOfOrderHeader }
      * 
      */
-    public ListOfOrderItemXA createListOfOrderItemXA() {
-        return new ListOfOrderItemXA();
+    public ListOfOrderHeader createListOfOrderHeader() {
+        return new ListOfOrderHeader();
     }
 
     /**

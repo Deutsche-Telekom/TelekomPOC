@@ -34,6 +34,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListOfAssetManagementIoQuery }
+     * 
+     */
+    public ListOfAssetManagementIoQuery createListOfAssetManagementIoQuery() {
+        return new ListOfAssetManagementIoQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfAssetManagementIoTopElmtQuery }
+     * 
+     */
+    public ListOfAssetManagementIoTopElmtQuery createListOfAssetManagementIoTopElmtQuery() {
+        return new ListOfAssetManagementIoTopElmtQuery();
+    }
+
+    /**
      * Create an instance of {@link AssetMgmtAssetQuery }
      * 
      */
@@ -47,22 +63,6 @@ public class ObjectFactory {
      */
     public QueryType createQueryType() {
         return new QueryType();
-    }
-
-    /**
-     * Create an instance of {@link ListOfAssetManagementIoTopElmtQuery }
-     * 
-     */
-    public ListOfAssetManagementIoTopElmtQuery createListOfAssetManagementIoTopElmtQuery() {
-        return new ListOfAssetManagementIoTopElmtQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfAssetManagementIoQuery }
-     * 
-     */
-    public ListOfAssetManagementIoQuery createListOfAssetManagementIoQuery() {
-        return new ListOfAssetManagementIoQuery();
     }
 
     /**

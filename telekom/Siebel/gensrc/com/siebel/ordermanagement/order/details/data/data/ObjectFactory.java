@@ -34,94 +34,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OrderItemXADetailData }
-     * 
-     */
-    public OrderItemXADetailData createOrderItemXADetailData() {
-        return new OrderItemXADetailData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfShipmentData }
-     * 
-     */
-    public ListOfShipmentData createListOfShipmentData() {
-        return new ListOfShipmentData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderItemProductLineData }
-     * 
-     */
-    public ListOfOrderItemProductLineData createListOfOrderItemProductLineData() {
-        return new ListOfOrderItemProductLineData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderApprovalHistoryData }
-     * 
-     */
-    public ListOfOrderApprovalHistoryData createListOfOrderApprovalHistoryData() {
-        return new ListOfOrderApprovalHistoryData();
-    }
-
-    /**
-     * Create an instance of {@link ShipmentItemData }
-     * 
-     */
-    public ShipmentItemData createShipmentItemData() {
-        return new ShipmentItemData();
-    }
-
-    /**
-     * Create an instance of {@link OrderItemDetailData }
-     * 
-     */
-    public OrderItemDetailData createOrderItemDetailData() {
-        return new OrderItemDetailData();
-    }
-
-    /**
-     * Create an instance of {@link ShipmentData }
-     * 
-     */
-    public ShipmentData createShipmentData() {
-        return new ShipmentData();
-    }
-
-    /**
-     * Create an instance of {@link OrderItemProductLineData }
-     * 
-     */
-    public OrderItemProductLineData createOrderItemProductLineData() {
-        return new OrderItemProductLineData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderItemDetailData }
-     * 
-     */
-    public ListOfOrderItemDetailData createListOfOrderItemDetailData() {
-        return new ListOfOrderItemDetailData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderPaymentData }
-     * 
-     */
-    public ListOfOrderPaymentData createListOfOrderPaymentData() {
-        return new ListOfOrderPaymentData();
-    }
-
-    /**
-     * Create an instance of {@link OrderDetailData }
-     * 
-     */
-    public OrderDetailData createOrderDetailData() {
-        return new OrderDetailData();
-    }
-
-    /**
      * Create an instance of {@link ListOfOrderPaymentsBankAddressData }
      * 
      */
@@ -130,19 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OrderPaymentsBankAddressData }
+     * Create an instance of {@link OrderApprovalHistoryData }
      * 
      */
-    public OrderPaymentsBankAddressData createOrderPaymentsBankAddressData() {
-        return new OrderPaymentsBankAddressData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderDetailData }
-     * 
-     */
-    public ListOfOrderDetailData createListOfOrderDetailData() {
-        return new ListOfOrderDetailData();
+    public OrderApprovalHistoryData createOrderApprovalHistoryData() {
+        return new OrderApprovalHistoryData();
     }
 
     /**
@@ -154,11 +58,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OrderPaymentsBillToAddressData }
+     * Create an instance of {@link ListOfOrderDetailData }
      * 
      */
-    public OrderPaymentsBillToAddressData createOrderPaymentsBillToAddressData() {
-        return new OrderPaymentsBillToAddressData();
+    public ListOfOrderDetailData createListOfOrderDetailData() {
+        return new ListOfOrderDetailData();
+    }
+
+    /**
+     * Create an instance of {@link OrderItemProductLineData }
+     * 
+     */
+    public OrderItemProductLineData createOrderItemProductLineData() {
+        return new OrderItemProductLineData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderItemXADetailData }
+     * 
+     */
+    public ListOfOrderItemXADetailData createListOfOrderItemXADetailData() {
+        return new ListOfOrderItemXADetailData();
+    }
+
+    /**
+     * Create an instance of {@link OrderItemXADetailData }
+     * 
+     */
+    public OrderItemXADetailData createOrderItemXADetailData() {
+        return new OrderItemXADetailData();
     }
 
     /**
@@ -178,6 +106,46 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ShipmentData }
+     * 
+     */
+    public ShipmentData createShipmentData() {
+        return new ShipmentData();
+    }
+
+    /**
+     * Create an instance of {@link ShipmentItemData }
+     * 
+     */
+    public ShipmentItemData createShipmentItemData() {
+        return new ShipmentItemData();
+    }
+
+    /**
+     * Create an instance of {@link OrderPaymentsBillToAddressData }
+     * 
+     */
+    public OrderPaymentsBillToAddressData createOrderPaymentsBillToAddressData() {
+        return new OrderPaymentsBillToAddressData();
+    }
+
+    /**
+     * Create an instance of {@link OrderDetailData }
+     * 
+     */
+    public OrderDetailData createOrderDetailData() {
+        return new OrderDetailData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderApprovalHistoryData }
+     * 
+     */
+    public ListOfOrderApprovalHistoryData createListOfOrderApprovalHistoryData() {
+        return new ListOfOrderApprovalHistoryData();
+    }
+
+    /**
      * Create an instance of {@link ListOfOrderDetailTopElmtData }
      * 
      */
@@ -186,19 +154,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfOrderItemXADetailData }
+     * Create an instance of {@link ListOfOrderItemDetailData }
      * 
      */
-    public ListOfOrderItemXADetailData createListOfOrderItemXADetailData() {
-        return new ListOfOrderItemXADetailData();
+    public ListOfOrderItemDetailData createListOfOrderItemDetailData() {
+        return new ListOfOrderItemDetailData();
     }
 
     /**
-     * Create an instance of {@link OrderApprovalHistoryData }
+     * Create an instance of {@link ListOfShipmentData }
      * 
      */
-    public OrderApprovalHistoryData createOrderApprovalHistoryData() {
-        return new OrderApprovalHistoryData();
+    public ListOfShipmentData createListOfShipmentData() {
+        return new ListOfShipmentData();
+    }
+
+    /**
+     * Create an instance of {@link OrderItemDetailData }
+     * 
+     */
+    public OrderItemDetailData createOrderItemDetailData() {
+        return new OrderItemDetailData();
+    }
+
+    /**
+     * Create an instance of {@link OrderPaymentsBankAddressData }
+     * 
+     */
+    public OrderPaymentsBankAddressData createOrderPaymentsBankAddressData() {
+        return new OrderPaymentsBankAddressData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderItemProductLineData }
+     * 
+     */
+    public ListOfOrderItemProductLineData createListOfOrderItemProductLineData() {
+        return new ListOfOrderItemProductLineData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderPaymentData }
+     * 
+     */
+    public ListOfOrderPaymentData createListOfOrderPaymentData() {
+        return new ListOfOrderPaymentData();
     }
 
     /**

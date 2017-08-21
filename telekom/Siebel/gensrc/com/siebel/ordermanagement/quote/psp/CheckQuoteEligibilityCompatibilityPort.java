@@ -18,9 +18,9 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @WebService(name = "CheckQuoteEligibilityCompatibilityPort", targetNamespace = "http://siebel.com/OrderManagement/Quote/PSP")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
+    com.siebel.ordermanagement.quote.data.projectedasset.ObjectFactory.class,
     com.siebel.ordermanagement.quote.psp.ObjectFactory.class,
-    com.siebel.ordermanagement.quote.data.ObjectFactory.class,
-    com.siebel.ordermanagement.quote.data.projectedasset.ObjectFactory.class
+    com.siebel.ordermanagement.quote.data.ObjectFactory.class
 })
 public interface CheckQuoteEligibilityCompatibilityPort {
 

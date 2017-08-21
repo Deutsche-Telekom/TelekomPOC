@@ -18,23 +18,23 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @WebService(name = "CatalogUDSPort", targetNamespace = "http://siebel.com/OrderManagement/Catalog")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
-    com.siebel.ordermanagement.catalog.data.udspublishcatalog.query.ObjectFactory.class,
-    com.siebel.ordermanagement.catalog.data.product.ObjectFactory.class,
-    com.siebel.ordermanagement.catalog.data.catalog.ObjectFactory.class,
     com.siebel.ordermanagement.catalog.data.relatedproducts.ObjectFactory.class,
-    com.siebel.ordermanagement.catalog.ObjectFactory.class,
-    com.siebel.ordermanagement.catalog.data.productclassattributes.ObjectFactory.class,
-    com.siebel.ordermanagement.catalog.data.publishcatalog.ObjectFactory.class,
-    com.siebel.ordermanagement.catalog.data.productchildren.ObjectFactory.class,
     com.siebel.ordermanagement.catalog.data.productattributedomain.ObjectFactory.class,
-    com.siebel.ordermanagement.catalog.data.productdetails.ObjectFactory.class,
-    com.siebel.ordermanagement.catalog.data.relatedpromotions.ObjectFactory.class,
-    com.siebel.ordermanagement.catalog.data.udspublishcatalog.data.ObjectFactory.class,
+    com.siebel.ordermanagement.catalog.data.catalog.ObjectFactory.class,
     com.siebel.ordermanagement.catalog.data.searchableproductclass.ObjectFactory.class,
     com.siebel.ordermanagement.catalog.data.catalogcontext.ObjectFactory.class,
+    com.siebel.ordermanagement.catalog.data.product.ObjectFactory.class,
+    com.siebel.ordermanagement.catalog.data.udspublishcatalog.data.ObjectFactory.class,
+    com.siebel.ordermanagement.catalog.data.productchildren.ObjectFactory.class,
+    com.siebel.ordermanagement.catalog.data.productclassattributes.ObjectFactory.class,
+    com.siebel.ordermanagement.catalog.data.productdetails.ObjectFactory.class,
     com.siebel.ordermanagement.catalog.data.categories.ObjectFactory.class,
+    com.siebel.ordermanagement.catalog.data.udspublishcatalog.query.ObjectFactory.class,
+    com.siebel.ordermanagement.catalog.ObjectFactory.class,
     com.siebel.ordermanagement.catalog.data.category.ObjectFactory.class,
-    com.siebel.ordermanagement.catalog.data.categoryproduct.ObjectFactory.class
+    com.siebel.ordermanagement.catalog.data.categoryproduct.ObjectFactory.class,
+    com.siebel.ordermanagement.catalog.data.relatedpromotions.ObjectFactory.class,
+    com.siebel.ordermanagement.catalog.data.publishcatalog.ObjectFactory.class
 })
 public interface CatalogUDSPort {
 

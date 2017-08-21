@@ -34,11 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfProduct }
+     * Create an instance of {@link Product }
      * 
      */
-    public ListOfProduct createListOfProduct() {
-        return new ListOfProduct();
+    public Product createProduct() {
+        return new Product();
     }
 
     /**
@@ -50,11 +50,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Product }
+     * Create an instance of {@link ListOfProduct }
      * 
      */
-    public Product createProduct() {
-        return new Product();
+    public ListOfProduct createListOfProduct() {
+        return new ListOfProduct();
     }
 
     /**

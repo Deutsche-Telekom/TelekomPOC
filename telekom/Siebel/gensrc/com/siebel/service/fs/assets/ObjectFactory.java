@@ -30,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AssetManagementComplexQueryPageInput }
+     * Create an instance of {@link AssetManagementComplexInsertOutput }
      * 
      */
-    public AssetManagementComplexQueryPageInput createAssetManagementComplexQueryPageInput() {
-        return new AssetManagementComplexQueryPageInput();
+    public AssetManagementComplexInsertOutput createAssetManagementComplexInsertOutput() {
+        return new AssetManagementComplexInsertOutput();
     }
 
     /**
-     * Create an instance of {@link AssetManagementComplexQueryPageOutput }
+     * Create an instance of {@link AssetManagementComplexInsertInput }
      * 
      */
-    public AssetManagementComplexQueryPageOutput createAssetManagementComplexQueryPageOutput() {
-        return new AssetManagementComplexQueryPageOutput();
+    public AssetManagementComplexInsertInput createAssetManagementComplexInsertInput() {
+        return new AssetManagementComplexInsertInput();
     }
 
     /**
@@ -54,11 +54,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AssetManagementComplexInsertOutput }
+     * Create an instance of {@link AssetManagementComplexQueryPageOutput }
      * 
      */
-    public AssetManagementComplexInsertOutput createAssetManagementComplexInsertOutput() {
-        return new AssetManagementComplexInsertOutput();
+    public AssetManagementComplexQueryPageOutput createAssetManagementComplexQueryPageOutput() {
+        return new AssetManagementComplexQueryPageOutput();
     }
 
     /**
@@ -70,11 +70,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AssetManagementComplexInsertInput }
+     * Create an instance of {@link AssetManagementComplexQueryPageInput }
      * 
      */
-    public AssetManagementComplexInsertInput createAssetManagementComplexInsertInput() {
-        return new AssetManagementComplexInsertInput();
+    public AssetManagementComplexQueryPageInput createAssetManagementComplexQueryPageInput() {
+        return new AssetManagementComplexQueryPageInput();
     }
 
 }

@@ -30,35 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SelfServiceAddressExecuteInput }
+     * Create an instance of {@link SelfServiceAddressDeleteInput }
      * 
      */
-    public SelfServiceAddressExecuteInput createSelfServiceAddressExecuteInput() {
-        return new SelfServiceAddressExecuteInput();
-    }
-
-    /**
-     * Create an instance of {@link SelfServiceAddressUpdateInput }
-     * 
-     */
-    public SelfServiceAddressUpdateInput createSelfServiceAddressUpdateInput() {
-        return new SelfServiceAddressUpdateInput();
-    }
-
-    /**
-     * Create an instance of {@link SelfServiceAddressUpdateOutput }
-     * 
-     */
-    public SelfServiceAddressUpdateOutput createSelfServiceAddressUpdateOutput() {
-        return new SelfServiceAddressUpdateOutput();
-    }
-
-    /**
-     * Create an instance of {@link SelfServiceAddressInitInput }
-     * 
-     */
-    public SelfServiceAddressInitInput createSelfServiceAddressInitInput() {
-        return new SelfServiceAddressInitInput();
+    public SelfServiceAddressDeleteInput createSelfServiceAddressDeleteInput() {
+        return new SelfServiceAddressDeleteInput();
     }
 
     /**
@@ -70,19 +46,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SelfServiceAddressDeleteInput }
+     * Create an instance of {@link SelfServiceAddressQueryPageOutput }
      * 
      */
-    public SelfServiceAddressDeleteInput createSelfServiceAddressDeleteInput() {
-        return new SelfServiceAddressDeleteInput();
+    public SelfServiceAddressQueryPageOutput createSelfServiceAddressQueryPageOutput() {
+        return new SelfServiceAddressQueryPageOutput();
     }
 
     /**
-     * Create an instance of {@link SelfServiceAddressInsertOutput }
+     * Create an instance of {@link SelfServiceAddressInitInput }
      * 
      */
-    public SelfServiceAddressInsertOutput createSelfServiceAddressInsertOutput() {
-        return new SelfServiceAddressInsertOutput();
+    public SelfServiceAddressInitInput createSelfServiceAddressInitInput() {
+        return new SelfServiceAddressInitInput();
+    }
+
+    /**
+     * Create an instance of {@link SelfServiceAddressInsertInput }
+     * 
+     */
+    public SelfServiceAddressInsertInput createSelfServiceAddressInsertInput() {
+        return new SelfServiceAddressInsertInput();
+    }
+
+    /**
+     * Create an instance of {@link SelfServiceAddressUpdateOutput }
+     * 
+     */
+    public SelfServiceAddressUpdateOutput createSelfServiceAddressUpdateOutput() {
+        return new SelfServiceAddressUpdateOutput();
     }
 
     /**
@@ -94,11 +86,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SelfServiceAddressQueryPageOutput }
+     * Create an instance of {@link SelfServiceAddressExecuteInput }
      * 
      */
-    public SelfServiceAddressQueryPageOutput createSelfServiceAddressQueryPageOutput() {
-        return new SelfServiceAddressQueryPageOutput();
+    public SelfServiceAddressExecuteInput createSelfServiceAddressExecuteInput() {
+        return new SelfServiceAddressExecuteInput();
+    }
+
+    /**
+     * Create an instance of {@link SelfServiceAddressInsertOutput }
+     * 
+     */
+    public SelfServiceAddressInsertOutput createSelfServiceAddressInsertOutput() {
+        return new SelfServiceAddressInsertOutput();
     }
 
     /**
@@ -110,19 +110,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SelfServiceAddressUpdateInput }
+     * 
+     */
+    public SelfServiceAddressUpdateInput createSelfServiceAddressUpdateInput() {
+        return new SelfServiceAddressUpdateInput();
+    }
+
+    /**
      * Create an instance of {@link SelfServiceAddressInitOutput }
      * 
      */
     public SelfServiceAddressInitOutput createSelfServiceAddressInitOutput() {
         return new SelfServiceAddressInitOutput();
-    }
-
-    /**
-     * Create an instance of {@link SelfServiceAddressInsertInput }
-     * 
-     */
-    public SelfServiceAddressInsertInput createSelfServiceAddressInsertInput() {
-        return new SelfServiceAddressInsertInput();
     }
 
 }

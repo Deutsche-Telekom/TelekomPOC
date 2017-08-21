@@ -34,19 +34,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ComInvoiceProfileId }
-     * 
-     */
-    public ComInvoiceProfileId createComInvoiceProfileId() {
-        return new ComInvoiceProfileId();
-    }
-
-    /**
      * Create an instance of {@link ListOfSsAccountbillingprofileIoId }
      * 
      */
     public ListOfSsAccountbillingprofileIoId createListOfSsAccountbillingprofileIoId() {
         return new ListOfSsAccountbillingprofileIoId();
+    }
+
+    /**
+     * Create an instance of {@link ComInvoiceProfileId }
+     * 
+     */
+    public ComInvoiceProfileId createComInvoiceProfileId() {
+        return new ComInvoiceProfileId();
     }
 
     /**

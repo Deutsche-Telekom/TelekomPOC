@@ -42,11 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfSSUserTopElmtData }
+     * Create an instance of {@link SSUserResponsibilityData }
      * 
      */
-    public ListOfSSUserTopElmtData createListOfSSUserTopElmtData() {
-        return new ListOfSSUserTopElmtData();
+    public SSUserResponsibilityData createSSUserResponsibilityData() {
+        return new SSUserResponsibilityData();
     }
 
     /**
@@ -58,19 +58,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SSUserResponsibilityData }
-     * 
-     */
-    public SSUserResponsibilityData createSSUserResponsibilityData() {
-        return new SSUserResponsibilityData();
-    }
-
-    /**
      * Create an instance of {@link ListOfSSUserResponsibilityData }
      * 
      */
     public ListOfSSUserResponsibilityData createListOfSSUserResponsibilityData() {
         return new ListOfSSUserResponsibilityData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfSSUserTopElmtData }
+     * 
+     */
+    public ListOfSSUserTopElmtData createListOfSSUserTopElmtData() {
+        return new ListOfSSUserTopElmtData();
     }
 
     /**

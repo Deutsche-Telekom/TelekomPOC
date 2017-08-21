@@ -42,19 +42,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfSearchableProductClassTopElmt }
-     * 
-     */
-    public ListOfSearchableProductClassTopElmt createListOfSearchableProductClassTopElmt() {
-        return new ListOfSearchableProductClassTopElmt();
-    }
-
-    /**
      * Create an instance of {@link SearchableProductClass }
      * 
      */
     public SearchableProductClass createSearchableProductClass() {
         return new SearchableProductClass();
+    }
+
+    /**
+     * Create an instance of {@link ListOfSearchableProductClassTopElmt }
+     * 
+     */
+    public ListOfSearchableProductClassTopElmt createListOfSearchableProductClassTopElmt() {
+        return new ListOfSearchableProductClassTopElmt();
     }
 
     /**

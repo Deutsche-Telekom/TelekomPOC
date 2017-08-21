@@ -34,6 +34,158 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ContactQuery }
+     * 
+     */
+    public ContactQuery createContactQuery() {
+        return new ContactQuery();
+    }
+
+    /**
+     * Create an instance of {@link ContactCommunicationAddressQuery }
+     * 
+     */
+    public ContactCommunicationAddressQuery createContactCommunicationAddressQuery() {
+        return new ContactCommunicationAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfContactCommunicationAddressQuery }
+     * 
+     */
+    public ListOfContactCommunicationAddressQuery createListOfContactCommunicationAddressQuery() {
+        return new ListOfContactCommunicationAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfAccountOrganizationQuery }
+     * 
+     */
+    public ListOfAccountOrganizationQuery createListOfAccountOrganizationQuery() {
+        return new ListOfAccountOrganizationQuery();
+    }
+
+    /**
+     * Create an instance of {@link ContactAlternatePhoneQuery }
+     * 
+     */
+    public ContactAlternatePhoneQuery createContactAlternatePhoneQuery() {
+        return new ContactAlternatePhoneQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfContactAlternatePhoneQuery }
+     * 
+     */
+    public ListOfContactAlternatePhoneQuery createListOfContactAlternatePhoneQuery() {
+        return new ListOfContactAlternatePhoneQuery();
+    }
+
+    /**
+     * Create an instance of {@link ContactBusinessAddressQuery }
+     * 
+     */
+    public ContactBusinessAddressQuery createContactBusinessAddressQuery() {
+        return new ContactBusinessAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link AccountQuery }
+     * 
+     */
+    public AccountQuery createAccountQuery() {
+        return new AccountQuery();
+    }
+
+    /**
+     * Create an instance of {@link ContactAccountQuery }
+     * 
+     */
+    public ContactAccountQuery createContactAccountQuery() {
+        return new ContactAccountQuery();
+    }
+
+    /**
+     * Create an instance of {@link AccountBusinessAddressQuery }
+     * 
+     */
+    public AccountBusinessAddressQuery createAccountBusinessAddressQuery() {
+        return new AccountBusinessAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfContactOrganizationQuery }
+     * 
+     */
+    public ListOfContactOrganizationQuery createListOfContactOrganizationQuery() {
+        return new ListOfContactOrganizationQuery();
+    }
+
+    /**
+     * Create an instance of {@link QueryType }
+     * 
+     */
+    public QueryType createQueryType() {
+        return new QueryType();
+    }
+
+    /**
+     * Create an instance of {@link AccountOrganizationQuery }
+     * 
+     */
+    public AccountOrganizationQuery createAccountOrganizationQuery() {
+        return new AccountOrganizationQuery();
+    }
+
+    /**
+     * Create an instance of {@link ContactPersonalAddressQuery }
+     * 
+     */
+    public ContactPersonalAddressQuery createContactPersonalAddressQuery() {
+        return new ContactPersonalAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfSSContactQuery }
+     * 
+     */
+    public ListOfSSContactQuery createListOfSSContactQuery() {
+        return new ListOfSSContactQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfAccountBusinessAddressQuery }
+     * 
+     */
+    public ListOfAccountBusinessAddressQuery createListOfAccountBusinessAddressQuery() {
+        return new ListOfAccountBusinessAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfContactBusinessAddressQuery }
+     * 
+     */
+    public ListOfContactBusinessAddressQuery createListOfContactBusinessAddressQuery() {
+        return new ListOfContactBusinessAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfPersonalAddressQuery }
+     * 
+     */
+    public ListOfPersonalAddressQuery createListOfPersonalAddressQuery() {
+        return new ListOfPersonalAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfContactPersonalAddressQuery }
+     * 
+     */
+    public ListOfContactPersonalAddressQuery createListOfContactPersonalAddressQuery() {
+        return new ListOfContactPersonalAddressQuery();
+    }
+
+    /**
      * Create an instance of {@link ListOfSSContactTopElmtQuery }
      * 
      */
@@ -58,86 +210,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfContactAlternatePhoneQuery }
-     * 
-     */
-    public ListOfContactAlternatePhoneQuery createListOfContactAlternatePhoneQuery() {
-        return new ListOfContactAlternatePhoneQuery();
-    }
-
-    /**
-     * Create an instance of {@link QueryType }
-     * 
-     */
-    public QueryType createQueryType() {
-        return new QueryType();
-    }
-
-    /**
-     * Create an instance of {@link ListOfPersonalAddressQuery }
-     * 
-     */
-    public ListOfPersonalAddressQuery createListOfPersonalAddressQuery() {
-        return new ListOfPersonalAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link AccountBusinessAddressQuery }
-     * 
-     */
-    public AccountBusinessAddressQuery createAccountBusinessAddressQuery() {
-        return new AccountBusinessAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfAccountOrganizationQuery }
-     * 
-     */
-    public ListOfAccountOrganizationQuery createListOfAccountOrganizationQuery() {
-        return new ListOfAccountOrganizationQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfContactOrganizationQuery }
-     * 
-     */
-    public ListOfContactOrganizationQuery createListOfContactOrganizationQuery() {
-        return new ListOfContactOrganizationQuery();
-    }
-
-    /**
-     * Create an instance of {@link PersonalAddressQuery }
-     * 
-     */
-    public PersonalAddressQuery createPersonalAddressQuery() {
-        return new PersonalAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link ContactAccountQuery }
-     * 
-     */
-    public ContactAccountQuery createContactAccountQuery() {
-        return new ContactAccountQuery();
-    }
-
-    /**
-     * Create an instance of {@link AccountOrganizationQuery }
-     * 
-     */
-    public AccountOrganizationQuery createAccountOrganizationQuery() {
-        return new AccountOrganizationQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfContactPersonalAddressQuery }
-     * 
-     */
-    public ListOfContactPersonalAddressQuery createListOfContactPersonalAddressQuery() {
-        return new ListOfContactPersonalAddressQuery();
-    }
-
-    /**
      * Create an instance of {@link ListOfAccountQuery }
      * 
      */
@@ -146,83 +218,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AccountQuery }
+     * Create an instance of {@link PersonalAddressQuery }
      * 
      */
-    public AccountQuery createAccountQuery() {
-        return new AccountQuery();
-    }
-
-    /**
-     * Create an instance of {@link ContactAlternatePhoneQuery }
-     * 
-     */
-    public ContactAlternatePhoneQuery createContactAlternatePhoneQuery() {
-        return new ContactAlternatePhoneQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfContactBusinessAddressQuery }
-     * 
-     */
-    public ListOfContactBusinessAddressQuery createListOfContactBusinessAddressQuery() {
-        return new ListOfContactBusinessAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfContactCommunicationAddressQuery }
-     * 
-     */
-    public ListOfContactCommunicationAddressQuery createListOfContactCommunicationAddressQuery() {
-        return new ListOfContactCommunicationAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link ContactQuery }
-     * 
-     */
-    public ContactQuery createContactQuery() {
-        return new ContactQuery();
-    }
-
-    /**
-     * Create an instance of {@link ContactCommunicationAddressQuery }
-     * 
-     */
-    public ContactCommunicationAddressQuery createContactCommunicationAddressQuery() {
-        return new ContactCommunicationAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfSSContactQuery }
-     * 
-     */
-    public ListOfSSContactQuery createListOfSSContactQuery() {
-        return new ListOfSSContactQuery();
-    }
-
-    /**
-     * Create an instance of {@link ContactPersonalAddressQuery }
-     * 
-     */
-    public ContactPersonalAddressQuery createContactPersonalAddressQuery() {
-        return new ContactPersonalAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link ContactBusinessAddressQuery }
-     * 
-     */
-    public ContactBusinessAddressQuery createContactBusinessAddressQuery() {
-        return new ContactBusinessAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfAccountBusinessAddressQuery }
-     * 
-     */
-    public ListOfAccountBusinessAddressQuery createListOfAccountBusinessAddressQuery() {
-        return new ListOfAccountBusinessAddressQuery();
+    public PersonalAddressQuery createPersonalAddressQuery() {
+        return new PersonalAddressQuery();
     }
 
     /**

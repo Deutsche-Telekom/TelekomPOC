@@ -30,6 +30,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SelfServiceAccountQueryPageInput }
+     * 
+     */
+    public SelfServiceAccountQueryPageInput createSelfServiceAccountQueryPageInput() {
+        return new SelfServiceAccountQueryPageInput();
+    }
+
+    /**
      * Create an instance of {@link SelfServiceAccountExecuteOutput }
      * 
      */
@@ -43,14 +51,6 @@ public class ObjectFactory {
      */
     public SelfServiceAccountExecuteInput createSelfServiceAccountExecuteInput() {
         return new SelfServiceAccountExecuteInput();
-    }
-
-    /**
-     * Create an instance of {@link SelfServiceAccountQueryPageInput }
-     * 
-     */
-    public SelfServiceAccountQueryPageInput createSelfServiceAccountQueryPageInput() {
-        return new SelfServiceAccountQueryPageInput();
     }
 
     /**

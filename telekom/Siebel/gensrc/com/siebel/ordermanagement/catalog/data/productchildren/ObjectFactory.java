@@ -34,35 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Product }
-     * 
-     */
-    public Product createProduct() {
-        return new Product();
-    }
-
-    /**
-     * Create an instance of {@link ListOfProductChildrenTopElmt }
-     * 
-     */
-    public ListOfProductChildrenTopElmt createListOfProductChildrenTopElmt() {
-        return new ListOfProductChildrenTopElmt();
-    }
-
-    /**
      * Create an instance of {@link ListOfKeyFeature }
      * 
      */
     public ListOfKeyFeature createListOfKeyFeature() {
         return new ListOfKeyFeature();
-    }
-
-    /**
-     * Create an instance of {@link ListOfLiterature }
-     * 
-     */
-    public ListOfLiterature createListOfLiterature() {
-        return new ListOfLiterature();
     }
 
     /**
@@ -74,11 +50,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Literature }
+     * Create an instance of {@link ListOfProductChildrenTopElmt }
      * 
      */
-    public Literature createLiterature() {
-        return new Literature();
+    public ListOfProductChildrenTopElmt createListOfProductChildrenTopElmt() {
+        return new ListOfProductChildrenTopElmt();
+    }
+
+    /**
+     * Create an instance of {@link Product }
+     * 
+     */
+    public Product createProduct() {
+        return new Product();
     }
 
     /**
@@ -87,6 +71,22 @@ public class ObjectFactory {
      */
     public KeyFeature createKeyFeature() {
         return new KeyFeature();
+    }
+
+    /**
+     * Create an instance of {@link Literature }
+     * 
+     */
+    public Literature createLiterature() {
+        return new Literature();
+    }
+
+    /**
+     * Create an instance of {@link ListOfLiterature }
+     * 
+     */
+    public ListOfLiterature createListOfLiterature() {
+        return new ListOfLiterature();
     }
 
     /**

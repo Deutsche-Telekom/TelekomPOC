@@ -42,35 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ProductData }
+     * Create an instance of {@link ProductTranslationData }
      * 
      */
-    public ProductData createProductData() {
-        return new ProductData();
-    }
-
-    /**
-     * Create an instance of {@link NetPriceWaterfallData }
-     * 
-     */
-    public NetPriceWaterfallData createNetPriceWaterfallData() {
-        return new NetPriceWaterfallData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfUDSPublishCatalogTopElmtData }
-     * 
-     */
-    public ListOfUDSPublishCatalogTopElmtData createListOfUDSPublishCatalogTopElmtData() {
-        return new ListOfUDSPublishCatalogTopElmtData();
-    }
-
-    /**
-     * Create an instance of {@link ProductAttributeData }
-     * 
-     */
-    public ProductAttributeData createProductAttributeData() {
-        return new ProductAttributeData();
+    public ProductTranslationData createProductTranslationData() {
+        return new ProductTranslationData();
     }
 
     /**
@@ -79,30 +55,6 @@ public class ObjectFactory {
      */
     public ListOfCatalogTranslationData createListOfCatalogTranslationData() {
         return new ListOfCatalogTranslationData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfProductData }
-     * 
-     */
-    public ListOfProductData createListOfProductData() {
-        return new ListOfProductData();
-    }
-
-    /**
-     * Create an instance of {@link CategoryTranslationData }
-     * 
-     */
-    public CategoryTranslationData createCategoryTranslationData() {
-        return new CategoryTranslationData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfCategoryData }
-     * 
-     */
-    public ListOfCategoryData createListOfCategoryData() {
-        return new ListOfCategoryData();
     }
 
     /**
@@ -122,27 +74,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListOfProductTranslationData }
+     * 
+     */
+    public ListOfProductTranslationData createListOfProductTranslationData() {
+        return new ListOfProductTranslationData();
+    }
+
+    /**
      * Create an instance of {@link ListOfProductAttributeData }
      * 
      */
     public ListOfProductAttributeData createListOfProductAttributeData() {
         return new ListOfProductAttributeData();
-    }
-
-    /**
-     * Create an instance of {@link CatalogData }
-     * 
-     */
-    public CatalogData createCatalogData() {
-        return new CatalogData();
-    }
-
-    /**
-     * Create an instance of {@link ProductTranslationData }
-     * 
-     */
-    public ProductTranslationData createProductTranslationData() {
-        return new ProductTranslationData();
     }
 
     /**
@@ -154,11 +98,59 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfProductTranslationData }
+     * Create an instance of {@link ListOfProductData }
      * 
      */
-    public ListOfProductTranslationData createListOfProductTranslationData() {
-        return new ListOfProductTranslationData();
+    public ListOfProductData createListOfProductData() {
+        return new ListOfProductData();
+    }
+
+    /**
+     * Create an instance of {@link ProductData }
+     * 
+     */
+    public ProductData createProductData() {
+        return new ProductData();
+    }
+
+    /**
+     * Create an instance of {@link CatalogData }
+     * 
+     */
+    public CatalogData createCatalogData() {
+        return new CatalogData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfUDSPublishCatalogTopElmtData }
+     * 
+     */
+    public ListOfUDSPublishCatalogTopElmtData createListOfUDSPublishCatalogTopElmtData() {
+        return new ListOfUDSPublishCatalogTopElmtData();
+    }
+
+    /**
+     * Create an instance of {@link CategoryTranslationData }
+     * 
+     */
+    public CategoryTranslationData createCategoryTranslationData() {
+        return new CategoryTranslationData();
+    }
+
+    /**
+     * Create an instance of {@link NetPriceWaterfallData }
+     * 
+     */
+    public NetPriceWaterfallData createNetPriceWaterfallData() {
+        return new NetPriceWaterfallData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfCategoryData }
+     * 
+     */
+    public ListOfCategoryData createListOfCategoryData() {
+        return new ListOfCategoryData();
     }
 
     /**
@@ -167,6 +159,14 @@ public class ObjectFactory {
      */
     public ListOfCategoryTranslationData createListOfCategoryTranslationData() {
         return new ListOfCategoryTranslationData();
+    }
+
+    /**
+     * Create an instance of {@link ProductAttributeData }
+     * 
+     */
+    public ProductAttributeData createProductAttributeData() {
+        return new ProductAttributeData();
     }
 
     /**

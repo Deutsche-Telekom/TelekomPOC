@@ -34,14 +34,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LinkedItemValue }
-     * 
-     */
-    public LinkedItemValue createLinkedItemValue() {
-        return new LinkedItemValue();
-    }
-
-    /**
      * Create an instance of {@link ListOfLinkedItems }
      * 
      */
@@ -55,6 +47,14 @@ public class ObjectFactory {
      */
     public ListOfLinkedItemsTopElmt createListOfLinkedItemsTopElmt() {
         return new ListOfLinkedItemsTopElmt();
+    }
+
+    /**
+     * Create an instance of {@link LinkedItemValue }
+     * 
+     */
+    public LinkedItemValue createLinkedItemValue() {
+        return new LinkedItemValue();
     }
 
     /**

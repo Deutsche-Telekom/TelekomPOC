@@ -42,11 +42,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Item }
+     * Create an instance of {@link ProductData }
      * 
      */
-    public Item createItem() {
-        return new Item();
+    public ProductData createProductData() {
+        return new ProductData();
+    }
+
+    /**
+     * Create an instance of {@link AttributeValue }
+     * 
+     */
+    public AttributeValue createAttributeValue() {
+        return new AttributeValue();
+    }
+
+    /**
+     * Create an instance of {@link Relationship }
+     * 
+     */
+    public Relationship createRelationship() {
+        return new Relationship();
+    }
+
+    /**
+     * Create an instance of {@link ListOfData }
+     * 
+     */
+    public ListOfData createListOfData() {
+        return new ListOfData();
     }
 
     /**
@@ -66,43 +90,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Relationship }
-     * 
-     */
-    public Relationship createRelationship() {
-        return new Relationship();
-    }
-
-    /**
-     * Create an instance of {@link ProductData }
-     * 
-     */
-    public ProductData createProductData() {
-        return new ProductData();
-    }
-
-    /**
-     * Create an instance of {@link AttributeValue }
-     * 
-     */
-    public AttributeValue createAttributeValue() {
-        return new AttributeValue();
-    }
-
-    /**
-     * Create an instance of {@link ListOfData }
-     * 
-     */
-    public ListOfData createListOfData() {
-        return new ListOfData();
-    }
-
-    /**
      * Create an instance of {@link Explanation }
      * 
      */
     public Explanation createExplanation() {
         return new Explanation();
+    }
+
+    /**
+     * Create an instance of {@link Item }
+     * 
+     */
+    public Item createItem() {
+        return new Item();
     }
 
     /**

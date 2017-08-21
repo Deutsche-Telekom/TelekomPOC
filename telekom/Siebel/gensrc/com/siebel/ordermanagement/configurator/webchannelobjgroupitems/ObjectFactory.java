@@ -34,115 +34,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RelationshipDecoration }
+     * Create an instance of {@link AttributeDecoration }
      * 
      */
-    public RelationshipDecoration createRelationshipDecoration() {
-        return new RelationshipDecoration();
+    public AttributeDecoration createAttributeDecoration() {
+        return new AttributeDecoration();
     }
 
     /**
-     * Create an instance of {@link UIOptionDecoration }
+     * Create an instance of {@link AttributeDomain }
      * 
      */
-    public UIOptionDecoration createUIOptionDecoration() {
-        return new UIOptionDecoration();
+    public AttributeDomain createAttributeDomain() {
+        return new AttributeDomain();
     }
 
     /**
-     * Create an instance of {@link RelationshipDomainDecoration }
+     * Create an instance of {@link ObjectDecoration }
      * 
      */
-    public RelationshipDomainDecoration createRelationshipDomainDecoration() {
-        return new RelationshipDomainDecoration();
-    }
-
-    /**
-     * Create an instance of {@link ResourceDecoration }
-     * 
-     */
-    public ResourceDecoration createResourceDecoration() {
-        return new ResourceDecoration();
-    }
-
-    /**
-     * Create an instance of {@link UIOption }
-     * 
-     */
-    public UIOption createUIOption() {
-        return new UIOption();
-    }
-
-    /**
-     * Create an instance of {@link LinkedItemDecoration }
-     * 
-     */
-    public LinkedItemDecoration createLinkedItemDecoration() {
-        return new LinkedItemDecoration();
-    }
-
-    /**
-     * Create an instance of {@link GroupItem }
-     * 
-     */
-    public GroupItem createGroupItem() {
-        return new GroupItem();
-    }
-
-    /**
-     * Create an instance of {@link Resource }
-     * 
-     */
-    public Resource createResource() {
-        return new Resource();
-    }
-
-    /**
-     * Create an instance of {@link AttributeRejectedValue }
-     * 
-     */
-    public AttributeRejectedValue createAttributeRejectedValue() {
-        return new AttributeRejectedValue();
-    }
-
-    /**
-     * Create an instance of {@link Attribute }
-     * 
-     */
-    public Attribute createAttribute() {
-        return new Attribute();
-    }
-
-    /**
-     * Create an instance of {@link Group }
-     * 
-     */
-    public Group createGroup() {
-        return new Group();
-    }
-
-    /**
-     * Create an instance of {@link GroupDecoration }
-     * 
-     */
-    public GroupDecoration createGroupDecoration() {
-        return new GroupDecoration();
-    }
-
-    /**
-     * Create an instance of {@link Responsibility }
-     * 
-     */
-    public Responsibility createResponsibility() {
-        return new Responsibility();
-    }
-
-    /**
-     * Create an instance of {@link AttributeDefaultValue }
-     * 
-     */
-    public AttributeDefaultValue createAttributeDefaultValue() {
-        return new AttributeDefaultValue();
+    public ObjectDecoration createObjectDecoration() {
+        return new ObjectDecoration();
     }
 
     /**
@@ -151,22 +63,6 @@ public class ObjectFactory {
      */
     public LinkedItem createLinkedItem() {
         return new LinkedItem();
-    }
-
-    /**
-     * Create an instance of {@link ListOfObject }
-     * 
-     */
-    public ListOfObject createListOfObject() {
-        return new ListOfObject();
-    }
-
-    /**
-     * Create an instance of {@link AttributeDomainDecoration }
-     * 
-     */
-    public AttributeDomainDecoration createAttributeDomainDecoration() {
-        return new AttributeDomainDecoration();
     }
 
     /**
@@ -186,19 +82,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RelationshipDomain }
+     * Create an instance of {@link GroupDecoration }
      * 
      */
-    public RelationshipDomain createRelationshipDomain() {
-        return new RelationshipDomain();
+    public GroupDecoration createGroupDecoration() {
+        return new GroupDecoration();
     }
 
     /**
-     * Create an instance of {@link AttributeDomain }
+     * Create an instance of {@link AttributeDefaultValue }
      * 
      */
-    public AttributeDomain createAttributeDomain() {
-        return new AttributeDomain();
+    public AttributeDefaultValue createAttributeDefaultValue() {
+        return new AttributeDefaultValue();
+    }
+
+    /**
+     * Create an instance of {@link ResourceDecoration }
+     * 
+     */
+    public ResourceDecoration createResourceDecoration() {
+        return new ResourceDecoration();
+    }
+
+    /**
+     * Create an instance of {@link AttributeDomainDecoration }
+     * 
+     */
+    public AttributeDomainDecoration createAttributeDomainDecoration() {
+        return new AttributeDomainDecoration();
+    }
+
+    /**
+     * Create an instance of {@link RelationshipDecoration }
+     * 
+     */
+    public RelationshipDecoration createRelationshipDecoration() {
+        return new RelationshipDecoration();
     }
 
     /**
@@ -210,19 +130,99 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ObjectDecoration }
+     * Create an instance of {@link AttributeRejectedValue }
      * 
      */
-    public ObjectDecoration createObjectDecoration() {
-        return new ObjectDecoration();
+    public AttributeRejectedValue createAttributeRejectedValue() {
+        return new AttributeRejectedValue();
     }
 
     /**
-     * Create an instance of {@link AttributeDecoration }
+     * Create an instance of {@link Resource }
      * 
      */
-    public AttributeDecoration createAttributeDecoration() {
-        return new AttributeDecoration();
+    public Resource createResource() {
+        return new Resource();
+    }
+
+    /**
+     * Create an instance of {@link RelationshipDomainDecoration }
+     * 
+     */
+    public RelationshipDomainDecoration createRelationshipDomainDecoration() {
+        return new RelationshipDomainDecoration();
+    }
+
+    /**
+     * Create an instance of {@link GroupItem }
+     * 
+     */
+    public GroupItem createGroupItem() {
+        return new GroupItem();
+    }
+
+    /**
+     * Create an instance of {@link UIOption }
+     * 
+     */
+    public UIOption createUIOption() {
+        return new UIOption();
+    }
+
+    /**
+     * Create an instance of {@link UIOptionDecoration }
+     * 
+     */
+    public UIOptionDecoration createUIOptionDecoration() {
+        return new UIOptionDecoration();
+    }
+
+    /**
+     * Create an instance of {@link LinkedItemDecoration }
+     * 
+     */
+    public LinkedItemDecoration createLinkedItemDecoration() {
+        return new LinkedItemDecoration();
+    }
+
+    /**
+     * Create an instance of {@link Attribute }
+     * 
+     */
+    public Attribute createAttribute() {
+        return new Attribute();
+    }
+
+    /**
+     * Create an instance of {@link Responsibility }
+     * 
+     */
+    public Responsibility createResponsibility() {
+        return new Responsibility();
+    }
+
+    /**
+     * Create an instance of {@link Group }
+     * 
+     */
+    public Group createGroup() {
+        return new Group();
+    }
+
+    /**
+     * Create an instance of {@link ListOfObject }
+     * 
+     */
+    public ListOfObject createListOfObject() {
+        return new ListOfObject();
+    }
+
+    /**
+     * Create an instance of {@link RelationshipDomain }
+     * 
+     */
+    public RelationshipDomain createRelationshipDomain() {
+        return new RelationshipDomain();
     }
 
     /**

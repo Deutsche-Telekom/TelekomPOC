@@ -58,19 +58,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LOVValue }
-     * 
-     */
-    public LOVValue createLOVValue() {
-        return new LOVValue();
-    }
-
-    /**
      * Create an instance of {@link SearchableProductClass }
      * 
      */
     public SearchableProductClass createSearchableProductClass() {
         return new SearchableProductClass();
+    }
+
+    /**
+     * Create an instance of {@link LOVValue }
+     * 
+     */
+    public LOVValue createLOVValue() {
+        return new LOVValue();
     }
 
     /**

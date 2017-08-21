@@ -42,6 +42,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Property }
+     * 
+     */
+    public Property createProperty() {
+        return new Property();
+    }
+
+    /**
+     * Create an instance of {@link Properties }
+     * 
+     */
+    public Properties createProperties() {
+        return new Properties();
+    }
+
+    /**
      * Create an instance of {@link ListOfProperties }
      * 
      */
@@ -55,22 +71,6 @@ public class ObjectFactory {
      */
     public ListOfPropertiesTopElmt createListOfPropertiesTopElmt() {
         return new ListOfPropertiesTopElmt();
-    }
-
-    /**
-     * Create an instance of {@link Properties }
-     * 
-     */
-    public Properties createProperties() {
-        return new Properties();
-    }
-
-    /**
-     * Create an instance of {@link Property }
-     * 
-     */
-    public Property createProperty() {
-        return new Property();
     }
 
     /**

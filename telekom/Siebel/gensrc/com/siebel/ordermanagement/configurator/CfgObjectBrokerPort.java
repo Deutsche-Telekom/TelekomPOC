@@ -18,15 +18,15 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @WebService(name = "CfgObjectBrokerPort", targetNamespace = "http://siebel.com/OrderManagement/Configurator")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
-    com.siebel.ordermanagement.configurator.cfginteractstatus.ObjectFactory.class,
-    com.siebel.ordermanagement.quote.data.ObjectFactory.class,
     com.siebel.ordermanagement.configurator.cfginteractdata.ObjectFactory.class,
-    com.siebel.ordermanagement.configurator.ObjectFactory.class,
-    com.siebel.ordermanagement.configurator.cfginteractrequest.ObjectFactory.class,
     com.siebel.ordermanagement.configurator.cfglinkeditems.ObjectFactory.class,
+    com.siebel.ordermanagement.configurator.ObjectFactory.class,
     com.siebel.ordermanagement.configurator.webchannelobjstructure.ObjectFactory.class,
     com.siebel.ordermanagement.configurator.webchannelobjgroupitems.ObjectFactory.class,
-    com.siebel.ordermanagement.configurator.cfgproperties.ObjectFactory.class
+    com.siebel.ordermanagement.configurator.cfginteractrequest.ObjectFactory.class,
+    com.siebel.ordermanagement.configurator.cfgproperties.ObjectFactory.class,
+    com.siebel.ordermanagement.quote.data.ObjectFactory.class,
+    com.siebel.ordermanagement.configurator.cfginteractstatus.ObjectFactory.class
 })
 public interface CfgObjectBrokerPort {
 

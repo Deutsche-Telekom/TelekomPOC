@@ -34,19 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link QueryType }
+     * Create an instance of {@link ListOfOrderPaymentsBillToAddressQuery }
      * 
      */
-    public QueryType createQueryType() {
-        return new QueryType();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderItemXADetailQuery }
-     * 
-     */
-    public ListOfOrderItemXADetailQuery createListOfOrderItemXADetailQuery() {
-        return new ListOfOrderItemXADetailQuery();
+    public ListOfOrderPaymentsBillToAddressQuery createListOfOrderPaymentsBillToAddressQuery() {
+        return new ListOfOrderPaymentsBillToAddressQuery();
     }
 
     /**
@@ -58,91 +50,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OrderItemProductLineQuery }
+     * Create an instance of {@link ListOfOrderPaymentsBankAddressQuery }
      * 
      */
-    public OrderItemProductLineQuery createOrderItemProductLineQuery() {
-        return new OrderItemProductLineQuery();
+    public ListOfOrderPaymentsBankAddressQuery createListOfOrderPaymentsBankAddressQuery() {
+        return new ListOfOrderPaymentsBankAddressQuery();
     }
 
     /**
-     * Create an instance of {@link ShipmentQuery }
+     * Create an instance of {@link QueryType }
      * 
      */
-    public ShipmentQuery createShipmentQuery() {
-        return new ShipmentQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderApprovalHistoryQuery }
-     * 
-     */
-    public ListOfOrderApprovalHistoryQuery createListOfOrderApprovalHistoryQuery() {
-        return new ListOfOrderApprovalHistoryQuery();
-    }
-
-    /**
-     * Create an instance of {@link OrderApprovalHistoryQuery }
-     * 
-     */
-    public OrderApprovalHistoryQuery createOrderApprovalHistoryQuery() {
-        return new OrderApprovalHistoryQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderDetailTopElmtQuery }
-     * 
-     */
-    public ListOfOrderDetailTopElmtQuery createListOfOrderDetailTopElmtQuery() {
-        return new ListOfOrderDetailTopElmtQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderDetailQuery }
-     * 
-     */
-    public ListOfOrderDetailQuery createListOfOrderDetailQuery() {
-        return new ListOfOrderDetailQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderItemDetailQuery }
-     * 
-     */
-    public ListOfOrderItemDetailQuery createListOfOrderItemDetailQuery() {
-        return new ListOfOrderItemDetailQuery();
-    }
-
-    /**
-     * Create an instance of {@link OrderItemDetailQuery }
-     * 
-     */
-    public OrderItemDetailQuery createOrderItemDetailQuery() {
-        return new OrderItemDetailQuery();
-    }
-
-    /**
-     * Create an instance of {@link OrderPaymentsBillToAddressQuery }
-     * 
-     */
-    public OrderPaymentsBillToAddressQuery createOrderPaymentsBillToAddressQuery() {
-        return new OrderPaymentsBillToAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link OrderPaymentQuery }
-     * 
-     */
-    public OrderPaymentQuery createOrderPaymentQuery() {
-        return new OrderPaymentQuery();
-    }
-
-    /**
-     * Create an instance of {@link ShipmentItemQuery }
-     * 
-     */
-    public ShipmentItemQuery createShipmentItemQuery() {
-        return new ShipmentItemQuery();
+    public QueryType createQueryType() {
+        return new QueryType();
     }
 
     /**
@@ -154,11 +74,99 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfOrderPaymentsBankAddressQuery }
+     * Create an instance of {@link OrderPaymentQuery }
      * 
      */
-    public ListOfOrderPaymentsBankAddressQuery createListOfOrderPaymentsBankAddressQuery() {
-        return new ListOfOrderPaymentsBankAddressQuery();
+    public OrderPaymentQuery createOrderPaymentQuery() {
+        return new OrderPaymentQuery();
+    }
+
+    /**
+     * Create an instance of {@link OrderApprovalHistoryQuery }
+     * 
+     */
+    public OrderApprovalHistoryQuery createOrderApprovalHistoryQuery() {
+        return new OrderApprovalHistoryQuery();
+    }
+
+    /**
+     * Create an instance of {@link ShipmentQuery }
+     * 
+     */
+    public ShipmentQuery createShipmentQuery() {
+        return new ShipmentQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderDetailQuery }
+     * 
+     */
+    public ListOfOrderDetailQuery createListOfOrderDetailQuery() {
+        return new ListOfOrderDetailQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderApprovalHistoryQuery }
+     * 
+     */
+    public ListOfOrderApprovalHistoryQuery createListOfOrderApprovalHistoryQuery() {
+        return new ListOfOrderApprovalHistoryQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfShipmentQuery }
+     * 
+     */
+    public ListOfShipmentQuery createListOfShipmentQuery() {
+        return new ListOfShipmentQuery();
+    }
+
+    /**
+     * Create an instance of {@link OrderItemDetailQuery }
+     * 
+     */
+    public OrderItemDetailQuery createOrderItemDetailQuery() {
+        return new OrderItemDetailQuery();
+    }
+
+    /**
+     * Create an instance of {@link OrderPaymentsBankAddressQuery }
+     * 
+     */
+    public OrderPaymentsBankAddressQuery createOrderPaymentsBankAddressQuery() {
+        return new OrderPaymentsBankAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderDetailTopElmtQuery }
+     * 
+     */
+    public ListOfOrderDetailTopElmtQuery createListOfOrderDetailTopElmtQuery() {
+        return new ListOfOrderDetailTopElmtQuery();
+    }
+
+    /**
+     * Create an instance of {@link OrderPaymentsBillToAddressQuery }
+     * 
+     */
+    public OrderPaymentsBillToAddressQuery createOrderPaymentsBillToAddressQuery() {
+        return new OrderPaymentsBillToAddressQuery();
+    }
+
+    /**
+     * Create an instance of {@link OrderItemProductLineQuery }
+     * 
+     */
+    public OrderItemProductLineQuery createOrderItemProductLineQuery() {
+        return new OrderItemProductLineQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderItemXADetailQuery }
+     * 
+     */
+    public ListOfOrderItemXADetailQuery createListOfOrderItemXADetailQuery() {
+        return new ListOfOrderItemXADetailQuery();
     }
 
     /**
@@ -170,11 +178,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfOrderPaymentsBillToAddressQuery }
+     * Create an instance of {@link ListOfOrderItemDetailQuery }
      * 
      */
-    public ListOfOrderPaymentsBillToAddressQuery createListOfOrderPaymentsBillToAddressQuery() {
-        return new ListOfOrderPaymentsBillToAddressQuery();
+    public ListOfOrderItemDetailQuery createListOfOrderItemDetailQuery() {
+        return new ListOfOrderItemDetailQuery();
     }
 
     /**
@@ -194,19 +202,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OrderPaymentsBankAddressQuery }
+     * Create an instance of {@link ShipmentItemQuery }
      * 
      */
-    public OrderPaymentsBankAddressQuery createOrderPaymentsBankAddressQuery() {
-        return new OrderPaymentsBankAddressQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfShipmentQuery }
-     * 
-     */
-    public ListOfShipmentQuery createListOfShipmentQuery() {
-        return new ListOfShipmentQuery();
+    public ShipmentItemQuery createShipmentItemQuery() {
+        return new ShipmentItemQuery();
     }
 
     /**

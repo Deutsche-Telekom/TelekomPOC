@@ -34,91 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfUDSPublishCatalogTopElmtQuery }
+     * Create an instance of {@link CatalogQuery }
      * 
      */
-    public ListOfUDSPublishCatalogTopElmtQuery createListOfUDSPublishCatalogTopElmtQuery() {
-        return new ListOfUDSPublishCatalogTopElmtQuery();
-    }
-
-    /**
-     * Create an instance of {@link CatalogTranslationQuery }
-     * 
-     */
-    public CatalogTranslationQuery createCatalogTranslationQuery() {
-        return new CatalogTranslationQuery();
-    }
-
-    /**
-     * Create an instance of {@link QueryType }
-     * 
-     */
-    public QueryType createQueryType() {
-        return new QueryType();
-    }
-
-    /**
-     * Create an instance of {@link ListOfNetPriceWaterfallQuery }
-     * 
-     */
-    public ListOfNetPriceWaterfallQuery createListOfNetPriceWaterfallQuery() {
-        return new ListOfNetPriceWaterfallQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfProductTranslationQuery }
-     * 
-     */
-    public ListOfProductTranslationQuery createListOfProductTranslationQuery() {
-        return new ListOfProductTranslationQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfProductQuery }
-     * 
-     */
-    public ListOfProductQuery createListOfProductQuery() {
-        return new ListOfProductQuery();
-    }
-
-    /**
-     * Create an instance of {@link CategoryQuery }
-     * 
-     */
-    public CategoryQuery createCategoryQuery() {
-        return new CategoryQuery();
-    }
-
-    /**
-     * Create an instance of {@link NetPriceWaterfallQuery }
-     * 
-     */
-    public NetPriceWaterfallQuery createNetPriceWaterfallQuery() {
-        return new NetPriceWaterfallQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfUDSPublishCatalogQuery }
-     * 
-     */
-    public ListOfUDSPublishCatalogQuery createListOfUDSPublishCatalogQuery() {
-        return new ListOfUDSPublishCatalogQuery();
-    }
-
-    /**
-     * Create an instance of {@link ProductAttributeQuery }
-     * 
-     */
-    public ProductAttributeQuery createProductAttributeQuery() {
-        return new ProductAttributeQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfProductAttributeQuery }
-     * 
-     */
-    public ListOfProductAttributeQuery createListOfProductAttributeQuery() {
-        return new ListOfProductAttributeQuery();
+    public CatalogQuery createCatalogQuery() {
+        return new CatalogQuery();
     }
 
     /**
@@ -135,6 +55,94 @@ public class ObjectFactory {
      */
     public ProductTranslationQuery createProductTranslationQuery() {
         return new ProductTranslationQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfNetPriceWaterfallQuery }
+     * 
+     */
+    public ListOfNetPriceWaterfallQuery createListOfNetPriceWaterfallQuery() {
+        return new ListOfNetPriceWaterfallQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfProductAttributeQuery }
+     * 
+     */
+    public ListOfProductAttributeQuery createListOfProductAttributeQuery() {
+        return new ListOfProductAttributeQuery();
+    }
+
+    /**
+     * Create an instance of {@link NetPriceWaterfallQuery }
+     * 
+     */
+    public NetPriceWaterfallQuery createNetPriceWaterfallQuery() {
+        return new NetPriceWaterfallQuery();
+    }
+
+    /**
+     * Create an instance of {@link QueryType }
+     * 
+     */
+    public QueryType createQueryType() {
+        return new QueryType();
+    }
+
+    /**
+     * Create an instance of {@link ListOfProductQuery }
+     * 
+     */
+    public ListOfProductQuery createListOfProductQuery() {
+        return new ListOfProductQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfProductTranslationQuery }
+     * 
+     */
+    public ListOfProductTranslationQuery createListOfProductTranslationQuery() {
+        return new ListOfProductTranslationQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfUDSPublishCatalogTopElmtQuery }
+     * 
+     */
+    public ListOfUDSPublishCatalogTopElmtQuery createListOfUDSPublishCatalogTopElmtQuery() {
+        return new ListOfUDSPublishCatalogTopElmtQuery();
+    }
+
+    /**
+     * Create an instance of {@link CatalogTranslationQuery }
+     * 
+     */
+    public CatalogTranslationQuery createCatalogTranslationQuery() {
+        return new CatalogTranslationQuery();
+    }
+
+    /**
+     * Create an instance of {@link ProductAttributeQuery }
+     * 
+     */
+    public ProductAttributeQuery createProductAttributeQuery() {
+        return new ProductAttributeQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfUDSPublishCatalogQuery }
+     * 
+     */
+    public ListOfUDSPublishCatalogQuery createListOfUDSPublishCatalogQuery() {
+        return new ListOfUDSPublishCatalogQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfCategoryTranslationQuery }
+     * 
+     */
+    public ListOfCategoryTranslationQuery createListOfCategoryTranslationQuery() {
+        return new ListOfCategoryTranslationQuery();
     }
 
     /**
@@ -162,19 +170,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CatalogQuery }
+     * Create an instance of {@link CategoryQuery }
      * 
      */
-    public CatalogQuery createCatalogQuery() {
-        return new CatalogQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfCategoryTranslationQuery }
-     * 
-     */
-    public ListOfCategoryTranslationQuery createListOfCategoryTranslationQuery() {
-        return new ListOfCategoryTranslationQuery();
+    public CategoryQuery createCategoryQuery() {
+        return new CategoryQuery();
     }
 
     /**

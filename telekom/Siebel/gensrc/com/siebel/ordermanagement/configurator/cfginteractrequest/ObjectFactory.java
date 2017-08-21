@@ -34,11 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Attribute }
+     * Create an instance of {@link AttributeValue }
      * 
      */
-    public Attribute createAttribute() {
-        return new Attribute();
+    public AttributeValue createAttributeValue() {
+        return new AttributeValue();
     }
 
     /**
@@ -50,11 +50,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Attribute }
+     * 
+     */
+    public Attribute createAttribute() {
+        return new Attribute();
+    }
+
+    /**
      * Create an instance of {@link Item }
      * 
      */
     public Item createItem() {
         return new Item();
+    }
+
+    /**
+     * Create an instance of {@link Requests }
+     * 
+     */
+    public Requests createRequests() {
+        return new Requests();
     }
 
     /**
@@ -71,22 +87,6 @@ public class ObjectFactory {
      */
     public Request createRequest() {
         return new Request();
-    }
-
-    /**
-     * Create an instance of {@link AttributeValue }
-     * 
-     */
-    public AttributeValue createAttributeValue() {
-        return new AttributeValue();
-    }
-
-    /**
-     * Create an instance of {@link Requests }
-     * 
-     */
-    public Requests createRequests() {
-        return new Requests();
     }
 
     /**

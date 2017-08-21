@@ -1,0 +1,63 @@
+
+<gsa-template xml-combine="append">
+
+	<header xml-combine="append">
+	    <name>Telekom Catalog</name>
+	    <author>TECHM</author>
+	    <version>$Revision: #1 $</version>
+	</header>
+	
+	<item-descriptor name="product" xml-combine="append" item-cache-size="2000" query-cache-size="2000" >
+		
+		<table name="twod_product" id-column-name="product_id" type="auxiliary" shared-table-sequence="1">
+			
+			<property name="outrightPrice" column-name="outright_price" display-name-resource="Hardware Buy Outright Price" data-type="double" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true">
+			</property>
+			
+			<property name="connectivity" column-name="connectivity" display-name-resource="Hardware Connectivity" data-type="enumerated" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true" default="NA">
+				<attribute name="useCodeForValue" value="false"/>
+				<option value="NA" code="0"/>
+		        <option value="2G" code="1"/>
+		        <option value="3G" code="2"/>
+		        <option value="4G" code="3"/>
+		        <option value="5G" code="4"/>
+		        <option value="6G" code="5"/>
+		        <option value="7G" code="6"/>
+			</property>
+			
+			<property name="colour" column-name="colour" display-name-resource="Colour" data-type="string" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true">
+			</property>
+			
+			<property name="memory" column-name="memory" display-name-resource="Memory" data-type="string" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true">
+			</property>
+			
+			<property name="compatibleSim" column-name="compatible_sim_id" display-name-resource="Compatible Sim" item-type="product" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true">
+			</property>
+			
+			<property name="modelName" column-name="model_name" display-name-resource="Product Model Name" data-type="string" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true">
+			</property>
+			
+			<property name="isHero" column-name="is_hero" display-name-resource="Hero Handset" data-type="boolean" default="true" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true">
+			</property>
+			
+			<property name="isComparable" column-name="is_comparable" display-name-resource="Product Comparable" data-type="boolean" default="true" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true">
+			</property>
+			
+			<property name="productTypeTwoD" column-name="product_type" display-name-resource="TwoD ProductType" data-type="enumerated" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true">
+				<attribute name="useCodeForValue" value="false"/>
+				<option value="phone" code="0"/>
+		        <option value="accessory" code="1"/>
+		        <option value="modem" code="2"/>
+		        <option value="tablet" code="3"/>
+		        <option value="sim" code="4"/>
+		        <option value="data-pack" code="5"/>
+			</property>
+			
+			<property name="IMEINumber" column-name="IMEI_number" display-name-resource="Hardware IMEI Number" data-type="string" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true">
+			</property>
+			
+			<property name="productName" column-name="product_name" display-name-resource="Product Name" data-type="string" expert="false" readable="true" hidden="false" writable="true" required="false" cache-mode="inherit" queryable="true">
+			</property>
+		</table>
+	</item-descriptor>
+</gsa-template>

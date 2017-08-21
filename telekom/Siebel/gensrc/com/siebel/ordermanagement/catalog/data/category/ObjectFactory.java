@@ -34,27 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfCatalog }
-     * 
-     */
-    public ListOfCatalog createListOfCatalog() {
-        return new ListOfCatalog();
-    }
-
-    /**
      * Create an instance of {@link ListOfCategory }
      * 
      */
     public ListOfCategory createListOfCategory() {
         return new ListOfCategory();
-    }
-
-    /**
-     * Create an instance of {@link ListOfCatalogTopElmt }
-     * 
-     */
-    public ListOfCatalogTopElmt createListOfCatalogTopElmt() {
-        return new ListOfCatalogTopElmt();
     }
 
     /**
@@ -71,6 +55,22 @@ public class ObjectFactory {
      */
     public Catalog createCatalog() {
         return new Catalog();
+    }
+
+    /**
+     * Create an instance of {@link ListOfCatalog }
+     * 
+     */
+    public ListOfCatalog createListOfCatalog() {
+        return new ListOfCatalog();
+    }
+
+    /**
+     * Create an instance of {@link ListOfCatalogTopElmt }
+     * 
+     */
+    public ListOfCatalogTopElmt createListOfCatalogTopElmt() {
+        return new ListOfCatalogTopElmt();
     }
 
     /**

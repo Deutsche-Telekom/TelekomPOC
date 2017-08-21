@@ -34,6 +34,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ComInvoiceProfileQuery }
+     * 
+     */
+    public ComInvoiceProfileQuery createComInvoiceProfileQuery() {
+        return new ComInvoiceProfileQuery();
+    }
+
+    /**
      * Create an instance of {@link QueryType }
      * 
      */
@@ -47,14 +55,6 @@ public class ObjectFactory {
      */
     public ListOfSsAccountbillingprofileIoTopElmtQuery createListOfSsAccountbillingprofileIoTopElmtQuery() {
         return new ListOfSsAccountbillingprofileIoTopElmtQuery();
-    }
-
-    /**
-     * Create an instance of {@link ComInvoiceProfileQuery }
-     * 
-     */
-    public ComInvoiceProfileQuery createComInvoiceProfileQuery() {
-        return new ComInvoiceProfileQuery();
     }
 
     /**

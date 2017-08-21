@@ -30,6 +30,38 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetPromotionCommitmentsOutput }
+     * 
+     */
+    public GetPromotionCommitmentsOutput createGetPromotionCommitmentsOutput() {
+        return new GetPromotionCommitmentsOutput();
+    }
+
+    /**
+     * Create an instance of {@link ApplyProductPromotionOutput }
+     * 
+     */
+    public ApplyProductPromotionOutput createApplyProductPromotionOutput() {
+        return new ApplyProductPromotionOutput();
+    }
+
+    /**
+     * Create an instance of {@link ApplyProductPromotionInput }
+     * 
+     */
+    public ApplyProductPromotionInput createApplyProductPromotionInput() {
+        return new ApplyProductPromotionInput();
+    }
+
+    /**
+     * Create an instance of {@link UpgradePromotionToQuoteInput }
+     * 
+     */
+    public UpgradePromotionToQuoteInput createUpgradePromotionToQuoteInput() {
+        return new UpgradePromotionToQuoteInput();
+    }
+
+    /**
      * Create an instance of {@link UpgradePromotionToOrderOutput }
      * 
      */
@@ -46,19 +78,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetProductPromotionDefinitionOutput }
+     * Create an instance of {@link UpgradePromotionToQuoteOutput }
      * 
      */
-    public GetProductPromotionDefinitionOutput createGetProductPromotionDefinitionOutput() {
-        return new GetProductPromotionDefinitionOutput();
-    }
-
-    /**
-     * Create an instance of {@link UpgradePromotionToQuoteInput }
-     * 
-     */
-    public UpgradePromotionToQuoteInput createUpgradePromotionToQuoteInput() {
-        return new UpgradePromotionToQuoteInput();
+    public UpgradePromotionToQuoteOutput createUpgradePromotionToQuoteOutput() {
+        return new UpgradePromotionToQuoteOutput();
     }
 
     /**
@@ -70,22 +94,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpgradePromotionToQuoteOutput }
-     * 
-     */
-    public UpgradePromotionToQuoteOutput createUpgradePromotionToQuoteOutput() {
-        return new UpgradePromotionToQuoteOutput();
-    }
-
-    /**
-     * Create an instance of {@link ApplyProductPromotionOutput }
-     * 
-     */
-    public ApplyProductPromotionOutput createApplyProductPromotionOutput() {
-        return new ApplyProductPromotionOutput();
-    }
-
-    /**
      * Create an instance of {@link GetProductPromotionDefinitionInput }
      * 
      */
@@ -94,19 +102,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetPromotionCommitmentsOutput }
+     * Create an instance of {@link GetProductPromotionDefinitionOutput }
      * 
      */
-    public GetPromotionCommitmentsOutput createGetPromotionCommitmentsOutput() {
-        return new GetPromotionCommitmentsOutput();
-    }
-
-    /**
-     * Create an instance of {@link ApplyProductPromotionInput }
-     * 
-     */
-    public ApplyProductPromotionInput createApplyProductPromotionInput() {
-        return new ApplyProductPromotionInput();
+    public GetProductPromotionDefinitionOutput createGetProductPromotionDefinitionOutput() {
+        return new GetProductPromotionDefinitionOutput();
     }
 
 }

@@ -18,9 +18,9 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @WebService(name = "QuoteItemPort", targetNamespace = "http://siebel.com/OrderManagement/Quote")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
+    com.siebel.ordermanagement.quote.item.data.ObjectFactory.class,
     com.siebel.ordermanagement.quote.ObjectFactory.class,
-    com.siebel.ordermanagement.quote.data.ObjectFactory.class,
-    com.siebel.ordermanagement.quote.item.data.ObjectFactory.class
+    com.siebel.ordermanagement.quote.data.ObjectFactory.class
 })
 public interface QuoteItemPort {
 

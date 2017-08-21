@@ -34,19 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAssetMgmtAssetXaQuery }
+     * Create an instance of {@link ListOfAssetTopElmtQuery }
      * 
      */
-    public ListOfAssetMgmtAssetXaQuery createListOfAssetMgmtAssetXaQuery() {
-        return new ListOfAssetMgmtAssetXaQuery();
-    }
-
-    /**
-     * Create an instance of {@link AssetMgmtAssetHeaderQuery }
-     * 
-     */
-    public AssetMgmtAssetHeaderQuery createAssetMgmtAssetHeaderQuery() {
-        return new AssetMgmtAssetHeaderQuery();
+    public ListOfAssetTopElmtQuery createListOfAssetTopElmtQuery() {
+        return new ListOfAssetTopElmtQuery();
     }
 
     /**
@@ -66,6 +58,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListOfAssetMgmtAssetQuery }
+     * 
+     */
+    public ListOfAssetMgmtAssetQuery createListOfAssetMgmtAssetQuery() {
+        return new ListOfAssetMgmtAssetQuery();
+    }
+
+    /**
      * Create an instance of {@link AssetMgmtAssetXaQuery }
      * 
      */
@@ -74,11 +74,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAssetTopElmtQuery }
+     * Create an instance of {@link ListOfAssetMgmtAssetXaQuery }
      * 
      */
-    public ListOfAssetTopElmtQuery createListOfAssetTopElmtQuery() {
-        return new ListOfAssetTopElmtQuery();
+    public ListOfAssetMgmtAssetXaQuery createListOfAssetMgmtAssetXaQuery() {
+        return new ListOfAssetMgmtAssetXaQuery();
+    }
+
+    /**
+     * Create an instance of {@link AssetMgmtAssetHeaderQuery }
+     * 
+     */
+    public AssetMgmtAssetHeaderQuery createAssetMgmtAssetHeaderQuery() {
+        return new AssetMgmtAssetHeaderQuery();
     }
 
     /**
@@ -87,14 +95,6 @@ public class ObjectFactory {
      */
     public ListOfAssetQuery createListOfAssetQuery() {
         return new ListOfAssetQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfAssetMgmtAssetQuery }
-     * 
-     */
-    public ListOfAssetMgmtAssetQuery createListOfAssetMgmtAssetQuery() {
-        return new ListOfAssetMgmtAssetQuery();
     }
 
     /**

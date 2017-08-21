@@ -42,19 +42,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAssetManagementIoId }
-     * 
-     */
-    public ListOfAssetManagementIoId createListOfAssetManagementIoId() {
-        return new ListOfAssetManagementIoId();
-    }
-
-    /**
      * Create an instance of {@link ListOfAssetManagementIoTopElmtId }
      * 
      */
     public ListOfAssetManagementIoTopElmtId createListOfAssetManagementIoTopElmtId() {
         return new ListOfAssetManagementIoTopElmtId();
+    }
+
+    /**
+     * Create an instance of {@link ListOfAssetManagementIoId }
+     * 
+     */
+    public ListOfAssetManagementIoId createListOfAssetManagementIoId() {
+        return new ListOfAssetManagementIoId();
     }
 
     /**

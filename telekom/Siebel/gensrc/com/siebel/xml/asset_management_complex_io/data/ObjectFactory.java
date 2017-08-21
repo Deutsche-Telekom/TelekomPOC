@@ -34,6 +34,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListOfAssetMgmtAssetData }
+     * 
+     */
+    public ListOfAssetMgmtAssetData createListOfAssetMgmtAssetData() {
+        return new ListOfAssetMgmtAssetData();
+    }
+
+    /**
      * Create an instance of {@link ListOfAssetMgmtAssetXaData }
      * 
      */
@@ -58,6 +66,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link AssetMgmtAssetHeaderData }
+     * 
+     */
+    public AssetMgmtAssetHeaderData createAssetMgmtAssetHeaderData() {
+        return new AssetMgmtAssetHeaderData();
+    }
+
+    /**
      * Create an instance of {@link AssetMgmtAssetXaData }
      * 
      */
@@ -66,27 +82,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAssetMgmtAssetData }
-     * 
-     */
-    public ListOfAssetMgmtAssetData createListOfAssetMgmtAssetData() {
-        return new ListOfAssetMgmtAssetData();
-    }
-
-    /**
      * Create an instance of {@link ListOfAssetTopElmtData }
      * 
      */
     public ListOfAssetTopElmtData createListOfAssetTopElmtData() {
         return new ListOfAssetTopElmtData();
-    }
-
-    /**
-     * Create an instance of {@link AssetMgmtAssetHeaderData }
-     * 
-     */
-    public AssetMgmtAssetHeaderData createAssetMgmtAssetHeaderData() {
-        return new AssetMgmtAssetHeaderData();
     }
 
     /**

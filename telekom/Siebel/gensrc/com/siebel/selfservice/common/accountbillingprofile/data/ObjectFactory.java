@@ -42,19 +42,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfSsAccountbillingprofileIoTopElmtData }
-     * 
-     */
-    public ListOfSsAccountbillingprofileIoTopElmtData createListOfSsAccountbillingprofileIoTopElmtData() {
-        return new ListOfSsAccountbillingprofileIoTopElmtData();
-    }
-
-    /**
      * Create an instance of {@link ListOfSsAccountbillingprofileIoData }
      * 
      */
     public ListOfSsAccountbillingprofileIoData createListOfSsAccountbillingprofileIoData() {
         return new ListOfSsAccountbillingprofileIoData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfSsAccountbillingprofileIoTopElmtData }
+     * 
+     */
+    public ListOfSsAccountbillingprofileIoTopElmtData createListOfSsAccountbillingprofileIoTopElmtData() {
+        return new ListOfSsAccountbillingprofileIoTopElmtData();
     }
 
     /**

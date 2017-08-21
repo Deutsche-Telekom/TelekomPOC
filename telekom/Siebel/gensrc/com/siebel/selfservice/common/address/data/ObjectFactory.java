@@ -42,35 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfSsAddressIoData }
-     * 
-     */
-    public ListOfSsAddressIoData createListOfSsAddressIoData() {
-        return new ListOfSsAddressIoData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfCUTAddressMVContactData }
-     * 
-     */
-    public ListOfCUTAddressMVContactData createListOfCUTAddressMVContactData() {
-        return new ListOfCUTAddressMVContactData();
-    }
-
-    /**
      * Create an instance of {@link CUTAddressMVAccountData }
      * 
      */
     public CUTAddressMVAccountData createCUTAddressMVAccountData() {
         return new CUTAddressMVAccountData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfCUTAddressMVAccountData }
-     * 
-     */
-    public ListOfCUTAddressMVAccountData createListOfCUTAddressMVAccountData() {
-        return new ListOfCUTAddressMVAccountData();
     }
 
     /**
@@ -82,11 +58,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListOfSsAddressIoData }
+     * 
+     */
+    public ListOfSsAddressIoData createListOfSsAddressIoData() {
+        return new ListOfSsAddressIoData();
+    }
+
+    /**
      * Create an instance of {@link CUTAddressMVContactData }
      * 
      */
     public CUTAddressMVContactData createCUTAddressMVContactData() {
         return new CUTAddressMVContactData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfCUTAddressMVContactData }
+     * 
+     */
+    public ListOfCUTAddressMVContactData createListOfCUTAddressMVContactData() {
+        return new ListOfCUTAddressMVContactData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfCUTAddressMVAccountData }
+     * 
+     */
+    public ListOfCUTAddressMVAccountData createListOfCUTAddressMVAccountData() {
+        return new ListOfCUTAddressMVAccountData();
     }
 
     /**

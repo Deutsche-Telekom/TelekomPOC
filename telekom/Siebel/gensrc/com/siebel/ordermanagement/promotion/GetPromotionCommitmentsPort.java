@@ -18,12 +18,12 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @WebService(name = "GetPromotionCommitmentsPort", targetNamespace = "http://siebel.com/OrderManagement/Promotion")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
-    com.siebel.ordermanagement.promotion.data.ObjectFactory.class,
-    com.siebel.ordermanagement.promotion.ObjectFactory.class,
     com.siebel.ordermanagement.quote.data.ObjectFactory.class,
+    com.siebel.ordermanagement.order.data.ObjectFactory.class,
     com.siebel.ordermanagement.catalog.data.catalogcontext.ObjectFactory.class,
     com.siebel.ordermanagement.catalog.data.product.ObjectFactory.class,
-    com.siebel.ordermanagement.order.data.ObjectFactory.class
+    com.siebel.ordermanagement.promotion.ObjectFactory.class,
+    com.siebel.ordermanagement.promotion.data.ObjectFactory.class
 })
 public interface GetPromotionCommitmentsPort {
 

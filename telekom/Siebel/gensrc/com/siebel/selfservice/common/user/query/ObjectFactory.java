@@ -34,14 +34,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link QueryType }
-     * 
-     */
-    public QueryType createQueryType() {
-        return new QueryType();
-    }
-
-    /**
      * Create an instance of {@link ListOfSSUserResponsibilityQuery }
      * 
      */
@@ -50,19 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfSSUserTopElmtQuery }
+     * Create an instance of {@link QueryType }
      * 
      */
-    public ListOfSSUserTopElmtQuery createListOfSSUserTopElmtQuery() {
-        return new ListOfSSUserTopElmtQuery();
-    }
-
-    /**
-     * Create an instance of {@link SSUserResponsibilityQuery }
-     * 
-     */
-    public SSUserResponsibilityQuery createSSUserResponsibilityQuery() {
-        return new SSUserResponsibilityQuery();
+    public QueryType createQueryType() {
+        return new QueryType();
     }
 
     /**
@@ -74,11 +58,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListOfSSUserTopElmtQuery }
+     * 
+     */
+    public ListOfSSUserTopElmtQuery createListOfSSUserTopElmtQuery() {
+        return new ListOfSSUserTopElmtQuery();
+    }
+
+    /**
      * Create an instance of {@link UserQuery }
      * 
      */
     public UserQuery createUserQuery() {
         return new UserQuery();
+    }
+
+    /**
+     * Create an instance of {@link SSUserResponsibilityQuery }
+     * 
+     */
+    public SSUserResponsibilityQuery createSSUserResponsibilityQuery() {
+        return new SSUserResponsibilityQuery();
     }
 
     /**

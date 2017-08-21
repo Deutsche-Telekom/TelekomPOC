@@ -30,27 +30,51 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link InsertQuoteItemInput }
+     * 
+     */
+    public InsertQuoteItemInput createInsertQuoteItemInput() {
+        return new InsertQuoteItemInput();
+    }
+
+    /**
+     * Create an instance of {@link UpdateQuoteOutput }
+     * 
+     */
+    public UpdateQuoteOutput createUpdateQuoteOutput() {
+        return new UpdateQuoteOutput();
+    }
+
+    /**
+     * Create an instance of {@link GetQuoteInput }
+     * 
+     */
+    public GetQuoteInput createGetQuoteInput() {
+        return new GetQuoteInput();
+    }
+
+    /**
+     * Create an instance of {@link GetQuoteByIdOutput }
+     * 
+     */
+    public GetQuoteByIdOutput createGetQuoteByIdOutput() {
+        return new GetQuoteByIdOutput();
+    }
+
+    /**
+     * Create an instance of {@link UpdateQuoteItemInput }
+     * 
+     */
+    public UpdateQuoteItemInput createUpdateQuoteItemInput() {
+        return new UpdateQuoteItemInput();
+    }
+
+    /**
      * Create an instance of {@link SynchronizeQuoteInput }
      * 
      */
     public SynchronizeQuoteInput createSynchronizeQuoteInput() {
         return new SynchronizeQuoteInput();
-    }
-
-    /**
-     * Create an instance of {@link InsertQuoteOutput }
-     * 
-     */
-    public InsertQuoteOutput createInsertQuoteOutput() {
-        return new InsertQuoteOutput();
-    }
-
-    /**
-     * Create an instance of {@link GetQuoteItemInput }
-     * 
-     */
-    public GetQuoteItemInput createGetQuoteItemInput() {
-        return new GetQuoteItemInput();
     }
 
     /**
@@ -62,11 +86,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetQuoteItemOutput }
+     * Create an instance of {@link GetQuoteItemByIdInput }
      * 
      */
-    public GetQuoteItemOutput createGetQuoteItemOutput() {
-        return new GetQuoteItemOutput();
+    public GetQuoteItemByIdInput createGetQuoteItemByIdInput() {
+        return new GetQuoteItemByIdInput();
+    }
+
+    /**
+     * Create an instance of {@link GetQuoteItemByIdOutput }
+     * 
+     */
+    public GetQuoteItemByIdOutput createGetQuoteItemByIdOutput() {
+        return new GetQuoteItemByIdOutput();
     }
 
     /**
@@ -86,35 +118,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetQuoteOutput }
+     * Create an instance of {@link UpdateQuoteInput }
      * 
      */
-    public GetQuoteOutput createGetQuoteOutput() {
-        return new GetQuoteOutput();
-    }
-
-    /**
-     * Create an instance of {@link GetQuoteInput }
-     * 
-     */
-    public GetQuoteInput createGetQuoteInput() {
-        return new GetQuoteInput();
-    }
-
-    /**
-     * Create an instance of {@link SynchronizeQuoteOutput }
-     * 
-     */
-    public SynchronizeQuoteOutput createSynchronizeQuoteOutput() {
-        return new SynchronizeQuoteOutput();
-    }
-
-    /**
-     * Create an instance of {@link UpdateQuoteOutput }
-     * 
-     */
-    public UpdateQuoteOutput createUpdateQuoteOutput() {
-        return new UpdateQuoteOutput();
+    public UpdateQuoteInput createUpdateQuoteInput() {
+        return new UpdateQuoteInput();
     }
 
     /**
@@ -126,19 +134,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetQuoteItemByIdInput }
+     * Create an instance of {@link SynchronizeQuoteOutput }
      * 
      */
-    public GetQuoteItemByIdInput createGetQuoteItemByIdInput() {
-        return new GetQuoteItemByIdInput();
+    public SynchronizeQuoteOutput createSynchronizeQuoteOutput() {
+        return new SynchronizeQuoteOutput();
     }
 
     /**
-     * Create an instance of {@link SynchronizeQuoteItemOutput }
+     * Create an instance of {@link InsertQuoteOutput }
      * 
      */
-    public SynchronizeQuoteItemOutput createSynchronizeQuoteItemOutput() {
-        return new SynchronizeQuoteItemOutput();
+    public InsertQuoteOutput createInsertQuoteOutput() {
+        return new InsertQuoteOutput();
     }
 
     /**
@@ -150,19 +158,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DeleteQuoteOutput }
+     * Create an instance of {@link SynchronizeQuoteItemOutput }
      * 
      */
-    public DeleteQuoteOutput createDeleteQuoteOutput() {
-        return new DeleteQuoteOutput();
-    }
-
-    /**
-     * Create an instance of {@link GetQuoteByIdOutput }
-     * 
-     */
-    public GetQuoteByIdOutput createGetQuoteByIdOutput() {
-        return new GetQuoteByIdOutput();
+    public SynchronizeQuoteItemOutput createSynchronizeQuoteItemOutput() {
+        return new SynchronizeQuoteItemOutput();
     }
 
     /**
@@ -174,11 +174,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateQuoteInput }
+     * Create an instance of {@link DeleteQuoteOutput }
      * 
      */
-    public UpdateQuoteInput createUpdateQuoteInput() {
-        return new UpdateQuoteInput();
+    public DeleteQuoteOutput createDeleteQuoteOutput() {
+        return new DeleteQuoteOutput();
+    }
+
+    /**
+     * Create an instance of {@link GetQuoteItemInput }
+     * 
+     */
+    public GetQuoteItemInput createGetQuoteItemInput() {
+        return new GetQuoteItemInput();
+    }
+
+    /**
+     * Create an instance of {@link GetQuoteItemOutput }
+     * 
+     */
+    public GetQuoteItemOutput createGetQuoteItemOutput() {
+        return new GetQuoteItemOutput();
     }
 
     /**
@@ -190,22 +206,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetQuoteItemByIdOutput }
-     * 
-     */
-    public GetQuoteItemByIdOutput createGetQuoteItemByIdOutput() {
-        return new GetQuoteItemByIdOutput();
-    }
-
-    /**
-     * Create an instance of {@link InsertQuoteItemInput }
-     * 
-     */
-    public InsertQuoteItemInput createInsertQuoteItemInput() {
-        return new InsertQuoteItemInput();
-    }
-
-    /**
      * Create an instance of {@link InsertQuoteItemOutput }
      * 
      */
@@ -214,11 +214,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateQuoteItemInput }
+     * Create an instance of {@link GetQuoteOutput }
      * 
      */
-    public UpdateQuoteItemInput createUpdateQuoteItemInput() {
-        return new UpdateQuoteItemInput();
+    public GetQuoteOutput createGetQuoteOutput() {
+        return new GetQuoteOutput();
     }
 
 }

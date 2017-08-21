@@ -19,8 +19,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
     com.siebel.xml.asset_management_complex_io.query.ObjectFactory.class,
-    com.siebel.service.fs.assets.ObjectFactory.class,
     com.siebel.xml.asset_management_complex_io.data.ObjectFactory.class,
+    com.siebel.service.fs.assets.ObjectFactory.class,
     com.siebel.xml.asset_management_complex_io.id.ObjectFactory.class
 })
 public interface AssetManagementComplexPort {

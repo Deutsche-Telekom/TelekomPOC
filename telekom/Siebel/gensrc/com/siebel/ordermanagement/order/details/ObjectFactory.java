@@ -30,11 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OrderDetailUpdateOutput }
+     * Create an instance of {@link OrderDetailUpdateInput }
      * 
      */
-    public OrderDetailUpdateOutput createOrderDetailUpdateOutput() {
-        return new OrderDetailUpdateOutput();
+    public OrderDetailUpdateInput createOrderDetailUpdateInput() {
+        return new OrderDetailUpdateInput();
     }
 
     /**
@@ -46,19 +46,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OrderDetailUpdateInput }
-     * 
-     */
-    public OrderDetailUpdateInput createOrderDetailUpdateInput() {
-        return new OrderDetailUpdateInput();
-    }
-
-    /**
      * Create an instance of {@link OrderDetailQueryPageOutput }
      * 
      */
     public OrderDetailQueryPageOutput createOrderDetailQueryPageOutput() {
         return new OrderDetailQueryPageOutput();
+    }
+
+    /**
+     * Create an instance of {@link OrderDetailUpdateOutput }
+     * 
+     */
+    public OrderDetailUpdateOutput createOrderDetailUpdateOutput() {
+        return new OrderDetailUpdateOutput();
     }
 
 }

@@ -30,19 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SuspendAssetToOrderInput }
+     * Create an instance of {@link AutoOrderOutput }
      * 
      */
-    public SuspendAssetToOrderInput createSuspendAssetToOrderInput() {
-        return new SuspendAssetToOrderInput();
-    }
-
-    /**
-     * Create an instance of {@link ModifyAssetToQuoteInput }
-     * 
-     */
-    public ModifyAssetToQuoteInput createModifyAssetToQuoteInput() {
-        return new ModifyAssetToQuoteInput();
+    public AutoOrderOutput createAutoOrderOutput() {
+        return new AutoOrderOutput();
     }
 
     /**
@@ -54,83 +46,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubmitOrderInput }
-     * 
-     */
-    public SubmitOrderInput createSubmitOrderInput() {
-        return new SubmitOrderInput();
-    }
-
-    /**
      * Create an instance of {@link ResumeAssetToOrderOutput }
      * 
      */
     public ResumeAssetToOrderOutput createResumeAssetToOrderOutput() {
         return new ResumeAssetToOrderOutput();
-    }
-
-    /**
-     * Create an instance of {@link AutoOrderOutput }
-     * 
-     */
-    public AutoOrderOutput createAutoOrderOutput() {
-        return new AutoOrderOutput();
-    }
-
-    /**
-     * Create an instance of {@link ModifyAssetToQuoteOutput }
-     * 
-     */
-    public ModifyAssetToQuoteOutput createModifyAssetToQuoteOutput() {
-        return new ModifyAssetToQuoteOutput();
-    }
-
-    /**
-     * Create an instance of {@link ModifyAssetToOrderOutput }
-     * 
-     */
-    public ModifyAssetToOrderOutput createModifyAssetToOrderOutput() {
-        return new ModifyAssetToOrderOutput();
-    }
-
-    /**
-     * Create an instance of {@link DisconnectAssetToQuoteInput }
-     * 
-     */
-    public DisconnectAssetToQuoteInput createDisconnectAssetToQuoteInput() {
-        return new DisconnectAssetToQuoteInput();
-    }
-
-    /**
-     * Create an instance of {@link AutoAssetOutput }
-     * 
-     */
-    public AutoAssetOutput createAutoAssetOutput() {
-        return new AutoAssetOutput();
-    }
-
-    /**
-     * Create an instance of {@link ResumeAssetToQuoteInput }
-     * 
-     */
-    public ResumeAssetToQuoteInput createResumeAssetToQuoteInput() {
-        return new ResumeAssetToQuoteInput();
-    }
-
-    /**
-     * Create an instance of {@link DisconnectAssetToOrderOutput }
-     * 
-     */
-    public DisconnectAssetToOrderOutput createDisconnectAssetToOrderOutput() {
-        return new DisconnectAssetToOrderOutput();
-    }
-
-    /**
-     * Create an instance of {@link ModifyAssetToOrderInput }
-     * 
-     */
-    public ModifyAssetToOrderInput createModifyAssetToOrderInput() {
-        return new ModifyAssetToOrderInput();
     }
 
     /**
@@ -142,19 +62,59 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SuspendAssetToQuoteOutput }
-     * 
-     */
-    public SuspendAssetToQuoteOutput createSuspendAssetToQuoteOutput() {
-        return new SuspendAssetToQuoteOutput();
-    }
-
-    /**
      * Create an instance of {@link SuspendAssetToQuoteInput }
      * 
      */
     public SuspendAssetToQuoteInput createSuspendAssetToQuoteInput() {
         return new SuspendAssetToQuoteInput();
+    }
+
+    /**
+     * Create an instance of {@link AutoAssetInput }
+     * 
+     */
+    public AutoAssetInput createAutoAssetInput() {
+        return new AutoAssetInput();
+    }
+
+    /**
+     * Create an instance of {@link SubmitOrderOutput }
+     * 
+     */
+    public SubmitOrderOutput createSubmitOrderOutput() {
+        return new SubmitOrderOutput();
+    }
+
+    /**
+     * Create an instance of {@link ResumeAssetToQuoteInput }
+     * 
+     */
+    public ResumeAssetToQuoteInput createResumeAssetToQuoteInput() {
+        return new ResumeAssetToQuoteInput();
+    }
+
+    /**
+     * Create an instance of {@link DisconnectAssetToQuoteInput }
+     * 
+     */
+    public DisconnectAssetToQuoteInput createDisconnectAssetToQuoteInput() {
+        return new DisconnectAssetToQuoteInput();
+    }
+
+    /**
+     * Create an instance of {@link ModifyAssetToQuoteInput }
+     * 
+     */
+    public ModifyAssetToQuoteInput createModifyAssetToQuoteInput() {
+        return new ModifyAssetToQuoteInput();
+    }
+
+    /**
+     * Create an instance of {@link SubmitOrderInput }
+     * 
+     */
+    public SubmitOrderInput createSubmitOrderInput() {
+        return new SubmitOrderInput();
     }
 
     /**
@@ -182,11 +142,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AutoAssetInput }
+     * Create an instance of {@link DisconnectAssetToOrderOutput }
      * 
      */
-    public AutoAssetInput createAutoAssetInput() {
-        return new AutoAssetInput();
+    public DisconnectAssetToOrderOutput createDisconnectAssetToOrderOutput() {
+        return new DisconnectAssetToOrderOutput();
+    }
+
+    /**
+     * Create an instance of {@link ModifyAssetToQuoteOutput }
+     * 
+     */
+    public ModifyAssetToQuoteOutput createModifyAssetToQuoteOutput() {
+        return new ModifyAssetToQuoteOutput();
+    }
+
+    /**
+     * Create an instance of {@link AutoAssetOutput }
+     * 
+     */
+    public AutoAssetOutput createAutoAssetOutput() {
+        return new AutoAssetOutput();
     }
 
     /**
@@ -198,11 +174,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubmitOrderOutput }
+     * Create an instance of {@link SuspendAssetToOrderInput }
      * 
      */
-    public SubmitOrderOutput createSubmitOrderOutput() {
-        return new SubmitOrderOutput();
+    public SuspendAssetToOrderInput createSuspendAssetToOrderInput() {
+        return new SuspendAssetToOrderInput();
+    }
+
+    /**
+     * Create an instance of {@link ModifyAssetToOrderInput }
+     * 
+     */
+    public ModifyAssetToOrderInput createModifyAssetToOrderInput() {
+        return new ModifyAssetToOrderInput();
+    }
+
+    /**
+     * Create an instance of {@link ModifyAssetToOrderOutput }
+     * 
+     */
+    public ModifyAssetToOrderOutput createModifyAssetToOrderOutput() {
+        return new ModifyAssetToOrderOutput();
+    }
+
+    /**
+     * Create an instance of {@link SuspendAssetToQuoteOutput }
+     * 
+     */
+    public SuspendAssetToQuoteOutput createSuspendAssetToQuoteOutput() {
+        return new SuspendAssetToQuoteOutput();
     }
 
 }

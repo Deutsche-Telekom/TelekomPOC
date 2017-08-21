@@ -30,22 +30,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SelfServiceContactExecuteOutput }
-     * 
-     */
-    public SelfServiceContactExecuteOutput createSelfServiceContactExecuteOutput() {
-        return new SelfServiceContactExecuteOutput();
-    }
-
-    /**
-     * Create an instance of {@link SelfServiceContactQueryPageInput }
-     * 
-     */
-    public SelfServiceContactQueryPageInput createSelfServiceContactQueryPageInput() {
-        return new SelfServiceContactQueryPageInput();
-    }
-
-    /**
      * Create an instance of {@link SelfServiceContactExecuteInput }
      * 
      */
@@ -59,6 +43,22 @@ public class ObjectFactory {
      */
     public SelfServiceContactQueryPageOutput createSelfServiceContactQueryPageOutput() {
         return new SelfServiceContactQueryPageOutput();
+    }
+
+    /**
+     * Create an instance of {@link SelfServiceContactQueryPageInput }
+     * 
+     */
+    public SelfServiceContactQueryPageInput createSelfServiceContactQueryPageInput() {
+        return new SelfServiceContactQueryPageInput();
+    }
+
+    /**
+     * Create an instance of {@link SelfServiceContactExecuteOutput }
+     * 
+     */
+    public SelfServiceContactExecuteOutput createSelfServiceContactExecuteOutput() {
+        return new SelfServiceContactExecuteOutput();
     }
 
 }

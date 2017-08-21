@@ -34,11 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAssetManagementIoData }
+     * Create an instance of {@link ListOfAssetManagementIoTopElmtData }
      * 
      */
-    public ListOfAssetManagementIoData createListOfAssetManagementIoData() {
-        return new ListOfAssetManagementIoData();
+    public ListOfAssetManagementIoTopElmtData createListOfAssetManagementIoTopElmtData() {
+        return new ListOfAssetManagementIoTopElmtData();
     }
 
     /**
@@ -50,11 +50,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAssetManagementIoTopElmtData }
+     * Create an instance of {@link ListOfAssetManagementIoData }
      * 
      */
-    public ListOfAssetManagementIoTopElmtData createListOfAssetManagementIoTopElmtData() {
-        return new ListOfAssetManagementIoTopElmtData();
+    public ListOfAssetManagementIoData createListOfAssetManagementIoData() {
+        return new ListOfAssetManagementIoData();
     }
 
     /**

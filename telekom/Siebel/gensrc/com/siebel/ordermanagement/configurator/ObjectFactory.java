@@ -30,59 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetCfgObjectGroupItemsOutput }
+     * Create an instance of {@link GetCfgObjectStructureInput }
      * 
      */
-    public GetCfgObjectGroupItemsOutput createGetCfgObjectGroupItemsOutput() {
-        return new GetCfgObjectGroupItemsOutput();
-    }
-
-    /**
-     * Create an instance of {@link GetCfgObjectGroupItemsInput }
-     * 
-     */
-    public GetCfgObjectGroupItemsInput createGetCfgObjectGroupItemsInput() {
-        return new GetCfgObjectGroupItemsInput();
-    }
-
-    /**
-     * Create an instance of {@link EndConfigurationInput }
-     * 
-     */
-    public EndConfigurationInput createEndConfigurationInput() {
-        return new EndConfigurationInput();
-    }
-
-    /**
-     * Create an instance of {@link UpdateConfigurationInput }
-     * 
-     */
-    public UpdateConfigurationInput createUpdateConfigurationInput() {
-        return new UpdateConfigurationInput();
-    }
-
-    /**
-     * Create an instance of {@link UpdateConfigurationOutput }
-     * 
-     */
-    public UpdateConfigurationOutput createUpdateConfigurationOutput() {
-        return new UpdateConfigurationOutput();
-    }
-
-    /**
-     * Create an instance of {@link GetObjDefaultGroupItemsInput }
-     * 
-     */
-    public GetObjDefaultGroupItemsInput createGetObjDefaultGroupItemsInput() {
-        return new GetObjDefaultGroupItemsInput();
-    }
-
-    /**
-     * Create an instance of {@link GetObjDefaultGroupItemsOutput }
-     * 
-     */
-    public GetObjDefaultGroupItemsOutput createGetObjDefaultGroupItemsOutput() {
-        return new GetObjDefaultGroupItemsOutput();
+    public GetCfgObjectStructureInput createGetCfgObjectStructureInput() {
+        return new GetCfgObjectStructureInput();
     }
 
     /**
@@ -94,11 +46,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetCfgObjectStructureInput }
+     * Create an instance of {@link GetCfgObjectGroupItemsInput }
      * 
      */
-    public GetCfgObjectStructureInput createGetCfgObjectStructureInput() {
-        return new GetCfgObjectStructureInput();
+    public GetCfgObjectGroupItemsInput createGetCfgObjectGroupItemsInput() {
+        return new GetCfgObjectGroupItemsInput();
+    }
+
+    /**
+     * Create an instance of {@link GetCfgObjectStructureOutput }
+     * 
+     */
+    public GetCfgObjectStructureOutput createGetCfgObjectStructureOutput() {
+        return new GetCfgObjectStructureOutput();
     }
 
     /**
@@ -110,6 +70,46 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link UpdateConfigurationInput }
+     * 
+     */
+    public UpdateConfigurationInput createUpdateConfigurationInput() {
+        return new UpdateConfigurationInput();
+    }
+
+    /**
+     * Create an instance of {@link GetCfgObjectGroupItemsOutput }
+     * 
+     */
+    public GetCfgObjectGroupItemsOutput createGetCfgObjectGroupItemsOutput() {
+        return new GetCfgObjectGroupItemsOutput();
+    }
+
+    /**
+     * Create an instance of {@link GetObjDefaultGroupItemsOutput }
+     * 
+     */
+    public GetObjDefaultGroupItemsOutput createGetObjDefaultGroupItemsOutput() {
+        return new GetObjDefaultGroupItemsOutput();
+    }
+
+    /**
+     * Create an instance of {@link EndConfigurationInput }
+     * 
+     */
+    public EndConfigurationInput createEndConfigurationInput() {
+        return new EndConfigurationInput();
+    }
+
+    /**
+     * Create an instance of {@link UpdateConfigurationOutput }
+     * 
+     */
+    public UpdateConfigurationOutput createUpdateConfigurationOutput() {
+        return new UpdateConfigurationOutput();
+    }
+
+    /**
      * Create an instance of {@link EndConfigurationOutput }
      * 
      */
@@ -118,11 +118,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetCfgObjectStructureOutput }
+     * Create an instance of {@link GetObjDefaultGroupItemsInput }
      * 
      */
-    public GetCfgObjectStructureOutput createGetCfgObjectStructureOutput() {
-        return new GetCfgObjectStructureOutput();
+    public GetObjDefaultGroupItemsInput createGetObjDefaultGroupItemsInput() {
+        return new GetObjDefaultGroupItemsInput();
     }
 
 }

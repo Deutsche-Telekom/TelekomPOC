@@ -34,38 +34,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfSSAccountData }
-     * 
-     */
-    public ListOfSSAccountData createListOfSSAccountData() {
-        return new ListOfSSAccountData();
-    }
-
-    /**
-     * Create an instance of {@link ContactCommunicationAddressData }
-     * 
-     */
-    public ContactCommunicationAddressData createContactCommunicationAddressData() {
-        return new ContactCommunicationAddressData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfContactCommunicationAddressData }
-     * 
-     */
-    public ListOfContactCommunicationAddressData createListOfContactCommunicationAddressData() {
-        return new ListOfContactCommunicationAddressData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfSSAccountTopElmtData }
-     * 
-     */
-    public ListOfSSAccountTopElmtData createListOfSSAccountTopElmtData() {
-        return new ListOfSSAccountTopElmtData();
-    }
-
-    /**
      * Create an instance of {@link ContactData }
      * 
      */
@@ -74,27 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAccountBusinessAddressData }
+     * Create an instance of {@link ListOfSSAccountData }
      * 
      */
-    public ListOfAccountBusinessAddressData createListOfAccountBusinessAddressData() {
-        return new ListOfAccountBusinessAddressData();
-    }
-
-    /**
-     * Create an instance of {@link ListOfContactAlternatePhoneData }
-     * 
-     */
-    public ListOfContactAlternatePhoneData createListOfContactAlternatePhoneData() {
-        return new ListOfContactAlternatePhoneData();
-    }
-
-    /**
-     * Create an instance of {@link ContactAlternatePhoneData }
-     * 
-     */
-    public ContactAlternatePhoneData createContactAlternatePhoneData() {
-        return new ContactAlternatePhoneData();
+    public ListOfSSAccountData createListOfSSAccountData() {
+        return new ListOfSSAccountData();
     }
 
     /**
@@ -114,6 +66,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link AccountData }
+     * 
+     */
+    public AccountData createAccountData() {
+        return new AccountData();
+    }
+
+    /**
      * Create an instance of {@link ListOfContactData }
      * 
      */
@@ -122,11 +82,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AccountData }
+     * Create an instance of {@link ContactCommunicationAddressData }
      * 
      */
-    public AccountData createAccountData() {
-        return new AccountData();
+    public ContactCommunicationAddressData createContactCommunicationAddressData() {
+        return new ContactCommunicationAddressData();
+    }
+
+    /**
+     * Create an instance of {@link ContactAlternatePhoneData }
+     * 
+     */
+    public ContactAlternatePhoneData createContactAlternatePhoneData() {
+        return new ContactAlternatePhoneData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfSSAccountTopElmtData }
+     * 
+     */
+    public ListOfSSAccountTopElmtData createListOfSSAccountTopElmtData() {
+        return new ListOfSSAccountTopElmtData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfContactAlternatePhoneData }
+     * 
+     */
+    public ListOfContactAlternatePhoneData createListOfContactAlternatePhoneData() {
+        return new ListOfContactAlternatePhoneData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfContactCommunicationAddressData }
+     * 
+     */
+    public ListOfContactCommunicationAddressData createListOfContactCommunicationAddressData() {
+        return new ListOfContactCommunicationAddressData();
+    }
+
+    /**
+     * Create an instance of {@link ListOfAccountBusinessAddressData }
+     * 
+     */
+    public ListOfAccountBusinessAddressData createListOfAccountBusinessAddressData() {
+        return new ListOfAccountBusinessAddressData();
     }
 
     /**

@@ -42,22 +42,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Message }
-     * 
-     */
-    public Message createMessage() {
-        return new Message();
-    }
-
-    /**
-     * Create an instance of {@link ListOfStatusTopElmt }
-     * 
-     */
-    public ListOfStatusTopElmt createListOfStatusTopElmt() {
-        return new ListOfStatusTopElmt();
-    }
-
-    /**
      * Create an instance of {@link ListOfStatus }
      * 
      */
@@ -71,6 +55,22 @@ public class ObjectFactory {
      */
     public MessageType createMessageType() {
         return new MessageType();
+    }
+
+    /**
+     * Create an instance of {@link ListOfStatusTopElmt }
+     * 
+     */
+    public ListOfStatusTopElmt createListOfStatusTopElmt() {
+        return new ListOfStatusTopElmt();
+    }
+
+    /**
+     * Create an instance of {@link Message }
+     * 
+     */
+    public Message createMessage() {
+        return new Message();
     }
 
     /**

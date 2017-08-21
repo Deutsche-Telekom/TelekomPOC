@@ -19,9 +19,9 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
     com.siebel.ordermanagement.order.data.ObjectFactory.class,
+    com.siebel.ordermanagement.abo.ObjectFactory.class,
     com.siebel.ordermanagement.asset.data.ObjectFactory.class,
-    com.siebel.ordermanagement.quote.data.ObjectFactory.class,
-    com.siebel.ordermanagement.abo.ObjectFactory.class
+    com.siebel.ordermanagement.quote.data.ObjectFactory.class
 })
 public interface DisconnectAssetToOrderPort {
 

@@ -34,43 +34,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfShipmentItemId }
+     * Create an instance of {@link OrderPaymentsBillToAddressId }
      * 
      */
-    public ListOfShipmentItemId createListOfShipmentItemId() {
-        return new ListOfShipmentItemId();
+    public OrderPaymentsBillToAddressId createOrderPaymentsBillToAddressId() {
+        return new OrderPaymentsBillToAddressId();
     }
 
     /**
-     * Create an instance of {@link ListOfOrderItemXADetailId }
+     * Create an instance of {@link ListOfOrderDetailTopElmtId }
      * 
      */
-    public ListOfOrderItemXADetailId createListOfOrderItemXADetailId() {
-        return new ListOfOrderItemXADetailId();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderPaymentId }
-     * 
-     */
-    public ListOfOrderPaymentId createListOfOrderPaymentId() {
-        return new ListOfOrderPaymentId();
-    }
-
-    /**
-     * Create an instance of {@link OrderItemProductLineId }
-     * 
-     */
-    public OrderItemProductLineId createOrderItemProductLineId() {
-        return new OrderItemProductLineId();
-    }
-
-    /**
-     * Create an instance of {@link OrderDetailId }
-     * 
-     */
-    public OrderDetailId createOrderDetailId() {
-        return new OrderDetailId();
+    public ListOfOrderDetailTopElmtId createListOfOrderDetailTopElmtId() {
+        return new ListOfOrderDetailTopElmtId();
     }
 
     /**
@@ -79,22 +55,6 @@ public class ObjectFactory {
      */
     public OrderPaymentId createOrderPaymentId() {
         return new OrderPaymentId();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderItemProductLineId }
-     * 
-     */
-    public ListOfOrderItemProductLineId createListOfOrderItemProductLineId() {
-        return new ListOfOrderItemProductLineId();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderPaymentsBillToAddressId }
-     * 
-     */
-    public ListOfOrderPaymentsBillToAddressId createListOfOrderPaymentsBillToAddressId() {
-        return new ListOfOrderPaymentsBillToAddressId();
     }
 
     /**
@@ -114,75 +74,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OrderPaymentsBillToAddressId }
-     * 
-     */
-    public OrderPaymentsBillToAddressId createOrderPaymentsBillToAddressId() {
-        return new OrderPaymentsBillToAddressId();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderItemDetailId }
-     * 
-     */
-    public ListOfOrderItemDetailId createListOfOrderItemDetailId() {
-        return new ListOfOrderItemDetailId();
-    }
-
-    /**
      * Create an instance of {@link ListOfOrderApprovalHistoryId }
      * 
      */
     public ListOfOrderApprovalHistoryId createListOfOrderApprovalHistoryId() {
         return new ListOfOrderApprovalHistoryId();
-    }
-
-    /**
-     * Create an instance of {@link ShipmentId }
-     * 
-     */
-    public ShipmentId createShipmentId() {
-        return new ShipmentId();
-    }
-
-    /**
-     * Create an instance of {@link ListOfShipmentId }
-     * 
-     */
-    public ListOfShipmentId createListOfShipmentId() {
-        return new ListOfShipmentId();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderDetailTopElmtId }
-     * 
-     */
-    public ListOfOrderDetailTopElmtId createListOfOrderDetailTopElmtId() {
-        return new ListOfOrderDetailTopElmtId();
-    }
-
-    /**
-     * Create an instance of {@link OrderItemDetailId }
-     * 
-     */
-    public OrderItemDetailId createOrderItemDetailId() {
-        return new OrderItemDetailId();
-    }
-
-    /**
-     * Create an instance of {@link OrderApprovalHistoryId }
-     * 
-     */
-    public OrderApprovalHistoryId createOrderApprovalHistoryId() {
-        return new OrderApprovalHistoryId();
-    }
-
-    /**
-     * Create an instance of {@link ListOfOrderDetailId }
-     * 
-     */
-    public ListOfOrderDetailId createListOfOrderDetailId() {
-        return new ListOfOrderDetailId();
     }
 
     /**
@@ -194,11 +90,115 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListOfOrderItemDetailId }
+     * 
+     */
+    public ListOfOrderItemDetailId createListOfOrderItemDetailId() {
+        return new ListOfOrderItemDetailId();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderItemProductLineId }
+     * 
+     */
+    public ListOfOrderItemProductLineId createListOfOrderItemProductLineId() {
+        return new ListOfOrderItemProductLineId();
+    }
+
+    /**
+     * Create an instance of {@link OrderItemProductLineId }
+     * 
+     */
+    public OrderItemProductLineId createOrderItemProductLineId() {
+        return new OrderItemProductLineId();
+    }
+
+    /**
      * Create an instance of {@link ShipmentItemId }
      * 
      */
     public ShipmentItemId createShipmentItemId() {
         return new ShipmentItemId();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderItemXADetailId }
+     * 
+     */
+    public ListOfOrderItemXADetailId createListOfOrderItemXADetailId() {
+        return new ListOfOrderItemXADetailId();
+    }
+
+    /**
+     * Create an instance of {@link OrderItemDetailId }
+     * 
+     */
+    public OrderItemDetailId createOrderItemDetailId() {
+        return new OrderItemDetailId();
+    }
+
+    /**
+     * Create an instance of {@link ListOfShipmentItemId }
+     * 
+     */
+    public ListOfShipmentItemId createListOfShipmentItemId() {
+        return new ListOfShipmentItemId();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderPaymentsBillToAddressId }
+     * 
+     */
+    public ListOfOrderPaymentsBillToAddressId createListOfOrderPaymentsBillToAddressId() {
+        return new ListOfOrderPaymentsBillToAddressId();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderPaymentId }
+     * 
+     */
+    public ListOfOrderPaymentId createListOfOrderPaymentId() {
+        return new ListOfOrderPaymentId();
+    }
+
+    /**
+     * Create an instance of {@link ListOfOrderDetailId }
+     * 
+     */
+    public ListOfOrderDetailId createListOfOrderDetailId() {
+        return new ListOfOrderDetailId();
+    }
+
+    /**
+     * Create an instance of {@link OrderApprovalHistoryId }
+     * 
+     */
+    public OrderApprovalHistoryId createOrderApprovalHistoryId() {
+        return new OrderApprovalHistoryId();
+    }
+
+    /**
+     * Create an instance of {@link OrderDetailId }
+     * 
+     */
+    public OrderDetailId createOrderDetailId() {
+        return new OrderDetailId();
+    }
+
+    /**
+     * Create an instance of {@link ListOfShipmentId }
+     * 
+     */
+    public ListOfShipmentId createListOfShipmentId() {
+        return new ListOfShipmentId();
+    }
+
+    /**
+     * Create an instance of {@link ShipmentId }
+     * 
+     */
+    public ShipmentId createShipmentId() {
+        return new ShipmentId();
     }
 
     /**

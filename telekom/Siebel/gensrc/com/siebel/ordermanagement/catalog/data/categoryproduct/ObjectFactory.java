@@ -42,14 +42,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfCategoryProductTopElmt }
-     * 
-     */
-    public ListOfCategoryProductTopElmt createListOfCategoryProductTopElmt() {
-        return new ListOfCategoryProductTopElmt();
-    }
-
-    /**
      * Create an instance of {@link ListOfProduct }
      * 
      */
@@ -63,6 +55,14 @@ public class ObjectFactory {
      */
     public Product createProduct() {
         return new Product();
+    }
+
+    /**
+     * Create an instance of {@link ListOfCategoryProductTopElmt }
+     * 
+     */
+    public ListOfCategoryProductTopElmt createListOfCategoryProductTopElmt() {
+        return new ListOfCategoryProductTopElmt();
     }
 
     /**

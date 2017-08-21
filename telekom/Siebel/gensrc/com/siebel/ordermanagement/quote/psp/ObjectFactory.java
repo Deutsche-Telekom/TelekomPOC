@@ -30,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CheckQuoteEligibilityCompatibilityInput }
-     * 
-     */
-    public CheckQuoteEligibilityCompatibilityInput createCheckQuoteEligibilityCompatibilityInput() {
-        return new CheckQuoteEligibilityCompatibilityInput();
-    }
-
-    /**
      * Create an instance of {@link CheckQuoteEligibilityCompatibilityOutput }
      * 
      */
     public CheckQuoteEligibilityCompatibilityOutput createCheckQuoteEligibilityCompatibilityOutput() {
         return new CheckQuoteEligibilityCompatibilityOutput();
+    }
+
+    /**
+     * Create an instance of {@link CheckQuoteEligibilityCompatibilityInput }
+     * 
+     */
+    public CheckQuoteEligibilityCompatibilityInput createCheckQuoteEligibilityCompatibilityInput() {
+        return new CheckQuoteEligibilityCompatibilityInput();
     }
 
 }

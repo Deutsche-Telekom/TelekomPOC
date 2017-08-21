@@ -42,11 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UserId }
+     * Create an instance of {@link ListOfSSUserResponsibilityId }
      * 
      */
-    public UserId createUserId() {
-        return new UserId();
+    public ListOfSSUserResponsibilityId createListOfSSUserResponsibilityId() {
+        return new ListOfSSUserResponsibilityId();
     }
 
     /**
@@ -58,19 +58,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link UserId }
+     * 
+     */
+    public UserId createUserId() {
+        return new UserId();
+    }
+
+    /**
      * Create an instance of {@link SSUserResponsibilityId }
      * 
      */
     public SSUserResponsibilityId createSSUserResponsibilityId() {
         return new SSUserResponsibilityId();
-    }
-
-    /**
-     * Create an instance of {@link ListOfSSUserResponsibilityId }
-     * 
-     */
-    public ListOfSSUserResponsibilityId createListOfSSUserResponsibilityId() {
-        return new ListOfSSUserResponsibilityId();
     }
 
     /**

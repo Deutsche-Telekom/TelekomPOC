@@ -34,11 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Catalog }
+     * Create an instance of {@link ListOfCategory }
      * 
      */
-    public Catalog createCatalog() {
-        return new Catalog();
+    public ListOfCategory createListOfCategory() {
+        return new ListOfCategory();
     }
 
     /**
@@ -50,11 +50,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link NetPriceWaterfall }
+     * Create an instance of {@link ListOfPublishCatalog }
      * 
      */
-    public NetPriceWaterfall createNetPriceWaterfall() {
-        return new NetPriceWaterfall();
+    public ListOfPublishCatalog createListOfPublishCatalog() {
+        return new ListOfPublishCatalog();
     }
 
     /**
@@ -66,35 +66,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Category }
+     * Create an instance of {@link ListOfIssProductAttributeVbc }
      * 
      */
-    public Category createCategory() {
-        return new Category();
-    }
-
-    /**
-     * Create an instance of {@link ListOfPublishCatalog }
-     * 
-     */
-    public ListOfPublishCatalog createListOfPublishCatalog() {
-        return new ListOfPublishCatalog();
-    }
-
-    /**
-     * Create an instance of {@link ListOfProduct }
-     * 
-     */
-    public ListOfProduct createListOfProduct() {
-        return new ListOfProduct();
-    }
-
-    /**
-     * Create an instance of {@link ListOfCategory }
-     * 
-     */
-    public ListOfCategory createListOfCategory() {
-        return new ListOfCategory();
+    public ListOfIssProductAttributeVbc createListOfIssProductAttributeVbc() {
+        return new ListOfIssProductAttributeVbc();
     }
 
     /**
@@ -106,11 +82,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfIssProductAttributeVbc }
+     * Create an instance of {@link Category }
      * 
      */
-    public ListOfIssProductAttributeVbc createListOfIssProductAttributeVbc() {
-        return new ListOfIssProductAttributeVbc();
+    public Category createCategory() {
+        return new Category();
     }
 
     /**
@@ -119,6 +95,30 @@ public class ObjectFactory {
      */
     public ListOfPublishCatalogTopElmt createListOfPublishCatalogTopElmt() {
         return new ListOfPublishCatalogTopElmt();
+    }
+
+    /**
+     * Create an instance of {@link NetPriceWaterfall }
+     * 
+     */
+    public NetPriceWaterfall createNetPriceWaterfall() {
+        return new NetPriceWaterfall();
+    }
+
+    /**
+     * Create an instance of {@link ListOfProduct }
+     * 
+     */
+    public ListOfProduct createListOfProduct() {
+        return new ListOfProduct();
+    }
+
+    /**
+     * Create an instance of {@link Catalog }
+     * 
+     */
+    public Catalog createCatalog() {
+        return new Catalog();
     }
 
     /**

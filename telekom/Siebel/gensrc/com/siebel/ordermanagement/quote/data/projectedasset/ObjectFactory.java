@@ -34,22 +34,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAsset }
-     * 
-     */
-    public ListOfAsset createListOfAsset() {
-        return new ListOfAsset();
-    }
-
-    /**
-     * Create an instance of {@link ProjectedAsset }
-     * 
-     */
-    public ProjectedAsset createProjectedAsset() {
-        return new ProjectedAsset();
-    }
-
-    /**
      * Create an instance of {@link ListOfPropSet }
      * 
      */
@@ -63,6 +47,22 @@ public class ObjectFactory {
      */
     public ListOfAssetTopElmt createListOfAssetTopElmt() {
         return new ListOfAssetTopElmt();
+    }
+
+    /**
+     * Create an instance of {@link ListOfAsset }
+     * 
+     */
+    public ListOfAsset createListOfAsset() {
+        return new ListOfAsset();
+    }
+
+    /**
+     * Create an instance of {@link ProjectedAsset }
+     * 
+     */
+    public ProjectedAsset createProjectedAsset() {
+        return new ProjectedAsset();
     }
 
     /**

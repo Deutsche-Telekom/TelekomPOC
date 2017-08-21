@@ -34,14 +34,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfQuoteItem }
-     * 
-     */
-    public ListOfQuoteItem createListOfQuoteItem() {
-        return new ListOfQuoteItem();
-    }
-
-    /**
      * Create an instance of {@link ListOfQuoteItemXA }
      * 
      */
@@ -58,14 +50,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfQuoteItemBOTopElmt }
-     * 
-     */
-    public ListOfQuoteItemBOTopElmt createListOfQuoteItemBOTopElmt() {
-        return new ListOfQuoteItemBOTopElmt();
-    }
-
-    /**
      * Create an instance of {@link QuoteItem }
      * 
      */
@@ -79,6 +63,22 @@ public class ObjectFactory {
      */
     public QuoteItemXA createQuoteItemXA() {
         return new QuoteItemXA();
+    }
+
+    /**
+     * Create an instance of {@link ListOfQuoteItemBOTopElmt }
+     * 
+     */
+    public ListOfQuoteItemBOTopElmt createListOfQuoteItemBOTopElmt() {
+        return new ListOfQuoteItemBOTopElmt();
+    }
+
+    /**
+     * Create an instance of {@link ListOfQuoteItem }
+     * 
+     */
+    public ListOfQuoteItem createListOfQuoteItem() {
+        return new ListOfQuoteItem();
     }
 
     /**

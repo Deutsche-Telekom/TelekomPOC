@@ -34,14 +34,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfProductAttributeDomain }
-     * 
-     */
-    public ListOfProductAttributeDomain createListOfProductAttributeDomain() {
-        return new ListOfProductAttributeDomain();
-    }
-
-    /**
      * Create an instance of {@link ListOfProductAttributeDomainTopElmt }
      * 
      */
@@ -50,11 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AttributeLOVValue }
+     * Create an instance of {@link ListOfProductAttributeDomain }
      * 
      */
-    public AttributeLOVValue createAttributeLOVValue() {
-        return new AttributeLOVValue();
+    public ListOfProductAttributeDomain createListOfProductAttributeDomain() {
+        return new ListOfProductAttributeDomain();
     }
 
     /**
@@ -63,6 +55,14 @@ public class ObjectFactory {
      */
     public ProductAttribute createProductAttribute() {
         return new ProductAttribute();
+    }
+
+    /**
+     * Create an instance of {@link AttributeLOVValue }
+     * 
+     */
+    public AttributeLOVValue createAttributeLOVValue() {
+        return new AttributeLOVValue();
     }
 
     /**

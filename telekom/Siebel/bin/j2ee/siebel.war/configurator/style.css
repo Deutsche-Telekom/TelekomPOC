@@ -1,6 +1,0 @@
-.cart div{
-    display: none;
-}
-.cart:hover div{
-    display: inline;
-}

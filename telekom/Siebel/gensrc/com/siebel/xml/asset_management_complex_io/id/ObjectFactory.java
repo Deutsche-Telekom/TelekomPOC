@@ -34,27 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAssetMgmtAssetXaId }
+     * Create an instance of {@link ListOfAssetMgmtAssetId }
      * 
      */
-    public ListOfAssetMgmtAssetXaId createListOfAssetMgmtAssetXaId() {
-        return new ListOfAssetMgmtAssetXaId();
-    }
-
-    /**
-     * Create an instance of {@link AssetMgmtAssetId }
-     * 
-     */
-    public AssetMgmtAssetId createAssetMgmtAssetId() {
-        return new AssetMgmtAssetId();
-    }
-
-    /**
-     * Create an instance of {@link ListOfAssetTopElmtId }
-     * 
-     */
-    public ListOfAssetTopElmtId createListOfAssetTopElmtId() {
-        return new ListOfAssetTopElmtId();
+    public ListOfAssetMgmtAssetId createListOfAssetMgmtAssetId() {
+        return new ListOfAssetMgmtAssetId();
     }
 
     /**
@@ -82,11 +66,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListOfAssetMgmtAssetId }
+     * Create an instance of {@link AssetMgmtAssetId }
      * 
      */
-    public ListOfAssetMgmtAssetId createListOfAssetMgmtAssetId() {
-        return new ListOfAssetMgmtAssetId();
+    public AssetMgmtAssetId createAssetMgmtAssetId() {
+        return new AssetMgmtAssetId();
+    }
+
+    /**
+     * Create an instance of {@link ListOfAssetMgmtAssetXaId }
+     * 
+     */
+    public ListOfAssetMgmtAssetXaId createListOfAssetMgmtAssetXaId() {
+        return new ListOfAssetMgmtAssetXaId();
+    }
+
+    /**
+     * Create an instance of {@link ListOfAssetTopElmtId }
+     * 
+     */
+    public ListOfAssetTopElmtId createListOfAssetTopElmtId() {
+        return new ListOfAssetTopElmtId();
     }
 
     /**

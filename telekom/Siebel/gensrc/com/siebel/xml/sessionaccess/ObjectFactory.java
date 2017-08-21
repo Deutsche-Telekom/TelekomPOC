@@ -30,11 +30,43 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SessionAccessGetProfileAttrInput }
+     * 
+     */
+    public SessionAccessGetProfileAttrInput createSessionAccessGetProfileAttrInput() {
+        return new SessionAccessGetProfileAttrInput();
+    }
+
+    /**
+     * Create an instance of {@link SessionAccessPingInput }
+     * 
+     */
+    public SessionAccessPingInput createSessionAccessPingInput() {
+        return new SessionAccessPingInput();
+    }
+
+    /**
      * Create an instance of {@link SessionAccessEchoInput }
      * 
      */
     public SessionAccessEchoInput createSessionAccessEchoInput() {
         return new SessionAccessEchoInput();
+    }
+
+    /**
+     * Create an instance of {@link SessionAccessPingOutput }
+     * 
+     */
+    public SessionAccessPingOutput createSessionAccessPingOutput() {
+        return new SessionAccessPingOutput();
+    }
+
+    /**
+     * Create an instance of {@link SessionAccessGetProfileAttrOutput }
+     * 
+     */
+    public SessionAccessGetProfileAttrOutput createSessionAccessGetProfileAttrOutput() {
+        return new SessionAccessGetProfileAttrOutput();
     }
 
     /**
@@ -51,38 +83,6 @@ public class ObjectFactory {
      */
     public SessionAccessSetProfileAttrInput createSessionAccessSetProfileAttrInput() {
         return new SessionAccessSetProfileAttrInput();
-    }
-
-    /**
-     * Create an instance of {@link SessionAccessGetProfileAttrInput }
-     * 
-     */
-    public SessionAccessGetProfileAttrInput createSessionAccessGetProfileAttrInput() {
-        return new SessionAccessGetProfileAttrInput();
-    }
-
-    /**
-     * Create an instance of {@link SessionAccessGetProfileAttrOutput }
-     * 
-     */
-    public SessionAccessGetProfileAttrOutput createSessionAccessGetProfileAttrOutput() {
-        return new SessionAccessGetProfileAttrOutput();
-    }
-
-    /**
-     * Create an instance of {@link SessionAccessPingInput }
-     * 
-     */
-    public SessionAccessPingInput createSessionAccessPingInput() {
-        return new SessionAccessPingInput();
-    }
-
-    /**
-     * Create an instance of {@link SessionAccessPingOutput }
-     * 
-     */
-    public SessionAccessPingOutput createSessionAccessPingOutput() {
-        return new SessionAccessPingOutput();
     }
 
 }

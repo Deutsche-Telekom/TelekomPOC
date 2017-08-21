@@ -34,51 +34,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CUTAddressMVContactQuery }
+     * Create an instance of {@link CutAddressQuery }
      * 
      */
-    public CUTAddressMVContactQuery createCUTAddressMVContactQuery() {
-        return new CUTAddressMVContactQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfCUTAddressMVAccountQuery }
-     * 
-     */
-    public ListOfCUTAddressMVAccountQuery createListOfCUTAddressMVAccountQuery() {
-        return new ListOfCUTAddressMVAccountQuery();
-    }
-
-    /**
-     * Create an instance of {@link QueryType }
-     * 
-     */
-    public QueryType createQueryType() {
-        return new QueryType();
-    }
-
-    /**
-     * Create an instance of {@link ListOfCUTAddressMVContactQuery }
-     * 
-     */
-    public ListOfCUTAddressMVContactQuery createListOfCUTAddressMVContactQuery() {
-        return new ListOfCUTAddressMVContactQuery();
-    }
-
-    /**
-     * Create an instance of {@link ListOfSsAddressIoTopElmtQuery }
-     * 
-     */
-    public ListOfSsAddressIoTopElmtQuery createListOfSsAddressIoTopElmtQuery() {
-        return new ListOfSsAddressIoTopElmtQuery();
-    }
-
-    /**
-     * Create an instance of {@link CUTAddressMVAccountQuery }
-     * 
-     */
-    public CUTAddressMVAccountQuery createCUTAddressMVAccountQuery() {
-        return new CUTAddressMVAccountQuery();
+    public CutAddressQuery createCutAddressQuery() {
+        return new CutAddressQuery();
     }
 
     /**
@@ -90,11 +50,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CutAddressQuery }
+     * Create an instance of {@link ListOfSsAddressIoTopElmtQuery }
      * 
      */
-    public CutAddressQuery createCutAddressQuery() {
-        return new CutAddressQuery();
+    public ListOfSsAddressIoTopElmtQuery createListOfSsAddressIoTopElmtQuery() {
+        return new ListOfSsAddressIoTopElmtQuery();
+    }
+
+    /**
+     * Create an instance of {@link QueryType }
+     * 
+     */
+    public QueryType createQueryType() {
+        return new QueryType();
+    }
+
+    /**
+     * Create an instance of {@link ListOfCUTAddressMVAccountQuery }
+     * 
+     */
+    public ListOfCUTAddressMVAccountQuery createListOfCUTAddressMVAccountQuery() {
+        return new ListOfCUTAddressMVAccountQuery();
+    }
+
+    /**
+     * Create an instance of {@link ListOfCUTAddressMVContactQuery }
+     * 
+     */
+    public ListOfCUTAddressMVContactQuery createListOfCUTAddressMVContactQuery() {
+        return new ListOfCUTAddressMVContactQuery();
+    }
+
+    /**
+     * Create an instance of {@link CUTAddressMVAccountQuery }
+     * 
+     */
+    public CUTAddressMVAccountQuery createCUTAddressMVAccountQuery() {
+        return new CUTAddressMVAccountQuery();
+    }
+
+    /**
+     * Create an instance of {@link CUTAddressMVContactQuery }
+     * 
+     */
+    public CUTAddressMVContactQuery createCUTAddressMVContactQuery() {
+        return new CUTAddressMVContactQuery();
     }
 
     /**

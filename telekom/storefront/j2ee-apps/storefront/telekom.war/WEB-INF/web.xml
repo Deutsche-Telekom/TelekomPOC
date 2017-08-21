@@ -71,7 +71,7 @@
         <servlet-name>InitSessionServlet</servlet-name>
         <servlet-class>atg.nucleus.servlet.InitSessionServlet</servlet-class>
     </servlet>
-
+    
     <servlet-mapping>
         <servlet-name>AdminProxyServlet</servlet-name>
         <url-pattern>/admin/*</url-pattern>
@@ -106,32 +106,11 @@
             <trim-directive-whitespaces>true</trim-directive-whitespaces>
         </jsp-property-group>
     </jsp-config>
-
+ 
  <context-param>
         <param-name>atg.dafear.bootstrapContextName</param-name>
         <param-value>/dyn</param-value>
  </context-param>
  
-<servlet>
-    <servlet-name>link</servlet-name>
-    <servlet-class>atg.endeca.servlet.NucleusPreviewLinkServlet</servlet-class>
-    <init-param>
-	   <description>The Nucleus component path of the NavigationStateBuilder.</description>
-	   <param-name>navigationStateBuilderComponent</param-name>
-       <param-value>/atg/endeca/assembler/cartridge/manager/NavigationStateBuilder</param-value>
-    </init-param>
-    <init-param>
-       <description>The Nucleus component path of the ContentSource.</description>
-       <param-name>contentSourceComponent</param-name>
-       <param-value>/atg/endeca/assembler/cartridge/manager/WorkbenchContentSource</param-value>
-    </init-param>
-</servlet>
 
-<servlet-mapping>
-   <servlet-name>link</servlet-name>
-   <url-pattern>/link.json/*</url-pattern>
-</servlet-mapping>
-
-
-  
 </web-app>

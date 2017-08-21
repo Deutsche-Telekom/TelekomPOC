@@ -34,19 +34,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SiebelContext }
+     * 
+     */
+    public SiebelContext createSiebelContext() {
+        return new SiebelContext();
+    }
+
+    /**
      * Create an instance of {@link Context }
      * 
      */
     public Context createContext() {
         return new Context();
-    }
-
-    /**
-     * Create an instance of {@link ListOfContext }
-     * 
-     */
-    public ListOfContext createListOfContext() {
-        return new ListOfContext();
     }
 
     /**
@@ -66,11 +66,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SiebelContext }
+     * Create an instance of {@link ListOfContext }
      * 
      */
-    public SiebelContext createSiebelContext() {
-        return new SiebelContext();
+    public ListOfContext createListOfContext() {
+        return new ListOfContext();
     }
 
     /**

@@ -30,11 +30,75 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetOrderByIdOutput }
+     * 
+     */
+    public GetOrderByIdOutput createGetOrderByIdOutput() {
+        return new GetOrderByIdOutput();
+    }
+
+    /**
+     * Create an instance of {@link DeleteOrderInput }
+     * 
+     */
+    public DeleteOrderInput createDeleteOrderInput() {
+        return new DeleteOrderInput();
+    }
+
+    /**
+     * Create an instance of {@link GetOrderOutput }
+     * 
+     */
+    public GetOrderOutput createGetOrderOutput() {
+        return new GetOrderOutput();
+    }
+
+    /**
+     * Create an instance of {@link GetOrderInput }
+     * 
+     */
+    public GetOrderInput createGetOrderInput() {
+        return new GetOrderInput();
+    }
+
+    /**
      * Create an instance of {@link InsertOrderInput }
      * 
      */
     public InsertOrderInput createInsertOrderInput() {
         return new InsertOrderInput();
+    }
+
+    /**
+     * Create an instance of {@link DeleteOrderItemInput }
+     * 
+     */
+    public DeleteOrderItemInput createDeleteOrderItemInput() {
+        return new DeleteOrderItemInput();
+    }
+
+    /**
+     * Create an instance of {@link SynchronizeOrderItemInput }
+     * 
+     */
+    public SynchronizeOrderItemInput createSynchronizeOrderItemInput() {
+        return new SynchronizeOrderItemInput();
+    }
+
+    /**
+     * Create an instance of {@link UpdateOrderOutput }
+     * 
+     */
+    public UpdateOrderOutput createUpdateOrderOutput() {
+        return new UpdateOrderOutput();
+    }
+
+    /**
+     * Create an instance of {@link GetOrderItemOutput }
+     * 
+     */
+    public GetOrderItemOutput createGetOrderItemOutput() {
+        return new GetOrderItemOutput();
     }
 
     /**
@@ -54,35 +118,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DeleteOrderInput }
+     * Create an instance of {@link InsertOrderOutput }
      * 
      */
-    public DeleteOrderInput createDeleteOrderInput() {
-        return new DeleteOrderInput();
-    }
-
-    /**
-     * Create an instance of {@link GetOrderItemByIdOutput }
-     * 
-     */
-    public GetOrderItemByIdOutput createGetOrderItemByIdOutput() {
-        return new GetOrderItemByIdOutput();
-    }
-
-    /**
-     * Create an instance of {@link SynchronizeOrderInput }
-     * 
-     */
-    public SynchronizeOrderInput createSynchronizeOrderInput() {
-        return new SynchronizeOrderInput();
-    }
-
-    /**
-     * Create an instance of {@link GetOrderItemInput }
-     * 
-     */
-    public GetOrderItemInput createGetOrderItemInput() {
-        return new GetOrderItemInput();
+    public InsertOrderOutput createInsertOrderOutput() {
+        return new InsertOrderOutput();
     }
 
     /**
@@ -94,67 +134,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DeleteOrderItemInput }
+     * Create an instance of {@link SynchronizeOrderInput }
      * 
      */
-    public DeleteOrderItemInput createDeleteOrderItemInput() {
-        return new DeleteOrderItemInput();
-    }
-
-    /**
-     * Create an instance of {@link InsertOrderOutput }
-     * 
-     */
-    public InsertOrderOutput createInsertOrderOutput() {
-        return new InsertOrderOutput();
-    }
-
-    /**
-     * Create an instance of {@link UpdateOrderInput }
-     * 
-     */
-    public UpdateOrderInput createUpdateOrderInput() {
-        return new UpdateOrderInput();
-    }
-
-    /**
-     * Create an instance of {@link DeleteOrderOutput }
-     * 
-     */
-    public DeleteOrderOutput createDeleteOrderOutput() {
-        return new DeleteOrderOutput();
-    }
-
-    /**
-     * Create an instance of {@link UpdateOrderOutput }
-     * 
-     */
-    public UpdateOrderOutput createUpdateOrderOutput() {
-        return new UpdateOrderOutput();
-    }
-
-    /**
-     * Create an instance of {@link GetOrderOutput }
-     * 
-     */
-    public GetOrderOutput createGetOrderOutput() {
-        return new GetOrderOutput();
-    }
-
-    /**
-     * Create an instance of {@link SynchronizeOrderItemInput }
-     * 
-     */
-    public SynchronizeOrderItemInput createSynchronizeOrderItemInput() {
-        return new SynchronizeOrderItemInput();
-    }
-
-    /**
-     * Create an instance of {@link GetOrderItemOutput }
-     * 
-     */
-    public GetOrderItemOutput createGetOrderItemOutput() {
-        return new GetOrderItemOutput();
+    public SynchronizeOrderInput createSynchronizeOrderInput() {
+        return new SynchronizeOrderInput();
     }
 
     /**
@@ -166,11 +150,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetOrderByIdInput }
+     * Create an instance of {@link DeleteOrderItemOutput }
      * 
      */
-    public GetOrderByIdInput createGetOrderByIdInput() {
-        return new GetOrderByIdInput();
+    public DeleteOrderItemOutput createDeleteOrderItemOutput() {
+        return new DeleteOrderItemOutput();
+    }
+
+    /**
+     * Create an instance of {@link GetOrderItemInput }
+     * 
+     */
+    public GetOrderItemInput createGetOrderItemInput() {
+        return new GetOrderItemInput();
     }
 
     /**
@@ -182,19 +174,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link InsertOrderItemInput }
+     * Create an instance of {@link DeleteOrderOutput }
      * 
      */
-    public InsertOrderItemInput createInsertOrderItemInput() {
-        return new InsertOrderItemInput();
+    public DeleteOrderOutput createDeleteOrderOutput() {
+        return new DeleteOrderOutput();
     }
 
     /**
-     * Create an instance of {@link GetOrderByIdOutput }
+     * Create an instance of {@link UpdateOrderInput }
      * 
      */
-    public GetOrderByIdOutput createGetOrderByIdOutput() {
-        return new GetOrderByIdOutput();
+    public UpdateOrderInput createUpdateOrderInput() {
+        return new UpdateOrderInput();
+    }
+
+    /**
+     * Create an instance of {@link GetOrderItemByIdOutput }
+     * 
+     */
+    public GetOrderItemByIdOutput createGetOrderItemByIdOutput() {
+        return new GetOrderItemByIdOutput();
+    }
+
+    /**
+     * Create an instance of {@link GetOrderByIdInput }
+     * 
+     */
+    public GetOrderByIdInput createGetOrderByIdInput() {
+        return new GetOrderByIdInput();
     }
 
     /**
@@ -206,19 +214,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DeleteOrderItemOutput }
+     * Create an instance of {@link InsertOrderItemInput }
      * 
      */
-    public DeleteOrderItemOutput createDeleteOrderItemOutput() {
-        return new DeleteOrderItemOutput();
-    }
-
-    /**
-     * Create an instance of {@link GetOrderInput }
-     * 
-     */
-    public GetOrderInput createGetOrderInput() {
-        return new GetOrderInput();
+    public InsertOrderItemInput createInsertOrderItemInput() {
+        return new InsertOrderItemInput();
     }
 
 }
